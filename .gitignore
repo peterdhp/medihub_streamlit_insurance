@@ -9,3 +9,6 @@ draft_LLMengine_retrievalattached.py
 draft_LLMengine.py
 LLM_engine.py
 *.pdf
+보험약관/
+pdf_contents_json/
+documents/
