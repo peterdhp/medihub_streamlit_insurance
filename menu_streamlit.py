@@ -4,7 +4,8 @@ import streamlit as st
 
 def authenticated_menu():
     st.sidebar.page_link("app_streamlit.py", label="사용자 변경하기")
-    st.sidebar.page_link("pages/w_insurance.py", label="보험관련 질문하기")
+    st.sidebar.page_link("pages/wo_insurance.py", label="보험관련 질문하기(가입정보 x)")
+    st.sidebar.page_link("pages/w_insurance.py", label="보험관련 질문하기(가입정보 ㅇ)")
     #st.sidebar.page_link("pages/result_opinion_new.py", label="새로운 검사 소견 자동 작성 및 소견 요약")
     #st.sidebar.page_link("pages/overall_opinion.py", label="종합 소견 자동 작성")
     #st.sidebar.page_link("pages/overall_opinion_english.py", label="종합 소견 자동 작성 (영문버전)")
