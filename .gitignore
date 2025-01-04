@@ -11,4 +11,3 @@ LLM_engine.py
 *.pdf
 보험약관/
 pdf_contents_json/
-documents/
