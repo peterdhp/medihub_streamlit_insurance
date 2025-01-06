@@ -95,7 +95,7 @@ def answer_node(state):
 
     answer_generator = answer_prompt | llm
 
-    response = answer_generator.invoke({'user_input':user_input, 'report': chat_history,'comment':chat_history})
+    response = answer_generator.invoke({'user_input':user_input, 'chat_history':chat_history})
     
     return {"response": response}
 

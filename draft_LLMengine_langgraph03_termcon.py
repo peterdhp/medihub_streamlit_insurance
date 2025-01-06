@@ -150,12 +150,12 @@ def process_and_print_active_policies(demo_data) -> str:
     for i, policy in enumerate(active_policies, start=1):
         table_str = render_policy_as_table(policy)
         # Add a section header + the table + a separator line
-        block = f"[Policy #{i}]\n{table_str}\n" + ("-" * 10)
+        block = f"[Insurance #{i}]\n{table_str}\n" + ("-" * 10)
         results.append(block)
     
     # Combine everything into one big string
     final_output = "\n\n".join(results)
-    print(final_output)
+    #print(final_output)
     return final_output
 
 
@@ -661,7 +661,7 @@ class State(AgentState):
     non_related : str
     messages: Annotated[Sequence[BaseMessage], add_messages]
     response : str
-    end_of_session : str
+    end_of_session : str = ""
     
 
 def run_oracle(state: list):
