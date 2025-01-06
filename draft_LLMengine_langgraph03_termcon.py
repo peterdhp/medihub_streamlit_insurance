@@ -20,12 +20,143 @@ from collections import defaultdict
 from langgraph.graph.message import add_messages
 from langgraph.prebuilt import create_react_agent
 import datetime
+from difflib import get_close_matches
 
 
 os.environ["LANGCHAIN_API_KEY"] = st.secrets['LANGCHAIN_API_KEY']
 os.environ["LANGCHAIN_TRACING_V2"] = st.secrets['LANGCHAIN_TRACING_V2']
 os.environ["LANGCHAIN_ENDPOINT"] = st.secrets['LANGCHAIN_ENDPOINT']
 os.environ['LANGCHAIN_PROJECT'] = st.secrets['LANGCHAIN_PROJECT']
+
+
+
+def is_active_policy(policy_dict):
+    """
+    Example logic: 
+      - We consider a policy active if 'resContractStatus' == '정상'
+      - Optionally also check date range (commEndDate in the future).
+        But your data uses strings like '20200214'. You can parse them as needed.
+    """
+    if policy_dict.get('resContractStatus') != '정상':
+        return False
+    
+    # Example: parse commEndDate and check if still in the future
+    # (You can skip this if you just want to filter by '정상')
+    end_date_str = policy_dict.get('commEndDate', '')  # e.g. "20200214"
+    if not end_date_str:
+        return False
+    
+    # Try to parse year-month-day
+    try:
+        end_date = datetime.datetime.strptime(end_date_str, "%Y%m%d").date()
+        today = datetime.date.today()  # or any reference date you want
+        return end_date >= today
+    except ValueError:
+        # If date format is wrong or missing, skip
+        return False
+
+def extract_active_flat_rate_contracts(data: dict):
+    """
+    Return a list of active (정상) flat-rate contracts.
+    """
+    contracts = data.get('data', {}).get('resFlatRateContractList', [])
+    active = []
+    for c in contracts:
+        if is_active_policy(c):
+            active.append(c)
+    return active
+
+def render_policy_as_table(policy_dict):
+    """
+    Returns a multiline string for a single policy in your desired format.
+    """
+    # Basic policy fields
+    company_name = policy_dict.get('resCompanyNm', 'Unknown')
+    insurance_name = policy_dict.get('resInsuranceName', 'Unknown')
+    policy_number = policy_dict.get('resPolicyNumber', 'Unknown')
+    policyholder = policy_dict.get('resContractor', 'Unknown')
+    start_date = policy_dict.get('commStartDate', 'Unknown')
+    end_date   = policy_dict.get('commEndDate', 'Unknown')
+    payment_cycle = policy_dict.get('resPaymentCycle', 'Unknown')
+    payment_period = policy_dict.get('resPaymentPeriod', 'Unknown')
+    premium = policy_dict.get('resPremium', 'Unknown')
+
+    # Convert date format YYYYMMDD -> YYYY.MM.DD for nicer display
+    def pretty_date(yyyymmdd):
+        if len(yyyymmdd) == 8:
+            return f"{yyyymmdd[0:4]}.{yyyymmdd[4:6]}.{yyyymmdd[6:8]}"
+        return yyyymmdd
+
+    start_date_str = pretty_date(start_date)
+    end_date_str   = pretty_date(end_date)
+
+    # Gather coverage rows
+    coverage_list = policy_dict.get('resCoverageLists', [])
+
+    # Build table rows
+    coverage_rows = []
+    for cov in coverage_list:
+        coverage_type  = cov.get('resAgreementType', '')
+        coverage_name  = cov.get('resCoverageName', '')
+        coverage_stat  = cov.get('resCoverageStatus', '')
+        coverage_amt   = cov.get('resCoverageAmount', '0')
+        # Format coverage amount with commas
+        try:
+            coverage_amt = f"{int(coverage_amt):,}"
+        except:
+            pass
+
+        # Example row: coverage_type, coverage_name, coverage_stat, coverage_amt
+        coverage_rows.append(
+            f"| {coverage_type:<30} "
+            f"| {coverage_name:<60} "
+            f"| {coverage_stat:<6} "
+            f"| {coverage_amt:>10} |"
+        )
+
+    # Construct final output
+    result_lines = []
+
+    result_lines.append(f"Insurance Company: {company_name}")
+    result_lines.append(f"Insurance Name: {insurance_name}")
+    result_lines.append(f"Policy Number: {policy_number}")
+    result_lines.append(f"Policyholder: {policyholder}")
+    result_lines.append(f"Coverage Start Date: {start_date_str}")
+    result_lines.append(f"Coverage End Date:   {end_date_str}")
+    result_lines.append(f"Payment Frequency:   {payment_cycle}")
+    result_lines.append(f"Payment Term:        {payment_period} years")
+    result_lines.append(f"Premium per Payment: {premium} KRW")
+    result_lines.append("Coverage Details:")
+    result_lines.append("| Coverage Type                 | Coverage Name                                               | Status | Coverage Amount |")
+    result_lines.append("|-------------------------------|------------------------------------------------------------|--------|----------------|")
+
+    # Append coverage rows
+    result_lines.extend(coverage_rows)
+
+    # Join them all with newlines
+    return "\n".join(result_lines) + "\n"
+
+def process_and_print_active_policies(demo_data) -> str:
+    """
+    Filters for active policies, then builds and returns a
+    single multiline string containing all those policies.
+    """
+    active_policies = extract_active_flat_rate_contracts(demo_data)
+    
+    if not active_policies:
+        return "No active policies found."
+    
+    results = []
+    for i, policy in enumerate(active_policies, start=1):
+        table_str = render_policy_as_table(policy)
+        # Add a section header + the table + a separator line
+        block = f"[Policy #{i}]\n{table_str}\n" + ("-" * 10)
+        results.append(block)
+    
+    # Combine everything into one big string
+    final_output = "\n\n".join(results)
+    print(final_output)
+    return final_output
 
 
 class InsuranceQuery(TypedDict):
@@ -53,7 +184,16 @@ def retrieve_documents_by_metadata(documents, source=None, page=None):
     ]
     return doclist[0]
 
-
+def get_insurance_details(data, insurance_name):
+    result = []
+    contracts = data.get("data", {}).get("resFlatRateContractList", [])
+    for contract in contracts:
+        if contract["resInsuranceName"] == insurance_name:
+            result.append({
+                "company_name": contract["resCompanyNm"],
+                "start_date": contract["commStartDate"]
+            })
+    return result
 
 @tool("fetch_insurance_term_con")
 def fetch_insurance_term_con(query_list : list[InsuranceQuery], insurance_enrollment_info: Annotated[str, InjectedState("insurance_enrollment_info")]):
@@ -62,16 +202,54 @@ Each query specifies an 'insurance_name' and a 'query' describing the details to
 This is useful for finding context or specific information related to insurance policies."""
     
     insurance_context = ''
+    #insurance_enrollment_info_text = process_and_print_active_policies(insurance_enrollment_info)
+    
     
     
     for query in query_list:
+        
         insurance_name = query['insurance_name']
+        
+        all_contracts = insurance_enrollment_info.get('data', {}).get('resFlatRateContractList', [])
+        for contract in all_contracts:
+            if contract["resInsuranceName"] == insurance_name:
+                matching_contract = contract
+                insurance_company = contract["resCompanyNm"]
+                insurance_start_date = contract["commStartDate"]
+                break
+            
+        insurance_company_code_dict = {'메리츠화재' : "0101" , "한화손보" : "0102", "삼성화재" : "0108", "DB손보" : "0111", "NH농협손해보험" : "0171", "삼성생명" : "0203"}
+        insurance_company_code = insurance_company_code_dict.get(insurance_company, "Unknown")
+        matching_insurance_text = render_policy_as_table(matching_contract)
+        
+        # insurance_name을 이용해서 insurance_enrollment_info에서 해당 보험에 대한 정보를 가져올 옴
+        # 이정보를 통해서 보험사 코드와 보험가입일 가졍오기
+        # 이를 이용해서 해당 보험에 대한 보험약관 목차와 본문 json 파일을 가져와서 loaded_toc, loaded_documents에 저장
         query = query["query"]
         query_result = ''
         
-        with open("documents/example_toc.json", "r", encoding="utf-8") as json_file:
-            data = json.load(json_file)
-        toc_list = data.get("sections", [])
+        with open("documents/contents_json/"+ insurance_company_code +".json", "r", encoding="utf-8") as json_file:
+            loaded_company_toc = json.load(json_file)
+                
+        matching_items = [item for item in loaded_company_toc if item['name'] == insurance_company]
+        
+        if not matching_items:  # If no exact matches found, use difflib for the closest match
+            names = [item['name'] for item in loaded_company_toc]
+            closest_match = get_close_matches(insurance_company, names, n=1)
+            if closest_match:
+                matching_items = [item for item in loaded_company_toc if item['name'] == closest_match[0]]
+        
+        # Filter items with start_date before insurance_start_date
+        valid_items = [
+            item for item in matching_items 
+            if datetime.strptime(item['start_date'], "%y%m%d") < insurance_start_date
+        ]
+        if not valid_items:  # If no valid items found, return None
+            return None
+        
+        # Sort by start_date to find the latest one
+        matching_item = max(valid_items, key=lambda x: datetime.strptime(x['start_date'], "%y%m%d"))
+        toc_list = matching_item.get("sections", [])
         formatted_toc = "\n".join([f"{item['title']} - Page {item['page']}" for index, item in enumerate(toc_list)])
         
         page_selector_system_prompt = """Given a query and insurance enrollment info, decide which pages of the insurance terms and conditions you would like to retrieve information from.
@@ -84,8 +262,7 @@ Give up to 10 pages
 
         page_selector_prompt = ChatPromptTemplate.from_messages([
         ("system", page_selector_system_prompt),
-        ("user", "query : {query}"),
-    ])
+        ("user", "query : {query}"),])
         
         class Pagelist(BaseModel):
             """list of page numbers to retrieve information from."""
@@ -100,12 +277,12 @@ Give up to 10 pages
         # Combine the prompt and classifier
         page_selector = page_selector_prompt | structured_pagenum_llm
 
-        response = page_selector.invoke({"query" : query , "table_of_contents" : formatted_toc,"enroll_info" :insurance_enrollment_info})
+        response = page_selector.invoke({"query" : query , "table_of_contents" : formatted_toc,"enroll_info" :matching_insurance_text})
         pages_to_include = response.page_numbers
         #print(pages_to_include)
             
         
-        with open("documents/example_doc.json", 'r', encoding='utf-8') as f:
+        with open("documents/vector_db/"+matching_item["start_date"]+'_'+matching_item['name']+"*.json", 'r', encoding='utf-8') as f:
             loaded_documents = json.load(f)
         
         
@@ -464,134 +641,6 @@ tools=[
 ]
 
 tool_node = ToolNode(tools)
-
-def is_active_policy(policy_dict):
-    """
-    Example logic: 
-      - We consider a policy active if 'resContractStatus' == '정상'
-      - Optionally also check date range (commEndDate in the future).
-        But your data uses strings like '20200214'. You can parse them as needed.
-    """
-    if policy_dict.get('resContractStatus') != '정상':
-        return False
-    
-    # Example: parse commEndDate and check if still in the future
-    # (You can skip this if you just want to filter by '정상')
-    end_date_str = policy_dict.get('commEndDate', '')  # e.g. "20200214"
-    if not end_date_str:
-        return False
-    
-    # Try to parse year-month-day
-    try:
-        end_date = datetime.datetime.strptime(end_date_str, "%Y%m%d").date()
-        today = datetime.date.today()  # or any reference date you want
-        return end_date >= today
-    except ValueError:
-        # If date format is wrong or missing, skip
-        return False
-
-def extract_active_flat_rate_contracts(data: dict):
-    """
-    Return a list of active (정상) flat-rate contracts.
-    """
-    contracts = data.get('data', {}).get('resFlatRateContractList', [])
-    active = []
-    for c in contracts:
-        if is_active_policy(c):
-            active.append(c)
-    return active
-
-def render_policy_as_table(policy_dict):
-    """
-    Returns a multiline string for a single policy in your desired format.
-    """
-    # Basic policy fields
-    company_name = policy_dict.get('resCompanyNm', 'Unknown')
-    insurance_name = policy_dict.get('resInsuranceName', 'Unknown')
-    policy_number = policy_dict.get('resPolicyNumber', 'Unknown')
-    policyholder = policy_dict.get('resContractor', 'Unknown')
-    start_date = policy_dict.get('commStartDate', 'Unknown')
-    end_date   = policy_dict.get('commEndDate', 'Unknown')
-    payment_cycle = policy_dict.get('resPaymentCycle', 'Unknown')
-    payment_period = policy_dict.get('resPaymentPeriod', 'Unknown')
-    premium = policy_dict.get('resPremium', 'Unknown')
-
-    # Convert date format YYYYMMDD -> YYYY.MM.DD for nicer display
-    def pretty_date(yyyymmdd):
-        if len(yyyymmdd) == 8:
-            return f"{yyyymmdd[0:4]}.{yyyymmdd[4:6]}.{yyyymmdd[6:8]}"
-        return yyyymmdd
-
-    start_date_str = pretty_date(start_date)
-    end_date_str   = pretty_date(end_date)
-
-    # Gather coverage rows
-    coverage_list = policy_dict.get('resCoverageLists', [])
-
-    # Build table rows
-    coverage_rows = []
-    for cov in coverage_list:
-        coverage_type  = cov.get('resAgreementType', '')
-        coverage_name  = cov.get('resCoverageName', '')
-        coverage_stat  = cov.get('resCoverageStatus', '')
-        coverage_amt   = cov.get('resCoverageAmount', '0')
-        # Format coverage amount with commas
-        try:
-            coverage_amt = f"{int(coverage_amt):,}"
-        except:
-            pass
-
-        # Example row: coverage_type, coverage_name, coverage_stat, coverage_amt
-        coverage_rows.append(
-            f"| {coverage_type:<30} "
-            f"| {coverage_name:<60} "
-            f"| {coverage_stat:<6} "
-            f"| {coverage_amt:>10} |"
-        )
-
-    # Construct final output
-    result_lines = []
-
-    result_lines.append(f"Insurance Company: {company_name}")
-    result_lines.append(f"Insurance Name: {insurance_name}")
-    result_lines.append(f"Policy Number: {policy_number}")
-    result_lines.append(f"Policyholder: {policyholder}")
-    result_lines.append(f"Coverage Start Date: {start_date_str}")
-    result_lines.append(f"Coverage End Date:   {end_date_str}")
-    result_lines.append(f"Payment Frequency:   {payment_cycle}")
-    result_lines.append(f"Payment Term:        {payment_period} years")
-    result_lines.append(f"Premium per Payment: {premium} KRW")
-    result_lines.append("Coverage Details:")
-    result_lines.append("| Coverage Type                 | Coverage Name                                               | Status | Coverage Amount |")
-    result_lines.append("|-------------------------------|------------------------------------------------------------|--------|----------------|")
-
-    # Append coverage rows
-    result_lines.extend(coverage_rows)
-
-    # Join them all with newlines
-    return "\n".join(result_lines) + "\n"
-
-def process_and_print_active_policies(demo_data) -> str:
-    """
-    Filters for active policies, then builds and returns a
-    single multiline string containing all those policies.
-    """
-    active_policies = extract_active_flat_rate_contracts(demo_data)
-    
-    if not active_policies:
-        return "No active policies found."
-    
-    results = []
-    for i, policy in enumerate(active_policies, start=1):
-        table_str = render_policy_as_table(policy)
-        # Add a section header + the table + a separator line
-        block = f"[Policy #{i}]\n{table_str}\n" + ("-" * 10)
-        results.append(block)
-    
-    # Combine everything into one big string
-    final_output = "\n\n".join(results)
-    print(final_output)
-    return final_output
 
 oracle = (
     {
