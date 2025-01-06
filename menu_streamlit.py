@@ -1,9 +1,6 @@
 import streamlit as st
 
-if "user" not in st.session_state:
-    st.session_state.user = ''
-if "birth" not in st.session_state:
-    st.session_state.birth = ''
+
 
 user_data = [{'name':'박도훈','birth':'medihub'},{'name':'조화윤','birth':'medihub'},{'name':'문성수','birth':'medihub'},{'name':'송지은','birth':'medihub'},{'name':'고준현','birth':'medihub'},{'name':'박근목','birth':'medihub'},{'name':'박현우','birth':'medihub'},{'name':'송원철','birth':'medihub'},{'name':'조민승','birth':'medihub'}]
 

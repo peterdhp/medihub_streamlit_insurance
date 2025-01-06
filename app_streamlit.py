@@ -21,6 +21,10 @@ os.environ['CO_API_KEY']=st.secrets['CO_API_KEY']
 
 st.title("사용자 로그인")
 
+if "user" not in st.session_state:
+    st.session_state.user = ''
+if "birth" not in st.session_state:
+    st.session_state.birth = ''
 st.session_state.user = st.text_input('이름' )
 st.session_state.birth = st.text_input('주민번호 앞 6자리(비밀번호)' ,type='password')
 

@@ -3,6 +3,7 @@ from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_openai import ChatOpenAI
 from pydantic import BaseModel, Field
 from langgraph.graph import END, StateGraph, START
+from langchain_core.output_parsers import StrOutputParser
 from langgraph.prebuilt.chat_agent_executor import AgentState
 import os 
 import streamlit as st
@@ -41,8 +42,8 @@ def verify(state):
     prompt_verify_prompt = ChatPromptTemplate.from_messages([
         ("system", """Given a chat history and user input , classify the user input into three categories. 
 not_related : if the user input does not pertain to health related insurances.
-enroll_info_required : if the user input pertains to health related insurances and requires enrollment information.
-enroll_info_not_required : if the user input pertains to health related insurances and does not require enrollment information."""),
+enroll_info_required : if the user input requires enrollment information to answer the respond.
+enroll_info_not_required : if the user input pertains to health related insurances and does not require enrollment information to respond."""),
         ("user", "[chat history]\n{chat_history}\n\n[user input]\n{user_input}")
     ])
     policy_terms_classifier = prompt_verify_prompt | question_classifier_llm
@@ -93,7 +94,7 @@ def answer_node(state):
     )
 
 
-    answer_generator = answer_prompt | llm
+    answer_generator = answer_prompt | llm | StrOutputParser()
 
     response = answer_generator.invoke({'user_input':user_input, 'chat_history':chat_history})
     

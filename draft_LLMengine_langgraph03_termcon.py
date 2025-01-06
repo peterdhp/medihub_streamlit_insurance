@@ -607,6 +607,7 @@ def answer_type_classifier(state):
 # Be cautious about the enrollment information."""
 
 oracle_system_prompt = """You are an insurance consultant. 
+You have full access to insurance enrollment information.
 You have full access to insurance terms and conditions through your tools. 
 Never tell the user to contact the insurance company or read the policy themselves. 
 If you need more info, ask the user via the human_retrieval tool. 
@@ -617,13 +618,13 @@ If specialized help (e.g., claims adjuster, doctor) is needed, gently request re
 provide a summary of the information and reccomend contacting a claims adjuster or doctor.
 
 Once you have collected plenty of information to answer the user's question use the final_answer tool. 
+
+Insurance enrollment information:\n{insurance_enrollment_info}
 """
 
 oracle_prompt = ChatPromptTemplate.from_messages([
     ("system", oracle_system_prompt),
-    ("assistant", "Insurance enrollment information: {insurance_enrollment_info}"),#\n\nscratchpad: {scratchpad}
     MessagesPlaceholder(variable_name="chat_history"),
-    ("user", "{user_input}"),
     MessagesPlaceholder(variable_name="messages"),
     ])
 
