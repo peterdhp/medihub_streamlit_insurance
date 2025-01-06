@@ -53,9 +53,10 @@ if prompt := st.chat_input():
     st.session_state.messages_w.append({"type": "human", "content": prompt})
     st.chat_message("human").write(prompt)
     with collect_runs() as cb:
-        response = insurance_engine.invoke({"user_input": prompt, "insurance_enrollment_info" : insurance_enrollment_info, "chat_history":st.session_state.messages_w})
+        with st.spinner('보장곰이 가입하신 보험들을 살펴보고 있습니다.'):
+            response = insurance_engine.invoke({"user_input": prompt, "insurance_enrollment_info" : insurance_enrollment_info, "chat_history":st.session_state.messages_w})
         st.session_state.run_id = cb.traced_runs[-1].id
-        print(st.session_state.run_id)
+        #print(st.session_state.run_id)
     if response['non_related'] == 'F' :
         st.session_state.messages_w.append({"type": "ai", "content": "저는 건강보험 관련 질문에 대해서만 답변할 수 있어요."})
         st.chat_message("ai").write("저는 건강보험 관련 질문에 대해서만 답변할 수 있어요.")

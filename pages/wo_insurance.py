@@ -40,7 +40,7 @@ if prompt := st.chat_input():
     with collect_runs() as cb:
         response = insurance_wotc_engine.invoke({"user_input": prompt, "chat_history":st.session_state.messages_wo})
         st.session_state.run_id = cb.traced_runs[-1].id
-        print(st.session_state.run_id)
+        #print(st.session_state.run_id)
     if response['type'] == 'not_related' :
         st.session_state.messages_wo.append({"type": "ai", "content": "저는 보험 관련 질문에 대해서만 답변할 수 있어요."})
         st.chat_message("ai").write("저는 보험 관련 질문에 대해서만 답변할 수 있어요.")
