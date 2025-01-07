@@ -196,7 +196,7 @@ def get_insurance_details(data, insurance_name):
     return result
 
 @tool("fetch_insurance_term_con")
-def fetch_insurance_term_con(query_list : list[InsuranceQuery], insurance_enrollment_info: Annotated[str, InjectedState("insurance_enrollment_info")]):
+def fetch_insurance_term_con(query_list : list[InsuranceQuery], insurance_enrollment_info: Annotated[dict, InjectedState("insurance_enrollment_info")]):
     """Retrieves relevant information from insurance terms and conditions based on a list of queries. 
 Each query specifies an 'insurance_name' and a 'query' describing the details to be extracted. 
 This is useful for finding context or specific information related to insurance policies."""
