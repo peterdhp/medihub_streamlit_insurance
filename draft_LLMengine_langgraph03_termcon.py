@@ -505,7 +505,7 @@ def question_v_retrieval(state):
     grade = response.is_about_policy_terms
 
     if grade == "yes":
-        return "oracle"
+        return "END" ### 이후에 다시 수정해야함
     else:
         return "END"
     
