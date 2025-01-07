@@ -414,10 +414,10 @@ def is_about_policy_terms(question :str):
 
     # Define the structured output model
     class PolicyTermsClassification(BaseModel):
-        """Binary score for whether the question is about 보험 약관."""
+        """Binary score for whether the question is about insurance policy terms and conditions."""
 
         is_about_policy_terms: str = Field(
-            description="Answer 'yes' if the question is about 보험 약관, otherwise 'no'."
+            description="Answer 'yes' if the question is about insurance policy terms and conditions, otherwise 'no'."
         )
 
 
@@ -429,13 +429,13 @@ def is_about_policy_terms(question :str):
     structured_llm_classifier = llm.with_structured_output(PolicyTermsClassification)
 
     # Define the system prompt
-    policy_terms_system_prompt = """You are a classifier that determines whether a question is about 보험 약관 (insurance policy terms).
+    policy_terms_system_prompt = """You are a classifier that determines whether a question is asking about insurance policy terms and conditions.
 
-Answer 'yes' if the question explicitly or implicitly refers to:
+Answer 'yes' if the question pertains to:
 1. General policy terms applicable to all insurers.
 2. Special terms and conditions, including payout criteria or claim amounts.
 
-Answer 'no' if the question is unrelated to insurance policy terms."""
+Answer 'no' if the question is unrelated to insurance policy terms and conditions."""
 
     # Define the prompt template
     policy_terms_prompt = ChatPromptTemplate.from_messages(
@@ -608,8 +608,8 @@ def answer_type_classifier(state):
 
 oracle_system_prompt = """You are an insurance consultant. 
 You have full access to insurance enrollment information.
-You have full access to insurance terms and conditions through your tools. 
-Never tell the user to contact the insurance company or read the policy themselves. 
+You have full access to insurance policy, terms and conditions(보험약관) through your tools. 
+Never tell the user to contact the insurance company or read the insurance policy themselves. 
 If you need more info, ask the user via the human_retrieval tool. 
 Use fetch_insurance_term_con to get coverage details from the documents.
 
