@@ -465,7 +465,7 @@ def verify(state):
     class Relevance(BaseModel):
         """Binary score to assess user question or input is related to health or life related insurances. Return 'T' for user inputs relevant to health related medicine and 'F' for others."""
         binary_score: str = Field(
-            description="Binary score: 'T' if the user question or input is related to to health or life related insurance, 'F' otherwise."
+            description="Binary score: 'T' if the user question or input is related to health or life related insurance, 'F' otherwise."
         )
         
     
@@ -478,7 +478,7 @@ def verify(state):
 
         
     prompt_verify_prompt = ChatPromptTemplate.from_messages([
-        ("system", "Given a chat history and user input/question , verify whether the user question or input is related pertains to health or life related insurances."),
+        ("system", "Given a chat history and user input/question , verify whether the user question or input is related to health or life related insurances."),
         ("user", "[chat history]\n{chat_history}\n\n[user input]\n{user_input}")
     ])
     policy_terms_classifier = prompt_verify_prompt | relevance_classifier_llm
