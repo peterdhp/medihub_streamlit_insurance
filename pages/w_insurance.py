@@ -13,13 +13,20 @@ if "user" not in st.session_state:
 if "birth" not in st.session_state:
     st.session_state.birth = ''
 
-menu_with_redirect()
-
-
-insurance_enrollment_info = st.secrets['INSURANCE_ENROLLMENT'][st.session_state.user]
 if "messages_w" not in st.session_state:
     st.session_state["messages_w"] = [{"type": "ai", "content": "보험과 관련해서 어떤게 궁금하신가요?"}]
     
+menu_with_redirect()
+
+def reset():
+    st.session_state["messages_w"] = [{"type": "ai", "content": "보험과 관련해서 어떤게 궁금하신가요?"}]
+
+with st.sidebar :
+    st.button("대화 내역 초기화 하기", on_click=reset)
+
+
+insurance_enrollment_info = st.secrets['INSURANCE_ENROLLMENT'][st.session_state.user]
+
 
 def submit_feedback():
     client.create_feedback(

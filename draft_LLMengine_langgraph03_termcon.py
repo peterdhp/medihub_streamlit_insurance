@@ -462,10 +462,10 @@ def verify(state):
         chat_history_text = "\n".join(f"ai: {msg['content']}" if msg["type"] == "ai" else f"User: {msg['content']}" for msg in chat_history)
     else :
         chat_history_text = 'none'
-    class Relevance(BaseModel):
-        """Binary score to assess user question or input is related to health or life related insurances. Return 'T' for user inputs relevant to health related medicine and 'F' for others."""
+    class Verification(BaseModel):
+        """Binary score to assess whether the user question or input is related to health or life related insurance claims. Return 'T' for user inputs relevant to health related medicine and 'F' for others."""
         binary_score: str = Field(
-            description="Binary score: 'T' if the user question or input is related to health or life related insurance, 'F' otherwise."
+            description="Binary score: 'T' if the user question or input is related to health or life insurance claims, 'F' otherwise."
         )
         
     
@@ -474,11 +474,11 @@ def verify(state):
         model="gpt-4o-mini",
         temperature=0
     )
-    relevance_classifier_llm = llm4omini.with_structured_output(Relevance)
+    relevance_classifier_llm = llm4omini.with_structured_output(Verification)
 
         
     prompt_verify_prompt = ChatPromptTemplate.from_messages([
-        ("system", "Given a chat history and user input/question , verify whether the user question or input is related to health or life related insurances."),
+        ("system", "Given a chat history and user input/question, verify whether the user question or input is related to health or life related insurances."),
         ("user", "[chat history]\n{chat_history}\n\n[user input]\n{user_input}")
     ])
     policy_terms_classifier = prompt_verify_prompt | relevance_classifier_llm

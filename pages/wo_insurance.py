@@ -17,6 +17,13 @@ if "messages_wo" not in st.session_state:
     st.session_state["messages_wo"] = [{"type": "ai", "content": "보험과 관련해서 어떤게 궁금하신가요?"}]
 
 menu()
+
+def reset():
+    st.session_state["messages_wo"] = [{"type": "ai", "content": "보험과 관련해서 어떤게 궁금하신가요?"}]
+
+with st.sidebar :
+    st.button("대화 내역 초기화 하기", on_click=reset)
+
 for msg in st.session_state.messages_wo:
     st.chat_message(msg["type"]).write(msg["content"])
 
