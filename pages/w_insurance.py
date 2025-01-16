@@ -3,6 +3,7 @@ from langchain_core.tracers.context import collect_runs
 from draft_LLMengine_langgraph03_termcon import insurance_engine
 from langsmith import Client
 from menu_streamlit import menu_with_redirect
+import datetime
 
 client = Client()
 
@@ -12,10 +13,12 @@ if "user" not in st.session_state:
     st.session_state.user = ''
 if "birth" not in st.session_state:
     st.session_state.birth = ''
+if "thread_id" not in st.session_state:
+    st.session_state.thread_id = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
 
 if "messages_w" not in st.session_state:
     st.session_state["messages_w"] = [{"type": "ai", "content": "보험과 관련해서 어떤게 궁금하신가요?"}]
-    
+    st.session_state.thread_id = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
 menu_with_redirect()
 
 def reset():
@@ -27,6 +30,7 @@ with st.sidebar :
 
 insurance_enrollment_info = st.secrets['INSURANCE_ENROLLMENT'][st.session_state.user]
 
+config = {"configurable": {"thread_id": st.session_state.thread_id}}
 
 def submit_feedback():
     client.create_feedback(
@@ -48,7 +52,7 @@ if prompt := st.chat_input():
     st.chat_message("human").write(prompt)
     with collect_runs() as cb:
         with st.spinner('보장곰이 가입하신 보험들을 살펴보고 있습니다.'):
-            response = insurance_engine.invoke({"user_input": prompt, "insurance_enrollment_info" : insurance_enrollment_info, "chat_history":st.session_state.messages_w})
+            response = insurance_engine.invoke({"user_input": prompt, "insurance_enrollment_info" : insurance_enrollment_info},config=config)
         st.session_state.run_id = cb.traced_runs[-1].id
         #print(st.session_state.run_id)
     if response['non_related'] == 'F' :

@@ -3,6 +3,8 @@ from draft_LLMengine_langgraph03_wotermcon import insurance_wotc_engine
 from langchain_core.tracers.context import collect_runs
 from langsmith import Client
 from menu_streamlit import menu
+import datetime
+
 
 
 
@@ -12,7 +14,8 @@ if "user" not in st.session_state:
     st.session_state.user = ''
 if "birth" not in st.session_state:
     st.session_state.birth = ''
-    
+if "thread_id" not in st.session_state:
+    st.session_state.thread_id = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
 if "messages_wo" not in st.session_state:
     st.session_state["messages_wo"] = [{"type": "ai", "content": "보험과 관련해서 어떤게 궁금하신가요?"}]
 
@@ -20,7 +23,7 @@ menu()
 
 def reset():
     st.session_state["messages_wo"] = [{"type": "ai", "content": "보험과 관련해서 어떤게 궁금하신가요?"}]
-
+    st.session_state.thread_id = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
 with st.sidebar :
     st.button("대화 내역 초기화 하기", on_click=reset)
 
@@ -39,12 +42,14 @@ def submit_feedback():
     st.session_state.run_id = None
 
 
+config = {"configurable": {"thread_id": st.session_state.thread_id}}
+
 if prompt := st.chat_input():
 
     st.session_state.messages_wo.append({"type": "human", "content": prompt})
     st.chat_message("human").write(prompt)
     with collect_runs() as cb:
-        response = insurance_wotc_engine.invoke({"user_input": prompt, "chat_history":st.session_state.messages_wo})
+        response = insurance_wotc_engine.invoke({"user_input": prompt},config=config)
         st.session_state.run_id = cb.traced_runs[-1].id
         #print(st.session_state.run_id)
     if response['type'] == 'not_related' :
