@@ -42,7 +42,7 @@ def verify(state):
 
         
     prompt_verify_prompt = ChatPromptTemplate.from_messages([
-        ("system", """Given a chat history and user input , classify the user input into three categories.
+        ("system", """Given a chat history and user input, classify the user input into three categories.
 not_related : if the user input is not related to health related insurances.
 enroll_info_required : if the user input requires insurance enrollment information to answer the respond.
 enroll_info_not_required : if the user input pertains to health related insurances and does not require insurance enrollment information to respond.
