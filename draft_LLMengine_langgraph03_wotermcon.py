@@ -20,7 +20,8 @@ memory = MemorySaver()
 
 def verify(state):
     user_input = state['user_input']
-    chat_history = state['chat_history']
+    chat_history = state['messages']
+    #chat_history = state['chat_history']
     if len(chat_history) > 1 : 
         chat_history = chat_history[:-2]
         chat_history_text = "\n".join(f"ai: {msg['content']}" if msg["type"] == "ai" else f"User: {msg['content']}" for msg in chat_history)
