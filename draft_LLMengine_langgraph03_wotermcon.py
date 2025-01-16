@@ -77,7 +77,7 @@ def continue_v_error(state):
 
 def answer_node(state):
     user_input = state['user_input']
-    chat_history = state['chat_history']
+    chat_history = state['messages']
     
     answer_system_prompt = """You are an insurance consultant. 
     Given a simple question about health insurance that doen't require enrollment information, please answer the question.
