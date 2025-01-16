@@ -8,6 +8,7 @@ from langgraph.prebuilt.chat_agent_executor import AgentState
 import os 
 import streamlit as st
 from langchain_core.messages import BaseMessage
+from langgraph.checkpoint.memory import MemorySaver
 
 
 os.environ["LANGCHAIN_API_KEY"] = st.secrets['LANGCHAIN_API_KEY']
@@ -15,7 +16,7 @@ os.environ["LANGCHAIN_TRACING_V2"] = st.secrets['LANGCHAIN_TRACING_V2']
 os.environ["LANGCHAIN_ENDPOINT"] = st.secrets['LANGCHAIN_ENDPOINT']
 os.environ['LANGCHAIN_PROJECT'] = st.secrets['LANGCHAIN_PROJECT']
 
-
+memory = MemorySaver()
 
 def verify(state):
     user_input = state['user_input']
@@ -131,4 +132,4 @@ graph.add_conditional_edges(
 
 graph.add_edge("answer_node", END)
 
-insurance_wotc_engine = graph.compile()
+insurance_wotc_engine = graph.compile(checkpointer=memory)
