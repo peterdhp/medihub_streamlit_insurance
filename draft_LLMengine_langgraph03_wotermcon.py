@@ -16,12 +16,12 @@ os.environ["LANGCHAIN_TRACING_V2"] = st.secrets['LANGCHAIN_TRACING_V2']
 os.environ["LANGCHAIN_ENDPOINT"] = st.secrets['LANGCHAIN_ENDPOINT']
 os.environ['LANGCHAIN_PROJECT'] = st.secrets['LANGCHAIN_PROJECT']
 
-memory = MemorySaver()
+# memory = MemorySaver()
 
 def verify(state):
     user_input = state['user_input']
-    chat_history = state['messages']
-    #chat_history = state['chat_history']
+    #chat_history = state['messages']
+    chat_history = state['chat_history']
     if len(chat_history) > 1 : 
         chat_history = chat_history[:-2]
         chat_history_text = "\n".join(f"ai: {msg['content']}" if msg["type"] == "ai" else f"User: {msg['content']}" for msg in chat_history)
@@ -77,7 +77,7 @@ def continue_v_error(state):
 
 def answer_node(state):
     user_input = state['user_input']
-    chat_history = state['messages']
+    chat_history = state['chat_history']
     
     answer_system_prompt = """You are an insurance consultant. 
     Given a simple question about health insurance that doen't require enrollment information, please answer the question.
@@ -133,4 +133,4 @@ graph.add_conditional_edges(
 
 graph.add_edge("answer_node", END)
 
-insurance_wotc_engine = graph.compile(checkpointer=memory)
+insurance_wotc_engine = graph.compile()
