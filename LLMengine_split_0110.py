@@ -473,7 +473,7 @@ def final_answer_node(state):
 The tone should be as polite as possible and attentive. Use korean and markdown format for readability.
 The arguments recieved are the sections to this report.
     """
-    args = state["messages"][-1].tool_calls[0]['args']['response']
+    args = state["messages"][-1].tool_calls[0]['args']
     response = args.pop("abstract", None)
     end_of_session_map = {"Payout Estimate" : "estimated_insurance_payout", "Claim Dispute" : "claims_adjuster", "Medical Support for Claims" : "medical_consulation", "General Inquiry" : "continue"}
     end_of_session_str = end_of_session_map[state["purpose"]]
