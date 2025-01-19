@@ -496,7 +496,7 @@ def run_oracle(state) :
     Never tell the user to contact the insurance company or read the insurance policy themselves. 
 
     Once you have collected plenty of information to answer the user's question use the {final_answer_str} tool. 
-    """
+    """.format(final_answer_str=final_answer_str)
 
     oracle_prompt = ChatPromptTemplate.from_messages([
         ("system", oracle_system_prompt),
@@ -519,7 +519,6 @@ def run_oracle(state) :
 
     oracle = (
         {
-            "final_answer_str" : final_answer_str,
             "user_input": lambda x: x["user_input"],
             "chat_history": lambda x: x["chat_history"],
             "insurance_enrollment_info": lambda x: process_and_print_active_policies(x["insurance_enrollment_info"]),
