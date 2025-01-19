@@ -59,13 +59,13 @@ def purpose_classifier(state):
         
     purpose_classifier_prompt = ChatPromptTemplate.from_messages([
         ("system", 
-         "You are a classifier designed to categorize chat history into one of five specific categories based on the user's intent. This chatbot is used exclusively for questions related to life and health insurance. The categories are:",  
-        "1. **Payout Estimate**: The user is inquiring about an estimated insurance payout for a life or health insurance policy.:"
-        "2. **Claim Dispute**: The user has received a payout for a life or health insurance claim but is dissatisfied and requires assistance from a claim adjuster."
-        "3. **Medical Support for Claims**: The user is seeking medical advice or documentation to support a life or health insurance claim adjustment."
-        "4. **General Inquiry**: The user has a question related to life or health insurance that does not fit into the above categories."
-        "5. **Unrelated**: The conversation is not about life or health insurance."
-         "Your task is to read the chat history and return the most appropriate category."),
+         """You are a classifier designed to categorize chat history into one of five specific categories based on the user's intent. This chatbot is used exclusively for questions related to life and health insurance. The categories are:  
+    1. **Payout Estimate**: The user is inquiring about an estimated insurance payout for a life or health insurance policy.
+    2. **Claim Dispute**: The user has received a payout for a life or health insurance claim but is dissatisfied and requires assistance from a claim adjuster.
+    3. **Medical Support for Claims**: The user is seeking medical advice or documentation to support a life or health insurance claim adjustment.
+    4. **General Inquiry**: The user has a question related to life or health insurance that does not fit into the above categories.
+    5. **Unrelated**: The conversation is not about life or health insurance.
+Your task is to read the chat history and return the most appropriate category."""),
         ("user", 
          "[chat history]\n{chat_history}")
     ])
