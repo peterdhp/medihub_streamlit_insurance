@@ -135,7 +135,7 @@ This is useful for finding context or specific information related to insurance 
                 insurance_start_date = contract["commStartDate"]
                 break
             
-        insurance_company_code_dict = {'메리츠화재' : "0101" , "한화손보" : "0102", "삼성화재" : "0108", "DB손보" : "0111", "NH농협손해보험" : "0171", "삼성생명" : "0203"}
+        insurance_company_code_dict = {'메리츠화재보험' : "0101" , "한화손해보험" : "0102", "삼성화재해상보험" : "0108", "DB손해보험" : "0111", "NH농협손해보험" : "0171", "삼성생명보험" : "0203"}
         insurance_company_code = insurance_company_code_dict.get(insurance_company, "Unknown")
         matching_insurance_text = render_policy_as_table(matching_contract)
         
@@ -275,7 +275,7 @@ def human_retrieval(question : str):
    This tool should not be used to retrieve contents of the insurance term and conditions.
    
    args : 
-       question [str] : A question to ask the user.
+       question : A question to ask the user.
     """
    
    return ""
@@ -330,36 +330,6 @@ Answer 'no' if the question is unrelated to insurance policy terms and condition
     return result
 
 
-def verify(state):
-    user_input = state['user_input']
-    chat_history = state['chat_history']
-    chat_history = chat_history[:-1]
-    chat_history_text = "\n".join(f"ai: {msg['content']}" if msg["type"] == "ai" else f"User: {msg['content']}" for msg in chat_history)
-    class Verification(BaseModel):
-        """Binary score to assess whether the user question or input is related to health or life related insurance claims. Return 'T' for user inputs relevant to health related medicine and 'F' for others."""
-        binary_score: str = Field(
-            description="Binary score: 'T' if the user question or input is related to health or life insurance claims, 'F' otherwise."
-        )
-        
-    
-    # Define the LLM with structured output
-    llm4omini = ChatOpenAI(
-        model="gpt-4o-mini",
-        temperature=0
-    )
-    relevance_classifier_llm = llm4omini.with_structured_output(Verification)
-
-        
-    prompt_verify_prompt = ChatPromptTemplate.from_messages([
-        ("system", "Given a chat history and user input/question, verify whether the user question or input is related to health or life related insurances."),
-        ("user", "[chat history]\n{chat_history}\n\n[user input]\n{user_input}")
-    ])
-    policy_terms_classifier = prompt_verify_prompt | relevance_classifier_llm
-
-    response = policy_terms_classifier.invoke({'user_input':user_input,'chat_history':chat_history_text})
-    relatedTF = response.binary_score
-    
-    return {'non_related' : relatedTF}
 
 
 
@@ -399,57 +369,125 @@ def continue_v_error(state):
     else :
         return "END"
     
-    
-
-@tool("final_answer")
-def final_answer(
-    response : str
+@tool("final_answer_general")
+def final_answer_general(
+    title : str,
+    chat_summary : str,
+    answer : str,
+    source : str,
+    abstract : str 
 ):
-    """When enough details are provided, returns a natural language response to the user input in korean.
-The tone should be as polite as possible and attentive.
-When the response is referenced on a context from the term and condition, the name of the insurance and explanation should be provided. 
-o not instruct the user to call the insurance company or read the policy themselves.
+    """When enough details are provided, returns a natural language response to the user in the form of a report. 
+The tone should be as polite as possible and attentive. Use korean and markdown format for readability.
+The arguments recieved are the sections to this report.
 
     Args :
-        response : An answer to the user question
+        title : The title of the report
+        chat_summary : A summary of the chat conversation that includes the main question of the user.
+        answer : The answer to the user's question
+        source : a bulletpoint list provided detailed sources for all information referenced during the research process. If the source is from the terms and conditions, the name of the insurance and explanation should be provided.
+        abstract : A brief summary of the report
     """
     
-    return response
+    return ""
+
+@tool("final_answer_payoutEstimate")
+def final_answer_payoutEstimate(
+    title : str,
+    chat_summary : str,
+    estimate : str,
+    estimate_details : str,
+    source : str,
+    abstract : str 
+):
+    """When enough details are provided, returns a natural language response to the user in the form of a report. 
+The tone should be as polite as possible and attentive. Use korean and markdown format for readability.
+The arguments recieved are the sections to this report.
+
+    Args :
+        title : The title of the report
+        chat_summary : A summary of the chat conversation that includes the main question of the user.
+        estimate : The estimated payout ammount of the user's case
+        estimate_details : A detailed explanation of how the estimate was calculated. Also information of how it could vary. Be specific, not ambiguous
+        source : a bulletpoint list provided detailed sources for all information referenced during the research process. If the source is from the terms and conditions, the name of the insurance and explanation should be provided.
+        abstract : A brief summary of the report
+    """
+    
+    return ""
+
+@tool("final_answer_dispute")
+def final_answer_dispute(
+    title : str,
+    chat_summary : str,
+    answer : str,
+    dispute_reason : str,
+    wanted_outcome : str,
+    case_details : str,
+    source : str,
+    abstract : str 
+):
+    """When enough details are provided, returns a natural language response to the user in the form of a report. 
+The tone should be as polite as possible and attentive. Use korean and markdown format for readability.
+The arguments recieved are the sections to this report.
+
+    Args :
+        title : The title of the report
+        chat_summary : A summary of the chat conversation that includes the main question of the user.
+        answer : The answer to the user's question
+        dispute_reason : What the user is dissatisfied with and the reason for the dispute
+        wanted_outcome : The desired outcome of the claim of the user
+        case_details : case details that are relevant to the dispute. Information that would help the claim adjuster understand the situation.
+        source : a bulletpoint list provided detailed sources for all information referenced during the research process. If the source is from the terms and conditions, the name of the insurance and explanation should be provided.
+        abstract : A brief summary of the report
+    """
+    
+    return ""
+
+@tool("final_answer_medicalSupport")
+def final_answer_medicalSupport(
+    title : str,
+    chat_summary : str,
+    answer : str,
+    medical_details: str,
+    medical_history : str,
+    source : str,
+    abstract : str 
+):
+    """When enough details are provided, returns a natural language response to the user in the form of a report. 
+The tone should be as polite as possible and attentive. Use korean and markdown format for readability.
+The arguments recieved are the sections to this report.
+
+    Args :
+        title : The title of the report
+        chat_summary : A summary of the chat conversation that includes the main question of the user.
+        answer : The answer to the user's question
+        medical_details : medical details of the case related to the insurance claim adjustment. (diagnostic code, test results, etc.)
+        medical_history : medical history of the user that is relevant to the insurance claim adjustment.
+        source : a bulletpoint list provided detailed sources for all information referenced during the research process. If the source is from the terms and conditions, the name of the insurance and explanation should be provided.
+        abstract : A brief summary of the report
+    """
+    
+    return ""
 
 def final_answer_node(state):
-    """When enough details are provided, returns a natural language response to the user input in korean.
-The tone should be as polite as possible and attentive.
-When the response is referenced on a context from the term and condition, the name of the insurance and explanation should be provided. 
-o not instruct the user to call the insurance company or read the policy themselves.
-
-    Args :
-        response : An answer to the user question
+    """When enough details are provided, returns a natural language response to the user in the form of a report. 
+The tone should be as polite as possible and attentive. Use korean and markdown format for readability.
+The arguments recieved are the sections to this report.
     """
-    response = state["messages"][-1].tool_calls[0]['args']['response']
+    args = state["messages"][-1].tool_calls[0]['args']['response']
+    response = args.pop("abstract", None)
+    end_of_session_map = {"Payout Estimate" : "estimated_insurance_payout", "Claim Dispute" : "claims_adjuster", "Medical Support for Claims" : "medical_consulation", "General Inquiry" : "continue"}
+    end_of_session_str = end_of_session_map[state["purpose"]]
     
     
-    return {'response' : response}
+    return {'response' : response, "report" : args, "end_of_session" : end_of_session_str}
 
 
-
-
-# oracle_system_prompt = """You are the oracle, the great AI decision maker. Given the user's query you must decide what to do with it based on the list of tools provided to you.
-# If you see that a tool has been used (in the scratchpad) with a particular query, do NOT use that same tool with the same query again. Also, do NOT use any tool more than twice (ie, if the tool appears in the scratchpad twice, do not use it again).
-# You should aim to collect information from a diverse range (including the user) of sources before providing the answer to the user.
-# Once you have collected plenty of information to answer the user's question (stored in the 'scratchpad') use the final_answer tool.
-# If no additional information is needed, skip to the final answer tool
-# Be cautious about the enrollment information.
-# 
-# 
-#When asked about improving coverage, focus on explaining factors (e.g., policy tiers, coverage limits) rather than offering direct solutions. 
-#If specialized help (e.g., claims adjuster, doctor) is needed, gently request relevant details. When enough details have been provided, 
-#provide a summary of the information and reccomend contacting a claims adjuster or doctor.
-#"""
 def run_oracle(state) :
-    classification = state["classification"]
-        
-
-    non_specific_system_prompt = """answer the user's question based on the information you have."""
+    purpose = state["purpose"]
+    
+    purpose_final_answer_map = {"Payout Estimate" : "final_answer_payoutEstimate", "Claim Dispute" : "final_answer_dispute", "Medical Support for Claims" : "final_answer_medicalSupport", "General Inquiry" : "final_answer_general"}
+    final_answer_str = purpose_final_answer_map[purpose]
 
     oracle_system_prompt = """You are an insurance consultant. 
     When given insurance enrollment information, answer the user query using your tools. 
@@ -458,7 +496,7 @@ def run_oracle(state) :
     You have full access to insurance policy, terms and conditions(보험약관) yourself through fetch_insurance_term_con to get coverage details from the documents.
     Never tell the user to contact the insurance company or read the insurance policy themselves. 
 
-    Once you have collected plenty of information to answer the user's question use the final_answer tool. 
+    Once you have collected plenty of information to answer the user's question use the {final_answer_str} tool. 
     """
 
     oracle_prompt = ChatPromptTemplate.from_messages([
@@ -470,16 +508,19 @@ def run_oracle(state) :
         MessagesPlaceholder(variable_name="messages"),
         ])
 
-
-    tools=[
-        fetch_insurance_term_con,
-        human_retrieval,
-        final_answer
-    ]
+    if purpose == "Payout Estimate":
+        tools=[fetch_insurance_term_con,human_retrieval,final_answer_payoutEstimate]
+    if purpose == "Claim Dispute":
+        tools=[fetch_insurance_term_con,human_retrieval,final_answer_dispute]
+    if purpose == "Medical Support for Claims":
+        tools=[fetch_insurance_term_con,human_retrieval,final_answer_medicalSupport]
+    if purpose == "General Inquiry":
+        tools=[fetch_insurance_term_con,human_retrieval,final_answer_general]
 
 
     oracle = (
         {
+            "final_answer_str" : final_answer_str,
             "user_input": lambda x: x["user_input"],
             "chat_history": lambda x: x["chat_history"],
             "insurance_enrollment_info": lambda x: process_and_print_active_policies(x["insurance_enrollment_info"]),
@@ -504,6 +545,7 @@ class State(AgentState):
     messages: Annotated[Sequence[BaseMessage], add_messages]
     response : str
     purpose : str
+    report : dict
     end_of_session : str = ""
     
 
@@ -533,7 +575,7 @@ graph = StateGraph(State)
 graph.add_node("purpose_classifier",purpose_classifier)
 graph.add_conditional_edges(
     "purpose_classifier",
-    question_v_retrieval,
+    continue_v_error,
     {
         "oracle": "oracle",
         "END": END,

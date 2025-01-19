@@ -1,6 +1,6 @@
 import streamlit as st
 from langchain_core.tracers.context import collect_runs
-from draft_LLMengine_langgraph03_termcon import insurance_engine
+from LLMengine_split_0110 import insurance_engine
 from langsmith import Client
 from menu_streamlit import menu_with_redirect
 import datetime
@@ -60,8 +60,13 @@ if prompt := st.chat_input():
         st.chat_message("ai").write("저는 건강보험 관련 질문에 대해서만 답변할 수 있어요.")
     else :
         msg = response["response"]
+        details = response["report"]
         st.session_state.messages_w.append({"type": "ai", "content": msg})
         st.chat_message("ai").write(msg)
+        
+        with st.expander("See explanation"):
+            details_str = "\n\n".join(f"{key}: {value}" for key, value in details.items())
+            st.write(details_str)
    
     
     if 'end_of_session' in response :    
