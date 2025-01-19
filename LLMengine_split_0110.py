@@ -22,6 +22,7 @@ from langgraph.prebuilt import create_react_agent
 import datetime
 from difflib import get_close_matches
 from langgraph.checkpoint.memory import MemorySaver
+from utils import render_policy_as_table, process_and_print_active_policies
 
 
 os.environ["LANGCHAIN_API_KEY"] = st.secrets['LANGCHAIN_API_KEY']
@@ -29,137 +30,55 @@ os.environ["LANGCHAIN_TRACING_V2"] = st.secrets['LANGCHAIN_TRACING_V2']
 os.environ["LANGCHAIN_ENDPOINT"] = st.secrets['LANGCHAIN_ENDPOINT']
 os.environ['LANGCHAIN_PROJECT'] = st.secrets['LANGCHAIN_PROJECT']
 
-memory = MemorySaver()
 
-def is_active_policy(policy_dict):
-    """
-    Example logic: 
-      - We consider a policy active if 'resContractStatus' == '정상'
-      - Optionally also check date range (commEndDate in the future).
-        But your data uses strings like '20200214'. You can parse them as needed.
-    """
-    if policy_dict.get('resContractStatus') != '정상':
-        return False
-    
-    # Example: parse commEndDate and check if still in the future
-    # (You can skip this if you just want to filter by '정상')
-    end_date_str = policy_dict.get('commEndDate', '')  # e.g. "20200214"
-    if not end_date_str:
-        return False
-    
-    # Try to parse year-month-day
-    try:
-        end_date = datetime.datetime.strptime(end_date_str, "%Y%m%d").date()
-        today = datetime.date.today()  # or any reference date you want
-        return end_date >= today
-    except ValueError:
-        # If date format is wrong or missing, skip
-        return False
+llm4o = ChatOpenAI(
+        model="gpt-4o",
+        temperature=0
+    )
 
-def extract_active_flat_rate_contracts(data: dict):
-    """
-    Return a list of active (정상) flat-rate contracts.
-    """
-    contracts = data.get('data', {}).get('resFlatRateContractList', [])
-    active = []
-    for c in contracts:
-        if is_active_policy(c):
-            active.append(c)
-    return active
+llm4omini = ChatOpenAI(
+        model="gpt-4o-mini",
+        temperature=0
+    )
 
-def render_policy_as_table(policy_dict):
-    """
-    Returns a multiline string for a single policy in your desired format.
-    """
-    # Basic policy fields
-    company_name = policy_dict.get('resCompanyNm', 'Unknown')
-    insurance_name = policy_dict.get('resInsuranceName', 'Unknown')
-    policy_number = policy_dict.get('resPolicyNumber', 'Unknown')
-    policyholder = policy_dict.get('resContractor', 'Unknown')
-    start_date = policy_dict.get('commStartDate', 'Unknown')
-    end_date   = policy_dict.get('commEndDate', 'Unknown')
-    payment_cycle = policy_dict.get('resPaymentCycle', 'Unknown')
-    payment_period = policy_dict.get('resPaymentPeriod', 'Unknown')
-    premium = policy_dict.get('resPremium', 'Unknown')
+def purpose_classifier(state):
+    response = state["response"]
+    chat_history = state['chat_history']
+    chat_history_text = "\n".join(f"ai: {msg['content']}" if msg["type"] == "ai" else f"User: {msg['content']}" for msg in chat_history)
 
-    # Convert date format YYYYMMDD -> YYYY.MM.DD for nicer display
-    def pretty_date(yyyymmdd):
-        if len(yyyymmdd) == 8:
-            return f"{yyyymmdd[0:4]}.{yyyymmdd[4:6]}.{yyyymmdd[6:8]}"
-        return yyyymmdd
-
-    start_date_str = pretty_date(start_date)
-    end_date_str   = pretty_date(end_date)
-
-    # Gather coverage rows
-    coverage_list = policy_dict.get('resCoverageLists', [])
-
-    # Build table rows
-    coverage_rows = []
-    for cov in coverage_list:
-        coverage_type  = cov.get('resAgreementType', '')
-        coverage_name  = cov.get('resCoverageName', '')
-        coverage_stat  = cov.get('resCoverageStatus', '')
-        coverage_amt   = cov.get('resCoverageAmount', '0')
-        # Format coverage amount with commas
-        try:
-            coverage_amt = f"{int(coverage_amt):,}"
-        except:
-            pass
-
-        # Example row: coverage_type, coverage_name, coverage_stat, coverage_amt
-        coverage_rows.append(
-            f"| {coverage_type:<30} "
-            f"| {coverage_name:<60} "
-            f"| {coverage_stat:<6} "
-            f"| {coverage_amt:>10} |"
+    class Purpose_Type(BaseModel):
+        purpose: str = Field(
+            description="One of: 'Payout Estimate', 'Claim Dispute', 'Medical Support for Claims', 'General Inquiry','Unrelated'"
         )
-
-    # Construct final output
-    result_lines = []
-
-    result_lines.append(f"보험사 : {company_name}")
-    result_lines.append(f"보험명 : {insurance_name}")
-    result_lines.append(f"증권번호 : {policy_number}")
-    result_lines.append(f"계약자 : {policyholder}")
-    result_lines.append(f"보장시작일 : {start_date_str}")
-    result_lines.append(f"보장종료일 : {end_date_str}")
-    result_lines.append(f"납입 주기 : {payment_cycle}")
-    result_lines.append(f"납입 기간 : {payment_period} 년")
-    result_lines.append(f"1회 보험료 : {premium} 원")
-    result_lines.append("보험 내용:")
-    result_lines.append("| 보장구분                 | 보장명                                               | 보장상태 | 보장금액 (원) |")
-    result_lines.append("|-------------------------------|------------------------------------------------------------|--------|----------------|")
-
-    # Append coverage rows
-    result_lines.extend(coverage_rows)
-
-    # Join them all with newlines
-    return "\n".join(result_lines) + "\n"
-
-def process_and_print_active_policies(demo_data) -> str:
-    """
-    Filters for active policies, then builds and returns a
-    single multiline string containing all those policies.
-    """
-    active_policies = extract_active_flat_rate_contracts(demo_data)
     
-    if not active_policies:
-        return "No active policies found."
-    
-    results = []
-    for i, policy in enumerate(active_policies, start=1):
-        table_str = render_policy_as_table(policy)
-        # Add a section header + the table + a separator line
-        block = f"[Insurance #{i}]\n{table_str}\n" + ("-" * 10)
-        results.append(block)
-    
-    # Combine everything into one big string
-    final_output = "\n\n".join(results)
-    #print(final_output)
-    return final_output
+    # Define the LLM with structured output
+    llm4omini = ChatOpenAI(
+        model="gpt-4o-mini",
+        temperature=0
+    )
+    purpose_classifier = llm4omini.with_structured_output(Purpose_Type)
+        
+    purpose_classifier_prompt = ChatPromptTemplate.from_messages([
+        ("system", 
+         "You are a classifier designed to categorize chat history into one of five specific categories based on the user's intent. This chatbot is used exclusively for questions related to life and health insurance. The categories are:",  
+        "1. **Payout Estimate**: The user is inquiring about an estimated insurance payout for a life or health insurance policy.:"
+        "2. **Claim Dispute**: The user has received a payout for a life or health insurance claim but is dissatisfied and requires assistance from a claim adjuster."
+        "3. **Medical Support for Claims**: The user is seeking medical advice or documentation to support a life or health insurance claim adjustment."
+        "4. **General Inquiry**: The user has a question related to life or health insurance that does not fit into the above categories."
+        "5. **Unrelated**: The conversation is not about life or health insurance."
+         "Your task is to read the chat history and return the most appropriate category."),
+        ("user", 
+         "[chat history]\n{chat_history}")
+    ])
+    response_classifier = purpose_classifier_prompt | purpose_classifier
 
-
+    result = response_classifier.invoke({'response':response,'chat_history':chat_history_text})
+    purpose = result.purpose
+    
+    if purpose == "unrelated":
+        return {"non_related" : "F"}
+    else :
+        return {"purpose": purpose, "non_related" : "T"}
 class InsuranceQuery(TypedDict):
     """Represents a pair consisting of an insurance name and a related query."""
     insurance_name: str= Field(
@@ -202,11 +121,8 @@ def fetch_insurance_term_con(query_list : list[InsuranceQuery], insurance_enroll
 Each query specifies an 'insurance_name' and a 'query' describing the details to be extracted. 
 This is useful for finding context or specific information related to insurance policies."""
     
-    insurance_context = ''
     #insurance_enrollment_info_text = process_and_print_active_policies(insurance_enrollment_info)
-    
-    
-    
+    page_results =[]
     for query in query_list:
         
         insurance_name = query['insurance_name']
@@ -272,7 +188,7 @@ Give up to 10 pages
             description="list of page numbers to retrieve information from."
         )
             
-        structured_pagenum_llm = llm.with_structured_output(Pagelist)
+        structured_pagenum_llm = llm4o.with_structured_output(Pagelist)
 
 
         # Combine the prompt and classifier
@@ -287,7 +203,7 @@ Give up to 10 pages
             loaded_documents = json.load(f)
         
         
-        page_results =[]
+        
         # Fetch and add sections once for each insurance
         for page in pages_to_include:
             matching_doc = retrieve_documents_by_metadata(
@@ -297,110 +213,72 @@ Give up to 10 pages
             )
             page_content = matching_doc.get("page_content", "")
             section = matching_doc.get("topic", "")
-            formatted_content = (
-                f"Section: {section}\n\n"
-                f"{page_content}"
-            )
+            insurance_name = matching_doc.get("name", "")
+            formatted_content = {
+                "insurance_name" : insurance_name,
+                "query" : query,
+                "section" : section,
+                "page" : page,
+                "content" : page_content
+            }
             page_results.append(formatted_content)
+    grouped = {}
+    for d in page_results:
+        key = (d["insurance_name"], d["page"])
+        if key not in grouped:
+            grouped[key] = {
+                "insurance_name": d["insurance_name"],
+                "page": d["page"],
+                "content": d["content"],  # Assuming content is identical for the same key
+                "topics": set(),
+                "queries": set()
+            }
+        grouped[key]["topics"].add(d["topic"])
+        grouped[key]["queries"].add(d["query"])
+        
+    result = []
+    for key, value in grouped.items():
+        value["topics"] = list(value["topics"])  # Convert to list (or ','.join(value["topics"]) for a string)
+        value["queries"] = list(value["queries"])  # Convert to list (or ','.join(value["queries"]) for a string)
+        result.append(value)
 
+
+    sorted_result = sorted(result, key=lambda x: (x["insurance_name"], x["page"]))
 
         #f"Insurance Name: {insurance_name}\n"
-        # Combine all results for this insurance name
-        query_result = (f"보험명: {insurance_name}\n"f"Query: {query}")
-        query_result = "\n".join(page_results)
-        insurance_context += '\n\n---\n\n' + query_result #insurance_context를 dict로 
-
-    return insurance_context
+        # # Combine all results for this insurance name
+        # query_result = (f"보험명: {insurance_name}\n"f"Query: {query}")
+        # query_result = "\n".join(page_results)
+        # insurance_context += '\n\n---\n\n' + query_result #insurance_context를 dict로  
+       
+    return sorted_result
 
 
 def human_retrieval_node(state):
-   """Prompts the user for information. Useful for gathering details directly from the user, 
-    especially when clarifying or collecting information related to their health condition."""
+   """Prompts the user for information. Useful for gathering details directly from the user,
+   Especially when clarifying or collecting information related to their health condition.
+   This tool should not be used to retrieve contents of the insurance term and conditions."""
    
-   query = state['user_input']
-   chat_history = state['chat_history']
-   chat_history_text = "\n".join(f"ai: {msg['content']}" if msg["type"] == "ai" else f"User: {msg['content']}" for msg in chat_history)
-    
-    
-   human_retrieval_system_prompt = """Given a user query and chat history. Generate a question to ask the user in order to retrieve additional information needed to answer the query. Try to ask one question at a time.
-Here are the some examples of required information for determining insurance claim eligibility and answering the user's question:
-
-1. 실손 (Reimbursement Insurance):
-   - Information to help determine if the treatment was for a legitimate medical purpose.
-   - Details regarding hospitalization disputes (e.g., appropriateness of hospitalization, 6-hour standard)
-
-2. 상해 (Injury):
-   - Information about the initial accident (e.g. first examination records, emergency records, traffic accident or ambulance records).
-   - The nature and severity of the injury to determine the injury grade.
-   - Clarification whether the injury is related to degenerative disease or another condition.
-
-3. 질병 (Illness):
-   - Initial charts or records to determine the diagnosis and the nature of the illness.
-   - Test results and clarify which tests were used to establish the diagnosis, as required for claim eligibility.
-"""
-   human_retrieval_prompt = ChatPromptTemplate.from_messages([
-   ("system", human_retrieval_system_prompt),
-   ("user", "chat history : \n {chat_history}\n\nquery : {input}"),
-])
-    
-   llm4o = ChatOpenAI(
-   model="gpt-4o",
-   openai_api_key=os.environ["OPENAI_API_KEY"],
-   temperature=0
-)
-   human_retrieval_chain = human_retrieval_prompt | llm4o | StrOutputParser()
+   for tool_call in state["messages"][-1].tool_calls :
+        if tool_call['name'] == "human_retrieval":
+            question = tool_call['args']['question']
    
-   question = human_retrieval_chain.invoke({"input": query, "chat_history": chat_history_text})
-   
-   
-   #tool_call_id = state["messages"][-1].tool_calls[0]["id"]
-   #tool_message = [{"tool_call_id": tool_call_id, "type": "tool", "content": question}]
    return {
         "response": question, "end_of_session" : "continue"
     }
 
 
 @tool("human_retrieval")
-def human_retrieval(user_input : Annotated[str, InjectedState("user_input")], chat_history : Annotated[list[BaseMessage], InjectedState("chat_history")]):
-   """Prompts the user for information. Useful for gathering details directly from the user, 
-    especially when clarifying or collecting information related to their health condition."""
+def human_retrieval(question : str):
+   """Prompts the user for information. Useful for gathering details directly from the user,
+   Especially when clarifying or collecting information related to their health condition.
+   This tool should not be used to retrieve contents of the insurance term and conditions.
    
-   chat_history_text = "\n".join(f"ai: {msg['content']}" if msg["type"] == "ai" else f"User: {msg['content']}" for msg in chat_history)
-    
-    
-   human_retrieval_system_prompt = """Given a user query and chat history. Generate a question to ask the user in order to retrieve additional information needed to answer the query. Try to ask one question at a time.
-Here are the some examples of required information for determining insurance claim eligibility and answering the user's question:
-
-1. 실손 (Reimbursement Insurance):
-   - Information to help determine if the treatment was for a legitimate medical purpose.
-   - Details regarding hospitalization disputes (e.g., appropriateness of hospitalization, 6-hour standard)
-
-2. 상해 (Injury):
-   - Information about the initial accident (e.g., first examination records, emergency records, traffic accident or ambulance records).
-   - The nature and severity of the injury to determine the injury grade.
-   - Clarification whether the injury is related to degenerative disease or another condition.
-
-3. 질병 (Illness):
-   - Initial charts or records to determine the diagnosis and the nature of the illness.
-   - Test results and clarify which tests were used to establish the diagnosis, as required for claim eligibility.
+   args : 
+       question [str] : A question to ask the user.
+    """
    
-"""
-   human_retrieval_prompt = ChatPromptTemplate.from_messages([
-   ("system", human_retrieval_system_prompt),
-   ("user", "chat history : \n {chat_history}\n\nquery : {input}"),
-])
-    
-    
-   llm4o = ChatOpenAI(
-   model="gpt-4o",
-   openai_api_key=os.environ["OPENAI_API_KEY"],
-   temperature=0
-)
-   human_retrieval_chain = human_retrieval_prompt | llm4o | StrOutputParser()
-   
-   question = human_retrieval_chain.invoke({"input": user_input, "chat_history": chat_history_text})
-   
-   return question
+   return ""
 
 def is_about_policy_terms(question :str):
     """
@@ -423,11 +301,8 @@ def is_about_policy_terms(question :str):
 
 
     # Define the LLM with structured output
-    llm = ChatOpenAI(
-        model="gpt-4o-mini",
-        temperature=0
-    )
-    structured_llm_classifier = llm.with_structured_output(PolicyTermsClassification)
+    
+    structured_llm_classifier = llm4omini.with_structured_output(PolicyTermsClassification)
 
     # Define the system prompt
     policy_terms_system_prompt = """You are a classifier that determines whether a question is asking about insurance policy terms and conditions.
@@ -458,11 +333,8 @@ Answer 'no' if the question is unrelated to insurance policy terms and condition
 def verify(state):
     user_input = state['user_input']
     chat_history = state['chat_history']
-    if len(chat_history) > 1 : 
-        chat_history = chat_history[:-2]
-        chat_history_text = "\n".join(f"ai: {msg['content']}" if msg["type"] == "ai" else f"User: {msg['content']}" for msg in chat_history)
-    else :
-        chat_history_text = 'none'
+    chat_history = chat_history[:-1]
+    chat_history_text = "\n".join(f"ai: {msg['content']}" if msg["type"] == "ai" else f"User: {msg['content']}" for msg in chat_history)
     class Verification(BaseModel):
         """Binary score to assess whether the user question or input is related to health or life related insurance claims. Return 'T' for user inputs relevant to health related medicine and 'F' for others."""
         binary_score: str = Field(
@@ -558,44 +430,7 @@ o not instruct the user to call the insurance company or read the policy themsel
     
     return {'response' : response}
 
-def answer_type_classifier(state):
-    response = state["response"]
-    chat_history = state['chat_history']
-    if len(chat_history) > 1 : 
-        chat_history = chat_history[:-2]
-        chat_history_text = "\n".join(f"ai: {msg['content']}" if msg["type"] == "ai" else f"User: {msg['content']}" for msg in chat_history)
-    else :
-        chat_history_text = 'none'
-    class Answer_Type(BaseModel):
-        action: str = Field(
-            description="One of: 'estimated_insurance_payout', 'claims_adjuster', 'medical_consultation', 'continue'"
-        )
-    
-    # Define the LLM with structured output
-    llm4omini = ChatOpenAI(
-        model="gpt-4o-mini",
-        temperature=0
-    )
-    relevance_classifier_llm = llm4omini.with_structured_output(Answer_Type)
-        
-    response_classifier_prompt = ChatPromptTemplate.from_messages([
-        ("system", 
-         "You are given a chat history and a final answer from that conversation. "
-         "Decide which of the following actions is most appropriate: "
-         "'estimated_insurance_payout' if the answer provides an insurance payout estimate, "
-         "'claims_adjuster' if it suggests contacting a claims adjuster with enough info, "
-         "'medical_consultation' if it suggests seeing a doctor with enough info, "
-         "or 'continue' if more info is needed or no other category applies. "
-         "Return only the category string."),
-        ("user", 
-         "[chat history]\n{chat_history}\n\n[final answer]\n{response}")
-    ])
-    response_classifier = response_classifier_prompt | relevance_classifier_llm
 
-    result = response_classifier.invoke({'response':response,'chat_history':chat_history_text})
-    EOS = result.action
-    
-    return {'end_of_session' : EOS}
 
 
 # oracle_system_prompt = """You are the oracle, the great AI decision maker. Given the user's query you must decide what to do with it based on the list of tools provided to you.
@@ -610,53 +445,55 @@ def answer_type_classifier(state):
 #If specialized help (e.g., claims adjuster, doctor) is needed, gently request relevant details. When enough details have been provided, 
 #provide a summary of the information and reccomend contacting a claims adjuster or doctor.
 #"""
+def run_oracle(state) :
+    classification = state["classification"]
+        
 
-non_specific_system_prompt = """answer the user's question based on the information you have."""
+    non_specific_system_prompt = """answer the user's question based on the information you have."""
 
-oracle_system_prompt = """You are an insurance consultant. 
-When given insurance enrollment information, provide the user with the necessary information to answer their query using your tools. 
+    oracle_system_prompt = """You are an insurance consultant. 
+    When given insurance enrollment information, answer the user query using your tools. 
 
-If you need more info, ask the user via the human_retrieval tool. 
-You have full access to insurance policy, terms and conditions(보험약관) yourself through fetch_insurance_term_con to get coverage details from the documents.
-Never tell the user to contact the insurance company or read the insurance policy themselves. 
+    If you need more info, ask the user via the human_retrieval tool. 
+    You have full access to insurance policy, terms and conditions(보험약관) yourself through fetch_insurance_term_con to get coverage details from the documents.
+    Never tell the user to contact the insurance company or read the insurance policy themselves. 
 
-Once you have collected plenty of information to answer the user's question use the final_answer tool. 
-"""
+    Once you have collected plenty of information to answer the user's question use the final_answer tool. 
+    """
 
-oracle_prompt = ChatPromptTemplate.from_messages([
-    ("system", oracle_system_prompt),
-    ("ai", "먼저 보험 가입 정보를 알려주세요.")
-    ("user", "Insurance enrollment information:\n{insurance_enrollment_info}"),
-    ("ai", "알려주신 보험과 관련하여 어떤 것이 궁금하신가요?"),
-    MessagesPlaceholder(variable_name="chat_history"),
-    MessagesPlaceholder(variable_name="messages"),
-    ])
+    oracle_prompt = ChatPromptTemplate.from_messages([
+        ("system", oracle_system_prompt),
+        ("ai", "먼저 보험 가입 정보를 알려주세요.")
+        ("user", "Insurance enrollment information:\n{insurance_enrollment_info}"),
+        ("ai", "알려주신 보험과 관련하여 어떤 것이 궁금하신가요?"),
+        MessagesPlaceholder(variable_name="chat_history"),
+        MessagesPlaceholder(variable_name="messages"),
+        ])
 
 
-llm = ChatOpenAI(
-    model="gpt-4o",
-    openai_api_key=os.environ["OPENAI_API_KEY"],
-    temperature=0
-)
+    tools=[
+        fetch_insurance_term_con,
+        human_retrieval,
+        final_answer
+    ]
 
-tools=[
-    fetch_insurance_term_con,
-    human_retrieval,
-    final_answer
-]
 
-tool_node = ToolNode(tools)
-
-oracle = (
-    {
-        "user_input": lambda x: x["user_input"],
-        "chat_history": lambda x: x["chat_history"],
-        "insurance_enrollment_info": lambda x: process_and_print_active_policies(x["insurance_enrollment_info"]),
-        "messages": lambda x: x["messages"],
+    oracle = (
+        {
+            "user_input": lambda x: x["user_input"],
+            "chat_history": lambda x: x["chat_history"],
+            "insurance_enrollment_info": lambda x: process_and_print_active_policies(x["insurance_enrollment_info"]),
+            "messages": lambda x: x["messages"],
+        }
+        | oracle_prompt
+        | llm4o.bind_tools(tools, tool_choice="any")
+    )
+    
+    out = oracle.invoke(state)
+    
+    return {
+        "messages": [out]
     }
-    | oracle_prompt
-    | llm.bind_tools(tools, tool_choice="any")
-)
 
 
 class State(AgentState):
@@ -666,17 +503,9 @@ class State(AgentState):
     non_related : str
     messages: Annotated[Sequence[BaseMessage], add_messages]
     response : str
+    purpose : str
     end_of_session : str = ""
     
-
-def run_oracle(state: list):
-    print("run_oracle")
-    print(f"messages: {state['messages']}")
-    out = oracle.invoke(state)
-    
-    return {
-        "messages": [out]
-    }
 
 def router(state: list):
     # return the tool name to use
@@ -694,28 +523,32 @@ def router(state: list):
         return "final_answer"
 
 
+tools = tools=[fetch_insurance_term_con]
+tool_node = ToolNode(tools)
 
 from langgraph.graph import StateGraph, END
 
 graph = StateGraph(State)
 
-graph.add_node("verify",verify)
-graph.add_node("oracle", run_oracle)
-graph.add_node("tools", tool_node)
-graph.add_node("final_answer", final_answer_node)
-graph.add_node("human_retrieval", human_retrieval_node)
-graph.add_node("answer_type_classifier", answer_type_classifier)
-
-
-graph.add_edge(START,"verify")
+graph.add_node("purpose_classifier",purpose_classifier)
 graph.add_conditional_edges(
-    "verify",
-    continue_v_error,
+    "purpose_classifier",
+    question_v_retrieval,
     {
         "oracle": "oracle",
         "END": END,
     },
 )
+
+graph.add_node("oracle", run_oracle)
+graph.add_node("tools", tool_node)
+graph.add_node("final_answer", final_answer_node)
+graph.add_node("human_retrieval", human_retrieval_node)
+
+
+graph.add_edge(START,"purpose_classifier")
+graph.add_edge("purpose_classifier","oracle")
+
 
 graph.add_conditional_edges(
     source="oracle",  # where in graph to start
@@ -740,4 +573,4 @@ graph.add_edge("tools","oracle")
 graph.add_edge("final_answer", 'answer_type_classifier')
 graph.add_edge("answer_type_classifier", END)
 
-insurance_engine = graph.compile(checkpointer=memory)
+insurance_engine = graph.compile()
