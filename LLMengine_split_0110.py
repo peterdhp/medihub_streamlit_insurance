@@ -500,7 +500,7 @@ def run_oracle(state) :
 
     oracle_prompt = ChatPromptTemplate.from_messages([
         ("system", oracle_system_prompt),
-        ("ai", "먼저 보험 가입 정보를 알려주세요.")
+        ("ai", "먼저 보험 가입 정보를 알려주세요."),
         ("user", "Insurance enrollment information:\n{insurance_enrollment_info}"),
         ("ai", "알려주신 보험과 관련하여 어떤 것이 궁금하신가요?"),
         MessagesPlaceholder(variable_name="chat_history"),
