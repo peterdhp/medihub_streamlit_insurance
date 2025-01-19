@@ -52,7 +52,7 @@ if prompt := st.chat_input():
     st.chat_message("human").write(prompt)
     with collect_runs() as cb:
         with st.spinner('보장곰이 가입하신 보험들을 살펴보고 있습니다.'):
-            response = insurance_engine.invoke({"user_input": prompt, "insurance_enrollment_info" : insurance_enrollment_info},config=config)
+            response = insurance_engine.invoke({"user_input": prompt, "insurance_enrollment_info" : insurance_enrollment_info, "chat_history": st.session_state.messages_w})
         st.session_state.run_id = cb.traced_runs[-1].id
         #print(st.session_state.run_id)
     if response['non_related'] == 'F' :

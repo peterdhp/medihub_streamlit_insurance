@@ -69,9 +69,9 @@ def purpose_classifier(state):
         ("user", 
          "[chat history]\n{chat_history}")
     ])
-    response_classifier = purpose_classifier_prompt | purpose_classifier
+    purpose_classifier = purpose_classifier_prompt | purpose_classifier
 
-    result = response_classifier.invoke({'response':response,'chat_history':chat_history_text})
+    result = purpose_classifier.invoke({'chat_history':chat_history_text})
     purpose = result.purpose
     
     if purpose == "unrelated":
