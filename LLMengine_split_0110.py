@@ -42,7 +42,6 @@ llm4omini = ChatOpenAI(
     )
 
 def purpose_classifier(state):
-    response = state["response"]
     chat_history = state['chat_history']
     chat_history_text = "\n".join(f"ai: {msg['content']}" if msg["type"] == "ai" else f"User: {msg['content']}" for msg in chat_history)
 
