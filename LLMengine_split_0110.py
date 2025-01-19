@@ -553,7 +553,7 @@ def router(state: list):
         for tool_call in state["messages"][-1].tool_calls :
             if tool_call['name'] == "human_retrieval":
                 return "human_retrieval"
-        if len(state["messages"][-1].tool_calls) == 1 and state["messages"][-1].tool_calls[0]["name"] == "final_answer" :
+        if len(state["messages"][-1].tool_calls) == 1 and "final_answer" in state["messages"][-1].tool_calls[0]["name"] : 
             return "final_answer"
         else :
             return "tools"
