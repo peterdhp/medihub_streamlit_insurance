@@ -573,14 +573,7 @@ from langgraph.graph import StateGraph, END
 graph = StateGraph(State)
 
 graph.add_node("purpose_classifier",purpose_classifier)
-graph.add_conditional_edges(
-    "purpose_classifier",
-    continue_v_error,
-    {
-        "oracle": "oracle",
-        "END": END,
-    },
-)
+
 
 graph.add_node("oracle", run_oracle)
 graph.add_node("tools", tool_node)
@@ -589,9 +582,14 @@ graph.add_node("human_retrieval", human_retrieval_node)
 
 
 graph.add_edge(START,"purpose_classifier")
-graph.add_edge("purpose_classifier","oracle")
-
-
+graph.add_conditional_edges(
+    "purpose_classifier",
+    continue_v_error,
+    {
+        "oracle": "oracle",
+        "END": END,
+    },
+)
 graph.add_conditional_edges(
     source="oracle",  # where in graph to start
     path=router,  # function to determine which node is called
@@ -612,7 +610,6 @@ graph.add_edge("tools","oracle")
 #        graph.add_edge(tool_obj.name, "oracle")
 
 # if anything goes to final answer, it must then move to END
-graph.add_edge("final_answer", 'answer_type_classifier')
-graph.add_edge("answer_type_classifier", END)
+graph.add_edge("final_answer", END)
 
 insurance_engine = graph.compile()
