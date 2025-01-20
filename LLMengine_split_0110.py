@@ -384,7 +384,7 @@ The arguments recieved are the sections to this report.
         title : The title of the report
         chat_summary : A summary of the chat conversation that includes the main question of the user.
         answer : The answer to the user's question
-        source : a bulletpoint list provided detailed sources for all information referenced during the research process. If the source is from the terms and conditions, the name of the insurance and explanation should be provided.
+        source : a bulletpoint list providing the terms and conditions referenced during the research process. The name of the insurance and explanation about it should be provided.
         abstract : A brief summary of the report
     """
     
@@ -408,7 +408,7 @@ The arguments recieved are the sections to this report.
         chat_summary : A summary of the chat conversation that includes the main question of the user.
         estimate : The estimated payout ammount of the user's case
         estimate_details : A detailed explanation of how the estimate was calculated. Also information of how it could vary. Be specific, not ambiguous
-        source : a bulletpoint list provided detailed sources for all information referenced during the research process. If the source is from the terms and conditions, the name of the insurance and explanation should be provided.
+        source : a bulletpoint list providing the terms and conditions referenced during the research process. The name of the insurance and explanation about it should be provided.
         abstract : A brief summary of the report
     """
     
@@ -436,7 +436,7 @@ The arguments recieved are the sections to this report.
         dispute_reason : What the user is dissatisfied with and the reason for the dispute
         wanted_outcome : The desired outcome of the claim of the user
         case_details : case details that are relevant to the dispute. Information that would help the claim adjuster understand the situation.
-        source : a bulletpoint list provided detailed sources for all information referenced during the research process. If the source is from the terms and conditions, the name of the insurance and explanation should be provided.
+        source : a bulletpoint list providing the terms and conditions referenced during the research process. The name of the insurance and explanation about it should be provided.
         abstract : A brief summary of the report
     """
     
@@ -462,7 +462,7 @@ The arguments recieved are the sections to this report.
         answer : The answer to the user's question
         medical_details : medical details of the case related to the insurance claim adjustment. (diagnostic code, test results, etc.)
         medical_history : medical history of the user that is relevant to the insurance claim adjustment.
-        source : a bulletpoint list provided detailed sources for all information referenced during the research process. If the source is from the terms and conditions, the name of the insurance and explanation should be provided.
+        source : a bulletpoint list providing the terms and conditions referenced during the research process. The name of the insurance and explanation about it should be provided.
         abstract : A brief summary of the report
     """
     
