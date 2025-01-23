@@ -81,7 +81,7 @@ Your task is to read the chat history and return the most appropriate category."
 class InsuranceQuery(TypedDict):
     """Represents a pair consisting of an insurance name and a related query."""
     insurance_name: str= Field(
-        description="The name of the insurance policy from which information will be retrieved."
+        description="The name of the insurance policy from which information will be retrieved. Without the company name."
     )
     query: str= Field(
         description="A detailed query describing the specific information to be fetched from the terms and conditions."
@@ -117,7 +117,8 @@ def get_insurance_details(data, insurance_name):
 @tool("fetch_insurance_term_con")
 def fetch_insurance_term_con(query_list : list[InsuranceQuery], insurance_enrollment_info: Annotated[dict, InjectedState("insurance_enrollment_info")]):
     """Retrieves relevant information from insurance terms and conditions based on a list of queries. 
-Each query specifies an 'insurance_name' and a 'query' describing the details to be extracted. 
+Each query specifies an 'insurance_name(보험명)' and a 'query' describing the details to be extracted.
+The company of the insurance should not be included in the insurance_name.
 This is useful for finding context or specific information related to insurance policies."""
     
     #insurance_enrollment_info_text = process_and_print_active_policies(insurance_enrollment_info)
@@ -127,6 +128,7 @@ This is useful for finding context or specific information related to insurance 
         insurance_name = query['insurance_name']
         
         all_contracts = insurance_enrollment_info.get('data', {}).get('resFlatRateContractList', [])
+        print(insurance_enrollment_info)
         for contract in all_contracts:
             if contract["resInsuranceName"] == insurance_name:
                 matching_contract = contract
