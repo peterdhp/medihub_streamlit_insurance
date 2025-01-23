@@ -13,12 +13,12 @@ if "user" not in st.session_state:
     st.session_state.user = ''
 if "birth" not in st.session_state:
     st.session_state.birth = ''
-if "thread_id" not in st.session_state:
-    st.session_state.thread_id = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+#if "thread_id" not in st.session_state:
+#    st.session_state.thread_id = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
 
 if "messages_w" not in st.session_state:
     st.session_state["messages_w"] = [{"type": "ai", "content": "보험과 관련해서 어떤게 궁금하신가요?"}]
-    st.session_state.thread_id = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+    #st.session_state.thread_id = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
 menu_with_redirect()
 
 def reset():
@@ -30,7 +30,7 @@ with st.sidebar :
 
 insurance_enrollment_info = st.secrets['INSURANCE_ENROLLMENT'][st.session_state.user]
 
-config = {"configurable": {"thread_id": st.session_state.thread_id}}
+#config = {"configurable": {"thread_id": st.session_state.thread_id}}
 
 def submit_feedback():
     client.create_feedback(

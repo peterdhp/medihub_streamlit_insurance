@@ -42,7 +42,7 @@ def submit_feedback():
     st.session_state.run_id = None
 
 
-config = {"configurable": {"thread_id": st.session_state.thread_id}}
+#config = {"configurable": {"thread_id": st.session_state.thread_id}}
 
 if prompt := st.chat_input():
 
