@@ -115,18 +115,23 @@ This is useful for finding context or specific information related to insurance 
     for query in query_list:
         
         insurance_name = query['insurance_name']
+        matching_contract = {}
+        insurance_company = ""
+        insurance_start_date = ""
+        
         
         flatrate_contracts = insurance_enrollment_info.get('data', {}).get('resFlatRateContractList', [])
         actualloss_contracts = insurance_enrollment_info.get('data', {}).get('resActualLossContractList', [])
         all_contracts = flatrate_contracts + actualloss_contracts
-        print(insurance_enrollment_info)
+        
         for contract in all_contracts:
             if contract["resInsuranceName"] == insurance_name:
                 matching_contract = contract
                 insurance_company = contract["resCompanyNm"]
                 insurance_start_date = contract["commStartDate"]
+                print(insurance_company)
                 break
-            
+        print(insurance_company)
         insurance_company_code_dict = {'메리츠화재보험' : "0101" , "한화손해보험" : "0102", "삼성화재해상보험" : "0108", "DB손해보험" : "0111", "NH농협손해보험" : "0171", "삼성생명보험" : "0203"}
         insurance_company_code = insurance_company_code_dict.get(insurance_company, "Unknown")
         matching_insurance_text = render_policy_as_table(matching_contract)
