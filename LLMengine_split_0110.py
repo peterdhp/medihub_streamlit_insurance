@@ -103,17 +103,6 @@ def retrieve_documents_by_metadata(documents, source=None, page=None):
     ]
     return doclist[0]
 
-def get_insurance_details(data, insurance_name):
-    result = []
-    contracts = data.get("data", {}).get("resFlatRateContractList", [])
-    for contract in contracts:
-        if contract["resInsuranceName"] == insurance_name:
-            result.append({
-                "company_name": contract["resCompanyNm"],
-                "start_date": contract["commStartDate"]
-            })
-    return result
-
 @tool("fetch_insurance_term_con")
 def fetch_insurance_term_con(query_list : list[InsuranceQuery], insurance_enrollment_info: Annotated[dict, InjectedState("insurance_enrollment_info")]):
     """Retrieves relevant information from insurance terms and conditions based on a list of queries. 
@@ -127,7 +116,9 @@ This is useful for finding context or specific information related to insurance 
         
         insurance_name = query['insurance_name']
         
-        all_contracts = insurance_enrollment_info.get('data', {}).get('resFlatRateContractList', [])
+        flatrate_contracts = insurance_enrollment_info.get('data', {}).get('resFlatRateContractList', [])
+        actualloss_contracts = insurance_enrollment_info.get('data', {}).get('resActualLossContractList', [])
+        all_contracts = flatrate_contracts + actualloss_contracts
         print(insurance_enrollment_info)
         for contract in all_contracts:
             if contract["resInsuranceName"] == insurance_name:

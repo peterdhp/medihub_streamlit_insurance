@@ -25,11 +25,14 @@ def is_active_policy(policy_dict):
         # If date format is wrong or missing, skip
         return False
 
-def extract_active_flat_rate_contracts(data: dict):
+def extract_active_contracts(data: dict):
     """
     Return a list of active (정상) flat-rate contracts.
     """
-    contracts = data.get('data', {}).get('resFlatRateContractList', [])
+    contracts_flat = data.get('data', {}).get('resFlatRateContractList', [])
+    contracts_loss = data.get('data', {}).get('resActualLossContractList', [])
+    
+    contracts = contracts_flat + contracts_loss
     active = []
     for c in contracts:
         if is_active_policy(c):
@@ -111,7 +114,7 @@ def process_and_print_active_policies(demo_data) -> str:
     Filters for active policies, then builds and returns a
     single multiline string containing all those policies.
     """
-    active_policies = extract_active_flat_rate_contracts(demo_data)
+    active_policies = extract_active_contracts(demo_data)
     
     if not active_policies:
         return "No active policies found."
