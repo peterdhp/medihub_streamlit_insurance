@@ -18,11 +18,13 @@ import json
 from langgraph.prebuilt import InjectedState, ToolNode
 from collections import defaultdict
 from langgraph.graph.message import add_messages
-from langgraph.prebuilt import create_react_agent
-import datetime
+from langgraph.prebuilt import create_react_agent 
+from datetime import datetime
 from difflib import get_close_matches
 from langgraph.checkpoint.memory import MemorySaver
 from utils import render_policy_as_table, process_and_print_active_policies
+import unicodedata
+import glob
 
 
 os.environ["LANGCHAIN_API_KEY"] = st.secrets['LANGCHAIN_API_KEY']
@@ -74,11 +76,11 @@ Your task is to read the chat history and return the most appropriate category."
     result = purpose_classifier.invoke({'chat_history':chat_history_text})
     purpose = result.purpose
     
-    if purpose == "unrelated":
+    if purpose == "Unrelated":
         return {"non_related" : "F"}
     else :
         return {"purpose": purpose, "non_related" : "T"}
-class InsuranceQuery(TypedDict):
+class InsuranceQuery(BaseModel):
     """Represents a pair consisting of an insurance name and a related query."""
     insurance_name: str= Field(
         description="The name of the insurance policy from which information will be retrieved. Without the company name."
@@ -104,70 +106,79 @@ def retrieve_documents_by_metadata(documents, source=None, page=None):
     return doclist[0]
 
 @tool("fetch_insurance_term_con")
-def fetch_insurance_term_con(query_list : list[InsuranceQuery], insurance_enrollment_info: Annotated[dict, InjectedState("insurance_enrollment_info")]):
+def fetch_insurance_term_con(query : InsuranceQuery, insurance_enrollment_info: Annotated[dict, InjectedState("insurance_enrollment_info")]):
     """Retrieves relevant information from insurance terms and conditions based on a list of queries. 
 Each query specifies an 'insurance_name(보험명)' and a 'query' describing the details to be extracted.
 The company of the insurance should not be included in the insurance_name.
 This is useful for finding context or specific information related to insurance policies."""
     
     #insurance_enrollment_info_text = process_and_print_active_policies(insurance_enrollment_info)
-    page_results =[]
-    for query in query_list:
+    
+    result = []
         
-        insurance_name = query['insurance_name']
-        matching_contract = {}
-        insurance_company = ""
-        insurance_start_date = ""
-        
-        
-        flatrate_contracts = insurance_enrollment_info.get('data', {}).get('resFlatRateContractList', [])
-        actualloss_contracts = insurance_enrollment_info.get('data', {}).get('resActualLossContractList', [])
-        all_contracts = flatrate_contracts + actualloss_contracts
-        
-        for contract in all_contracts:
-            if contract["resInsuranceName"] == insurance_name:
-                matching_contract = contract
-                insurance_company = contract["resCompanyNm"]
-                insurance_start_date = contract["commStartDate"]
-                print(insurance_company)
-                break
-        print(insurance_company)
-        insurance_company_code_dict = {'메리츠화재보험' : "0101" , "한화손해보험" : "0102", "삼성화재해상보험" : "0108", "DB손해보험" : "0111", "NH농협손해보험" : "0171", "삼성생명보험" : "0203"}
-        insurance_company_code = insurance_company_code_dict.get(insurance_company, "Unknown")
-        matching_insurance_text = render_policy_as_table(matching_contract)
-        
-        # insurance_name을 이용해서 insurance_enrollment_info에서 해당 보험에 대한 정보를 가져올 옴
-        # 이정보를 통해서 보험사 코드와 보험가입일 가졍오기
-        # 이를 이용해서 해당 보험에 대한 보험약관 목차와 본문 json 파일을 가져와서 loaded_toc, loaded_documents에 저장
-        query = query["query"]
-        query_result = ''
-        
+    insurance_name = query.insurance_name
+    matching_contract = {}
+    insurance_company = ""
+    insurance_start_date = ""
+    
+    
+    flatrate_contracts = insurance_enrollment_info.get('data', {}).get('resFlatRateContractList', [])
+    actualloss_contracts = insurance_enrollment_info.get('data', {}).get('resActualLossContractList', [])
+    all_contracts = flatrate_contracts + actualloss_contracts
+    
+    #print(all_contracts)
+    for contract in all_contracts:
+        if insurance_name in contract["resInsuranceName"] :
+            matching_contract = contract
+            insurance_company = contract["resCompanyNm"]
+            insurance_start_date = contract["commStartDate"]
+            break
+    #print(insurance_company)
+    insurance_company_code_dict = {"메리츠화재보험" : "0101" , "한화손해보험" : "0102", "삼성화재해상보험" : "0108", "DB손해보험" : "0111", "NH농협손해보험" : "0171", "삼성생명보험" : "0203"}
+    insurance_company_code = insurance_company_code_dict.get(insurance_company, "Unknown")
+    matching_insurance_text = render_policy_as_table(matching_contract)
+    
+    # insurance_name을 이용해서 insurance_enrollment_info에서 해당 보험에 대한 정보를 가져올 옴
+    # 이정보를 통해서 보험사 코드와 보험가입일 가졍오기
+    # 이를 이용해서 해당 보험에 대한 보험약관 목차와 본문 json 파일을 가져와서 loaded_toc, loaded_documents에 저장
+    query = query.query
+    if insurance_company_code != "Unknown":
+        #print("where is the bug")
         with open("documents/contents_json/"+ insurance_company_code +".json", "r", encoding="utf-8") as json_file:
             loaded_company_toc = json.load(json_file)
-                
+        #print(loaded_company_toc)
         matching_items = [item for item in loaded_company_toc if item['name'] == insurance_company]
         
-        if not matching_items:  # If no exact matches found, use difflib for the closest match
+        if matching_items == []:  # If no exact matches found, use difflib for the closest match
             names = [item['name'] for item in loaded_company_toc]
-            closest_match = get_close_matches(insurance_company, names, n=1)
+            insurance_name_normalized = unicodedata.normalize('NFC', insurance_name)
+            names_normalized = [unicodedata.normalize('NFC', c) for c in names]
+            closest_match = get_close_matches(insurance_name_normalized, names_normalized, n=3)
+            #print(closest_match)
             if closest_match:
-                matching_items = [item for item in loaded_company_toc if item['name'] == closest_match[0]]
+                matching_items = [item for item in loaded_company_toc if unicodedata.normalize('NFC', item['name']) == closest_match[0]]
+        #print(matching_items)
         
         # Filter items with start_date before insurance_start_date
         valid_items = [
-            item for item in matching_items 
-            if datetime.strptime(item['start_date'], "%y%m%d") < insurance_start_date
+            item for item in matching_items
+            if datetime.strptime(item['start_date'], "%Y%m%d") < datetime.strptime(str(insurance_start_date), "%Y%m%d")
         ]
+        
+        
         if not valid_items:  # If no valid items found, return None
             return None
         
         # Sort by start_date to find the latest one
-        matching_item = max(valid_items, key=lambda x: datetime.strptime(x['start_date'], "%y%m%d"))
+        matching_item = max(valid_items, key=lambda x: datetime.strptime(x['start_date'], "%Y%m%d"))
+        #print(matching_item)
         toc_list = matching_item.get("sections", [])
         formatted_toc = "\n".join([f"{item['title']} - Page {item['page']}" for index, item in enumerate(toc_list)])
         
-        page_selector_system_prompt = """Given a query and insurance enrollment info, decide which pages of the insurance terms and conditions you would like to retrieve information from.
-Give up to 10 pages
+        page_selector_system_prompt = """Given a query and insurance enrollment info, select up to 10 relevant pages from the terms and conditions.
+Key Considerations:
+	•	Some policies prohibit duplicate payments
+	•	Prioritize sections on : 지급사유, 보험금을 지급하지 않는 사유 etc.
 [Insurance enrollment information]
 {enroll_info}
 
@@ -196,16 +207,25 @@ Give up to 10 pages
         #print(pages_to_include)
             
         
-        with open("documents/vector_db/"+matching_item["start_date"]+'_'+matching_item['name']+"*.json", 'r', encoding='utf-8') as f:
-            loaded_documents = json.load(f)
+        base_path = f"documents/vector_db/{insurance_company_code}/"
+
+        # Use a wildcard to match files that start with the expected format
+        pattern = f"{base_path}{matching_item['start_date']}_{matching_item['name']}*.json"
+
+        # Find matching files
+        matching_files = glob.glob(pattern)
         
+        #with open("documents/vector_db/"+insurance_company_code+'/'+matching_item["start_date"]+'_'+matching_item['name']+".json", 'r', encoding='utf-8') as f:
+        #    loaded_documents = json.load(f)
+        if matching_files:
+            with open(matching_files[0], 'r', encoding='utf-8') as f:
+                loaded_documents = json.load(f)
         
-        
+        page_results =[]
         # Fetch and add sections once for each insurance
         for page in pages_to_include:
             matching_doc = retrieve_documents_by_metadata(
                 loaded_documents,
-                source=f"{insurance_name}.pdf",
                 page=page
             )
             page_content = matching_doc.get("page_content", "")
@@ -219,28 +239,27 @@ Give up to 10 pages
                 "content" : page_content
             }
             page_results.append(formatted_content)
-    grouped = {}
-    for d in page_results:
-        key = (d["insurance_name"], d["page"])
-        if key not in grouped:
-            grouped[key] = {
-                "insurance_name": d["insurance_name"],
-                "page": d["page"],
-                "content": d["content"],  # Assuming content is identical for the same key
-                "topics": set(),
-                "queries": set()
-            }
-        grouped[key]["topics"].add(d["topic"])
-        grouped[key]["queries"].add(d["query"])
-        
-    result = []
-    for key, value in grouped.items():
-        value["topics"] = list(value["topics"])  # Convert to list (or ','.join(value["topics"]) for a string)
-        value["queries"] = list(value["queries"])  # Convert to list (or ','.join(value["queries"]) for a string)
-        result.append(value)
+        grouped = {}
+        for d in page_results:
+            key = (d["insurance_name"], d["page"])
+            if key not in grouped:
+                grouped[key] = {
+                    "insurance_name": d["insurance_name"],
+                    "page": d["page"],
+                    "content": d["content"],  # Assuming content is identical for the same key
+                    "sections": set(),
+                    "queries": set()
+                }
+            grouped[key]["sections"].add(d["section"])
+            grouped[key]["queries"].add(d["query"])
+    
+        for key, value in grouped.items():
+            value["sections"] = list(value["sections"])  # Convert to list (or ','.join(value["topics"]) for a string)
+            value["queries"] = list(value["queries"])  # Convert to list (or ','.join(value["queries"]) for a string)
+            result.append(value)
 
-
-    sorted_result = sorted(result, key=lambda x: (x["insurance_name"], x["page"]))
+    if result is not [] :
+        result = sorted(result, key=lambda x: (x["insurance_name"], x["page"]))
 
         #f"Insurance Name: {insurance_name}\n"
         # # Combine all results for this insurance name
@@ -248,7 +267,7 @@ Give up to 10 pages
         # query_result = "\n".join(page_results)
         # insurance_context += '\n\n---\n\n' + query_result #insurance_context를 dict로  
        
-    return sorted_result
+    return result
 
 
 def human_retrieval_node(state):
