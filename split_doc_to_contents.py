@@ -139,6 +139,7 @@ def filtering_page_split_contents(docs):
     
     ## page 낮은 순으로 sort
     if len(contents_list) > 0:
+        
         contents_list.sort(key=lambda x : x[1])
     
     return contents_list
