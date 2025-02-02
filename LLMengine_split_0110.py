@@ -176,13 +176,14 @@ This is useful for finding context or specific information related to insurance 
         formatted_toc = "\n".join([f"{item['title']} - Page {item['page']}" for index, item in enumerate(toc_list)])
         
         page_selector_system_prompt = """Given a query and insurance enrollment info, select up to 10 relevant pages from the terms and conditions.
+
 Key Considerations:
 	•	Some policies prohibit duplicate payments
 	•	Prioritize sections on : 지급사유, 보험금을 지급하지 않는 사유 etc.
 [Insurance enrollment information]
 {enroll_info}
 
-[Table of contents] : The Table of Content below only lists the starting page numbers for each section.
+[Table of contents] : The Table of Content below only lists the starting page numbers for each section. If you think a section should be selected, please output all the pages.
 {table_of_contents}"""
 
         page_selector_prompt = ChatPromptTemplate.from_messages([
@@ -229,8 +230,9 @@ Key Considerations:
                 page=page
             )
             page_content = matching_doc.get("page_content", "")
-            section = matching_doc.get("topic", "")
-            insurance_name = matching_doc.get("name", "")
+            metadata = matching_doc.get("metadata", "")
+            section = metadata.get("topic", "")
+            insurance_name = metadata.get("name", "")
             formatted_content = {
                 "insurance_name" : insurance_name,
                 "query" : query,
