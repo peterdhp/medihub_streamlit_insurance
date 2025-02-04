@@ -161,8 +161,9 @@ This is useful for finding context or specific information related to insurance 
             if closest_match:
                 matching_items = [item for item in loaded_company_toc if unicodedata.normalize('NFC', item['name']) == closest_match[0]]
         #print(matching_items)
-        if matching_items != [] :
-            print("matching items found")
+        if matching_items == []:  # If no valid items found, return None
+            return "해당 약관에 대한 정보가 조회 불가능합니다. 약관 정보가 없는 선에서 최대한 답변을 주고 서비스 업데이트를 기다려달라는 안내해줘"
+        
         # Filter items with start_date before insurance_start_date
         if len(str(insurance_start_date)) == 6:
             year = int(insurance_start_date[:2])
@@ -176,7 +177,6 @@ This is useful for finding context or specific information related to insurance 
         
         
         if not valid_items:  # If no valid items found, return None
-            
             return "해당 약관에 대한 정보가 조회 불가능합니다. 약관 정보가 없는 선에서 최대한 답변을 주고 서비스 업데이트를 기다려달라는 안내해줘"
         
         # Sort by start_date to find the latest one
