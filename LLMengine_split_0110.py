@@ -22,7 +22,7 @@ from langgraph.prebuilt import create_react_agent
 from datetime import datetime
 from difflib import get_close_matches
 from langgraph.checkpoint.memory import MemorySaver
-from utils import render_policy_as_table, process_and_print_active_policies
+from utils import render_policy_as_table_actual, render_policy_as_table_flat, process_and_print_active_policies
 import unicodedata
 import glob
 
@@ -132,6 +132,7 @@ This is useful for finding context or specific information related to insurance 
             matching_contract = contract
             insurance_company = contract["resCompanyNm"]
             insurance_start_date = contract["commStartDate"]
+            matching_insurance_text = render_policy_as_table_flat(matching_contract)
             break
         
     for contract in actualloss_contracts : 
@@ -139,11 +140,13 @@ This is useful for finding context or specific information related to insurance 
             matching_contract = contract
             insurance_company = contract["resCompanyNm"]
             insurance_start_date = contract["resCoverageLists"][0]["commStartDate"]
+            matching_insurance_text = render_policy_as_table_actual(matching_contract)
             break
     #print(insurance_company)
     insurance_company_code_dict = {"메리츠화재보험" : "0101" , "한화손해보험" : "0102", "삼성화재해상보험" : "0108", "DB손해보험" : "0111", "NH농협손해보험" : "0171", "삼성생명보험" : "0203","현대해상화재보험" : "0109"}
     insurance_company_code = insurance_company_code_dict.get(insurance_company, "Unknown")
-    matching_insurance_text = render_policy_as_table(matching_contract)
+    
+    
     #print("insurance_company_code is ", insurance_company_code)
     
     
