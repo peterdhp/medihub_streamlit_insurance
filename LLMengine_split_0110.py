@@ -172,7 +172,7 @@ This is useful for finding context or specific information related to insurance 
             insurance_start_date = century + insurance_start_date
         valid_items = [
             item for item in matching_items
-            if datetime.strptime(item['start_date'], "%Y%m%d") < datetime.strptime(str(insurance_start_date), "%y%m%d")
+            if datetime.strptime(item['start_date'], "%Y%m%d") < datetime.strptime(str(insurance_start_date), "%Y%m%d")
         ]
         
         
