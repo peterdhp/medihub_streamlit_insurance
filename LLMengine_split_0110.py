@@ -144,7 +144,7 @@ This is useful for finding context or specific information related to insurance 
     insurance_company_code_dict = {"메리츠화재보험" : "0101" , "한화손해보험" : "0102", "삼성화재해상보험" : "0108", "DB손해보험" : "0111", "NH농협손해보험" : "0171", "삼성생명보험" : "0203","현대해상화재보험" : "0109"}
     insurance_company_code = insurance_company_code_dict.get(insurance_company, "Unknown")
     matching_insurance_text = render_policy_as_table(matching_contract)
-    print("insurance_company_code is ", insurance_company_code)
+    #print("insurance_company_code is ", insurance_company_code)
     
     
     # insurance_name을 이용해서 insurance_enrollment_info에서 해당 보험에 대한 정보를 가져올 옴
@@ -152,11 +152,11 @@ This is useful for finding context or specific information related to insurance 
     # 이를 이용해서 해당 보험에 대한 보험약관 목차와 본문 json 파일을 가져와서 loaded_toc, loaded_documents에 저장
     query = query.query
     if insurance_company_code != "Unknown":
-        #print("where is the bug")
+
         with open("documents/contents_json/"+ insurance_company_code +".json", "r", encoding="utf-8") as json_file:
             loaded_company_toc = json.load(json_file)
-            print("found and loaded the toc")
-        #print(loaded_company_toc)
+
+
         matching_items = [item for item in loaded_company_toc if item['name'] == insurance_company]
         
         if matching_items == []:  # If no exact matches found, use difflib for the closest match
@@ -164,22 +164,21 @@ This is useful for finding context or specific information related to insurance 
             insurance_name_normalized = unicodedata.normalize('NFC', insurance_name)
             names_normalized = [unicodedata.normalize('NFC', c) for c in names]
             closest_match = get_close_matches(insurance_name_normalized, names_normalized, n=3)
-            #print(closest_match)
+
             if closest_match:
                 matching_items = [item for item in loaded_company_toc if unicodedata.normalize('NFC', item['name']) == closest_match[0]]
-        #print(matching_items)
+
         if matching_items == []:  # If no valid items found, return None
             return "해당 약관에 대한 정보가 조회 불가능합니다. 약관 정보가 없는 선에서 최대한 답변을 주고 서비스 업데이트를 기다려달라는 안내해줘"
         
         # Filter items with start_date before insurance_start_date
-        print(insurance_start_date)
-        print(len(str(insurance_start_date)) )
+
         if len(str(insurance_start_date)) == 6:
             year = int(insurance_start_date[:2])
             current_year = datetime.now().year % 100
             century = "20" if year <= current_year else "19"
             insurance_start_date = century + insurance_start_date
-            print(insurance_start_date)
+            #print(insurance_start_date)
         valid_items = [
             item for item in matching_items
             if datetime.strptime(item['start_date'], "%y%m%d") < datetime.strptime(str(insurance_start_date), "%Y%m%d")
@@ -235,8 +234,6 @@ Key Considerations:
 
         # Find matching files
         matching_files = glob.glob(pattern)
-        print(pattern)
-        print(matching_files)
         
         #with open("documents/vector_db/"+insurance_company_code+'/'+matching_item["start_date"]+'_'+matching_item['name']+".json", 'r', encoding='utf-8') as f:
         #    loaded_documents = json.load(f)
@@ -600,7 +597,7 @@ def router(state: list):
             return "tools"
     else:
         # if we output bad format go to final answer
-        print("Router invalid format")
+        #print("Router invalid format")
         return "final_answer"
 
 
