@@ -431,7 +431,7 @@ The arguments recieved are the sections to this report.
         chat_summary : A summary of the chat conversation that includes the main question of the user.
         answer : The answer to the user's question
         source: A list of referenced insurance clauses, including the policy name, explanation, and specific article and section numbers.
-        abstract : A brief summary of the report
+        abstract : A brief summary of the report for the user
     """
     
     return ""
@@ -455,7 +455,7 @@ The arguments recieved are the sections to this report.
         estimate : The estimated payout ammount of the user's case
         estimate_details : A detailed explanation of how the estimate was calculated. Also information of how it could vary. Be specific, not ambiguous
         source: A list of referenced insurance clauses, including the policy name, explanation, and specific article and section numbers.
-        abstract : A brief summary of the report
+        abstract : A brief summary of the report for the user
     """
     
     return ""
@@ -483,7 +483,7 @@ The arguments recieved are the sections to this report.
         wanted_outcome : The desired outcome of the claim of the user
         case_details : case details that are relevant to the dispute. Information that would help the claim adjuster understand the situation.
         source: A list of referenced insurance clauses, including the policy name, explanation, and specific article and section numbers.
-        abstract : A brief summary of the report
+        abstract : A brief summary of the report for the user
     """
     
     return ""
@@ -509,7 +509,7 @@ The arguments recieved are the sections to this report.
         medical_details : medical details of the case related to the insurance claim adjustment. (diagnostic code, test results, etc.)
         medical_history : medical history of the user that is relevant to the insurance claim adjustment.
         source: A list of referenced insurance clauses, including the policy name, explanation, and specific article and section numbers.
-        abstract : A brief summary of the report
+        abstract : A brief summary of the report for the user
     """
     
     return ""
