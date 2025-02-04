@@ -164,9 +164,14 @@ This is useful for finding context or specific information related to insurance 
         if matching_items != [] :
             print("matching items found")
         # Filter items with start_date before insurance_start_date
+        if len(str(insurance_start_date)) == 6:
+            year = int(insurance_start_date[:2])
+            current_year = datetime.now().year % 100
+            century = "20" if year <= current_year else "19"
+            insurance_start_date = century + insurance_start_date
         valid_items = [
             item for item in matching_items
-            if datetime.strptime(item['start_date'], "%Y%m%d") < datetime.strptime(str(insurance_start_date), "%Y%m%d")
+            if datetime.strptime(item['start_date'], "%Y%m%d") < datetime.strptime(str(insurance_start_date), "%y%m%d")
         ]
         
         
