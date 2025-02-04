@@ -14,7 +14,9 @@ def is_active_policy(policy_dict):
     # (You can skip this if you just want to filter by '정상')
     end_date_str = policy_dict.get('commEndDate', '')  # e.g. "20200214"
     if not end_date_str:
-        return False
+        end_date_str = policy_dict.get('resCoverageLists','').get('commEndDate', '')
+        if not end_date_str:
+            return False
     
     # Try to parse year-month-day
     try:
@@ -24,22 +26,58 @@ def is_active_policy(policy_dict):
     except ValueError:
         # If date format is wrong or missing, skip
         return False
-
-def extract_active_contracts(data: dict):
+def is_coverage_active(coverage_dict: dict) -> bool:
     """
-    Return a list of active (정상) flat-rate contracts.
+    Decide if a coverage line is 'active':
+      - resCoverageStatus == '정상'
+      - commEndDate >= today (if commEndDate exists)
     """
-    contracts_flat = data.get('data', {}).get('resFlatRateContractList', [])
-    contracts_loss = data.get('data', {}).get('resActualLossContractList', [])
-    
-    contracts = contracts_flat + contracts_loss
-    active = []
-    for c in contracts:
-        if is_active_policy(c):
-            active.append(c)
-    return active
+    if coverage_dict.get('resCoverageStatus') != '정상':
+        return False
 
-def render_policy_as_table(policy_dict):
+    end_date_str = coverage_dict.get('commEndDate', '')
+    if not end_date_str:
+        return False  # If there's truly no end date, you can decide a default.
+
+    try:
+        end_date = datetime.datetime.strptime(end_date_str, "%Y%m%d").date()
+        return end_date >= datetime.date.today()
+    except ValueError:
+        # If date parsing fails, consider coverage inactive or handle differently
+        return False    
+
+
+def gather_active_contracts(demo_data: dict) -> list:
+    """
+    1) Gathers contracts from both flat-rate and actual-loss lists.
+    2) Filters out non-'정상' contracts.
+    3) Adds a key 'contractType' with either 'flatRate' or 'actualLoss'
+       so we can decide which renderer to use later.
+    4) Returns a single list.
+    """
+    data_section = demo_data.get('data', {})
+
+    # Flat-Rate
+    flat_rate_list = data_section.get('resFlatRateContractList', [])
+    active_flat = []
+    for c in flat_rate_list:
+        if c.get('resContractStatus') == '정상':
+            contract = dict(c)  # Make a shallow copy
+            contract['contractType'] = 'flatRate'
+            active_flat.append(contract)
+
+    # Actual-Loss
+    actual_loss_list = data_section.get('resActualLossContractList', [])
+    active_actual = []
+    for c in actual_loss_list:
+        if c.get('resContractStatus') == '정상':
+            contract = dict(c)
+            contract['contractType'] = 'actualLoss'
+            active_actual.append(contract)
+
+    return active_flat + active_actual
+
+def render_policy_as_table_flat(policy_dict):
     """
     Returns a multiline string for a single policy in your desired format.
     """
@@ -90,6 +128,7 @@ def render_policy_as_table(policy_dict):
     # Construct final output
     result_lines = []
 
+    result_lines.append("[정액보험]")
     result_lines.append(f"보험사 : {company_name}")
     result_lines.append(f"보험명 : {insurance_name}")
     result_lines.append(f"증권번호 : {policy_number}")
@@ -109,22 +148,103 @@ def render_policy_as_table(policy_dict):
     # Join them all with newlines
     return "\n".join(result_lines) + "\n"
 
+def render_policy_as_table_actual(contract_dict: dict) -> str:
+    """
+    Renders an Actual-Loss contract into a multiline string.
+    We skip coverage lines that are not active (resCoverageStatus != '정상' or end date in past).
+    We'll *show* each coverage's commStartDate/commEndDate in additional columns.
+    """
+    company_name   = contract_dict.get('resCompanyNm', 'Unknown')
+    insurance_name = contract_dict.get('resInsuranceName', 'Unknown')
+    policy_number  = contract_dict.get('resPolicyNumber', 'Unknown')
+    policyholder   = contract_dict.get('resContractor', 'Unknown')
+
+    # We can keep these if present, else 'N/A'
+    payment_cycle  = contract_dict.get('resPaymentCycle', 'N/A')
+    payment_period = contract_dict.get('resPaymentPeriod', 'N/A')
+    premium        = contract_dict.get('resPremium', 'N/A')
+
+    # For actual-loss, let's not rely on top-level `commStartDate/commEndDate`.
+    # We'll show coverage-level dates in the table.
+    lines = []
+    lines.append("[실손보험]")
+    lines.append(f"보험사: {company_name}")
+    lines.append(f"보험명: {insurance_name}")
+    lines.append(f"증권번호: {policy_number}")
+    lines.append(f"계약자: {policyholder}")
+    lines.append(f"납입 주기: {payment_cycle}")
+    lines.append(f"납입 기간:      {payment_period} years")
+    lines.append(f"1회 보험료: {premium} KRW")
+
+    coverage_list  = contract_dict.get('resCoverageLists', [])
+
+    lines.append("보험 내용 (실손):")
+    # We'll add two extra columns for Start / End date
+    lines.append("| 보장구분                 | 보장명                               | 보장시작일  | 보장종료일    | 보장상태 | 보장금액 (원) |")
+    lines.append("|-------------------------------|--------------------------------------------|------------|------------|--------|----------------|")
+    for cov in coverage_list:
+        if not is_coverage_active(cov):
+            # Skip coverage that is not active (status != 정�상 or end date < today)
+            continue
+
+        coverage_type = cov.get('resType', 'N/A')
+        coverage_name = cov.get('resCoverageName', 'N/A')
+        coverage_stat = cov.get('resCoverageStatus', 'N/A')
+        coverage_amt  = cov.get('resCoverageAmount', '0')
+
+        start_date = cov.get('commStartDate', 'N/A')
+        end_date   = cov.get('commEndDate', 'N/A')
+        
+        def pretty_date(yyyymmdd):
+            if len(yyyymmdd) == 8:
+                return f"{yyyymmdd[0:4]}.{yyyymmdd[4:6]}.{yyyymmdd[6:8]}"
+            return yyyymmdd
+
+        start_date_str = pretty_date(start_date)
+        end_date_str   = pretty_date(end_date)
+
+        # Format coverage_amt with commas
+        try:
+            coverage_amt = f"{int(coverage_amt):,}"
+        except:
+            pass
+
+        row = (
+            f"| {coverage_type:<30}"
+            f" | {coverage_name:<40}"
+            f" | {start_date_str:<10}"
+            f" | {end_date_str:<10}"
+            f" | {coverage_stat:<6}"
+            f" | {coverage_amt:>14} |"
+        )
+        lines.append(row)
+
+    return "\n".join(lines) + "\n"
+
 def process_and_print_active_policies(demo_data) -> str:
     """
     Filters for active policies, then builds and returns a
     single multiline string containing all those policies.
     """
-    active_policies = extract_active_contracts(demo_data)
+    active_policies = gather_active_contracts(demo_data)
     
     if not active_policies:
         return "No active policies found."
     
+    
     results = []
     for i, policy in enumerate(active_policies, start=1):
-        table_str = render_policy_as_table(policy)
+        if policy['contractType'] == 'flatRate':
+            table_str = render_policy_as_table_flat(policy)
         # Add a section header + the table + a separator line
-        block = f"[Insurance #{i}]\n{table_str}\n" + ("-" * 10)
-        results.append(block)
+            block = f"[Insurance #{i}]\n{table_str}\n" + ("-" * 10)
+            results.append(block)
+        elif policy['contractType'] == 'actualLoss':
+            table_str = render_policy_as_table_actual(policy)
+        # Add a section header + the table + a separator line
+            block = f"[Insurance #{i}]\n{table_str}\n" + ("-" * 10)
+            results.append(block)
+            
     
     # Combine everything into one big string
     final_output = "\n\n".join(results)
