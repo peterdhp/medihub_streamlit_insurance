@@ -137,6 +137,8 @@ This is useful for finding context or specific information related to insurance 
     insurance_company_code_dict = {"메리츠화재보험" : "0101" , "한화손해보험" : "0102", "삼성화재해상보험" : "0108", "DB손해보험" : "0111", "NH농협손해보험" : "0171", "삼성생명보험" : "0203"}
     insurance_company_code = insurance_company_code_dict.get(insurance_company, "Unknown")
     matching_insurance_text = render_policy_as_table(matching_contract)
+    print("insurance_company_code is ", insurance_company_code)
+    
     
     # insurance_name을 이용해서 insurance_enrollment_info에서 해당 보험에 대한 정보를 가져올 옴
     # 이정보를 통해서 보험사 코드와 보험가입일 가졍오기
@@ -146,6 +148,7 @@ This is useful for finding context or specific information related to insurance 
         #print("where is the bug")
         with open("documents/contents_json/"+ insurance_company_code +".json", "r", encoding="utf-8") as json_file:
             loaded_company_toc = json.load(json_file)
+            print("found and loaded the toc")
         #print(loaded_company_toc)
         matching_items = [item for item in loaded_company_toc if item['name'] == insurance_company]
         
@@ -158,7 +161,8 @@ This is useful for finding context or specific information related to insurance 
             if closest_match:
                 matching_items = [item for item in loaded_company_toc if unicodedata.normalize('NFC', item['name']) == closest_match[0]]
         #print(matching_items)
-        
+        if matching_items != [] :
+            print("matching items found")
         # Filter items with start_date before insurance_start_date
         valid_items = [
             item for item in matching_items
@@ -167,7 +171,8 @@ This is useful for finding context or specific information related to insurance 
         
         
         if not valid_items:  # If no valid items found, return None
-            return None
+            
+            return "해당 약관에 대한 정보가 조회 불가능합니다. 약관 정보가 없는 선에서 최대한 답변을 주고 서비스 업데이트를 기다려달라는 안내해줘"
         
         # Sort by start_date to find the latest one
         matching_item = max(valid_items, key=lambda x: datetime.strptime(x['start_date'], "%Y%m%d"))
