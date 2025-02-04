@@ -165,6 +165,8 @@ This is useful for finding context or specific information related to insurance 
             return "해당 약관에 대한 정보가 조회 불가능합니다. 약관 정보가 없는 선에서 최대한 답변을 주고 서비스 업데이트를 기다려달라는 안내해줘"
         
         # Filter items with start_date before insurance_start_date
+        print(insurance_start_date)
+        print(len(str(insurance_start_date)) )
         if len(str(insurance_start_date)) == 6:
             year = int(insurance_start_date[:2])
             current_year = datetime.now().year % 100
@@ -173,7 +175,7 @@ This is useful for finding context or specific information related to insurance 
             print(insurance_start_date)
         valid_items = [
             item for item in matching_items
-            if datetime.strptime(item['start_date'], "%Y%m%d") < datetime.strptime(str(insurance_start_date), "%Y%m%d")
+            if datetime.strptime(item['start_date'], "%y%m%d") < datetime.strptime(str(insurance_start_date), "%Y%m%d")
         ]
         
         
