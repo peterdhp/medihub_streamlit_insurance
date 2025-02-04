@@ -34,9 +34,11 @@ user_data = [{'name':'박도훈','birth':'medihub'},{'name':'조화윤','birth':
     
 if {'name' : st.session_state.user,'birth':st.session_state.birth } not in user_data:
     st.warning('올바르지 않은 값이거나 등록되지 않은 사용자입니다.', icon='⚠')
+
     
 if {'name' : st.session_state.user,'birth':st.session_state.birth } in user_data:
     st.switch_page('pages/w_insurance.py')
+    
     
     
 
