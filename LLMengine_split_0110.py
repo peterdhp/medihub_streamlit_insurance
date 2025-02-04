@@ -215,6 +215,8 @@ Key Considerations:
 
         # Find matching files
         matching_files = glob.glob(pattern)
+        print(pattern)
+        print(matching_files)
         
         #with open("documents/vector_db/"+insurance_company_code+'/'+matching_item["start_date"]+'_'+matching_item['name']+".json", 'r', encoding='utf-8') as f:
         #    loaded_documents = json.load(f)

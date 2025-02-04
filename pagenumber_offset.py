@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 import pymupdf4llm
 from operator import itemgetter
 from langchain_core.runnables import RunnableParallel
+from collections import Counter
 
 load_dotenv()
 
@@ -32,8 +33,8 @@ def extract_num_from_text(texts):
     pages =[]
     
     class Page(BaseModel):
-        pagenumber: int = Field(
-            description="A single integer representing the page number.",
+        pagenumber: int | None = Field(
+            description="A single integer representing the page number or None if not found."
         )
     
     # Define the LLM with structured output
@@ -116,12 +117,13 @@ def extract_offset(pdf_path, page_indexes):
         #extract the numeric page from text
     extracted_page_num = extract_num_from_text(page_text)
     
+    
     for i in range(len(extracted_page_num)) : 
         if extracted_page_num[i] is not None : 
             offsets.append(page_num[i] - extracted_page_num[i])
             
         
-    return offsets
+    return offsets, page_num, extracted_page_num
 
 def check_offset_consistency(pdf_path, sample_size=10, random_sample=True):
     """
@@ -139,7 +141,7 @@ def check_offset_consistency(pdf_path, sample_size=10, random_sample=True):
     # Decide which pages to sample
     if random_sample:
         # pick random pages
-        sampled_pages = sorted(random.sample(range(1, total_pages + 1), min(sample_size, total_pages)))
+        sampled_pages = sorted(random.sample(range(1, total_pages), min(sample_size, total_pages)))
     else:
         # pick evenly spaced pages
         interval = max(total_pages // sample_size, 1)
@@ -150,20 +152,21 @@ def check_offset_consistency(pdf_path, sample_size=10, random_sample=True):
         sampled_pages = sampled_pages[:sample_size]
     
         # Extract textual page num from the page's content
-    offsets = extract_offset(pdf_path, sampled_pages)
+    offsets, pdf_page, extracted_page = extract_offset(pdf_path, sampled_pages)
     
-    # Check if all offsets are the same
-    if all(o == offsets[0] for o in offsets):
-        return offsets[0]  # consistent offset
+    offset_counts = Counter(offsets)
+    most_common_offset, count = offset_counts.most_common(1)[0]
+    
+    if count >= 3:
+        return most_common_offset, pdf_page, extracted_page  # most frequent offset
     else:
-        return None  # not consistent
-
+        return None, pdf_page, extracted_page  # not frequent enough
 
 
 def main():
     pdf_file = "your_document.pdf" ### replace with your pdf file
     
-    offset = check_offset_consistency(pdf_file, sample_size=10, random_sample=True)
+    offset, pdf_page, extracted_page = check_offset_consistency(pdf_file, sample_size=10, random_sample=True)
     
     if offset is not None:
         print(f"Calculated offset: {offset}")
