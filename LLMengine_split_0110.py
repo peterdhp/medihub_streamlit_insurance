@@ -546,8 +546,8 @@ def run_oracle(state) :
 
     oracle_prompt = ChatPromptTemplate.from_messages([
         ("system", oracle_system_prompt),
-        ("ai", "먼저 보험 가입 정보를 알려주세요."),
-        ("user", "Insurance enrollment information:\n{insurance_enrollment_info}"),
+        ("ai", "먼저 오늘 날짜와 보험 가입 정보를 알려주세요."),
+        ("user", "오늘 날짜: {today}\n 보험 가입 정보:\n{insurance_enrollment_info}"),
         ("ai", "알려주신 보험과 관련하여 어떤 것이 궁금하신가요?"),
         MessagesPlaceholder(variable_name="chat_history"),
         MessagesPlaceholder(variable_name="messages"),
@@ -567,6 +567,7 @@ def run_oracle(state) :
         {
             "user_input": lambda x: x["user_input"],
             "chat_history": lambda x: x["chat_history"],
+            "today" : datetime.today().strftime("%Y.%m.%d"),
             "insurance_enrollment_info": lambda x: process_and_print_active_policies(x["insurance_enrollment_info"]),
             "messages": lambda x: x["messages"],
         }
