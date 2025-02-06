@@ -567,7 +567,7 @@ def run_oracle(state) :
         {
             "user_input": lambda x: x["user_input"],
             "chat_history": lambda x: x["chat_history"],
-            "today" : datetime.today().strftime("%Y.%m.%d"),
+            "today" : lambda x : datetime.today().strftime("%Y.%m.%d"),
             "insurance_enrollment_info": lambda x: process_and_print_active_policies(x["insurance_enrollment_info"]),
             "messages": lambda x: x["messages"],
         }
