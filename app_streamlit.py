@@ -5,7 +5,7 @@ import os
 from langsmith import traceable
 
 
-st.set_page_config(layout="wide")
+
 
 if "openai_api_key_psscode" not in st.session_state:
     st.session_state.openai_api_key_psscode = ''
@@ -28,7 +28,7 @@ if "birth" not in st.session_state:
 st.session_state.user = st.text_input('이름' )
 st.session_state.birth = st.text_input('주민번호 앞 6자리(비밀번호)' ,type='password')
 
-user_data = [{'name':'박도훈','birth':'medihub'},{'name':'조화윤','birth':'medihub'},{'name':'문성수','birth':'medihub'},{'name':'송지은','birth':'medihub'},{'name':'고준현','birth':'medihub'},{'name':'박근목','birth':'medihub'},{'name':'박현우','birth':'medihub'},{'name':'송원철','birth':'medihub'},{'name':'조민승','birth':'medihub'},{'name':'조송만','birth':'medihub'},{'name':'메디허브','birth':'medihub'}]
+user_data = [{'name':'박도훈','birth':'medihub'},{'name':'조화윤','birth':'medihub'},{'name':'문성수','birth':'medihub'},{'name':'송지은','birth':'medihub'},{'name':'고준현','birth':'medihub'},{'name':'박근목','birth':'medihub'},{'name':'박현우','birth':'medihub'},{'name':'송원철','birth':'medihub'},{'name':'조민승','birth':'medihub'},{'name':'조송만','birth':'medihub'},{'name':'메디허브','birth':'medihub'},{'name':'손준명','birth':'medihub'}]
 
 
     

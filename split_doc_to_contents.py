@@ -139,9 +139,23 @@ def filtering_page_split_contents(docs):
     
     ## page 낮은 순으로 sort
     if len(contents_list) > 0:
+        # Fill in None values with previous item's page number
+        for i in range(len(contents_list)):
+            if contents_list[i][1] is None:
+                if i > 0:  # Check if there is a previous item
+                    contents_list[i] = (contents_list[i][0], contents_list[i-1][1])
+                else:
+                    # For first item, look ahead for first non-None page number
+                    for j in range(1, len(contents_list)):
+                        if contents_list[j][1] is not None:
+                            contents_list[i] = (contents_list[i][0], contents_list[j][1])
+                            break
         
-        contents_list.sort(key=lambda x : x[1])
-    
+        # Convert page numbers to integers before sorting
+        contents_list = [(topic, int(page)) for topic, page in contents_list]
+        
+        # Sort by page number after filling in None values and converting to int
+        contents_list.sort(key=lambda x: x[1])
     return contents_list
 
 
@@ -208,18 +222,6 @@ def matching_contents_docs(contents_list, docs):
 
     return documents, contents_json
 
-"""
-def trans_contents_list_json(contents_list):
-
-    contents_json = {"sections": []}
-
-    for i in range(len(contents_list)):
-        contents_json["sections"].append({"title": contents_list[i][0],"page": contents_list[i][1]})
-        
-    #contents_json = json.dumps(contents_json)
-
-    return contents_json
-"""
 
 def split_doc_to_contents(pdf_path, data_list):
 
