@@ -9,7 +9,7 @@ def init_connection():
 
 def extract_name_from_insurance_data(json_data):
     # Parse the JSON data
-    data = json.loads(json_data)
+    data = json_data
     
     # Extract contractor name from the insurance data structure
     if "data" in data:
@@ -57,7 +57,7 @@ st.write("- 파일 업로드까지 진행해주시면 등록이 완료됩니다.
 if uploaded_files is not None:
     # Read the uploaded file content
     content = uploaded_files.read().decode('utf-8')
-    
+    #print(content)
     # Connect to MongoDB
     client = init_connection()
     db = client['insurance_demo']
@@ -66,11 +66,12 @@ if uploaded_files is not None:
     # Parse the JSON content
     import json
     insurance_data = json.loads(content)
+    # insurance_data is already a dict, no need to parse again
     contractor_name = extract_name_from_insurance_data(insurance_data)
     
     new_user = {
     "name": contractor_name,
-    "birth": "medihub",
+    "birth": "medihub", 
     "insurance_enrollment": insurance_data
     }
     
@@ -78,4 +79,3 @@ if uploaded_files is not None:
     
 
 menu()
-
