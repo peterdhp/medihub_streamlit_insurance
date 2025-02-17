@@ -4,7 +4,7 @@ from LLMengine_split_0110 import insurance_engine
 from langsmith import Client
 from menu_streamlit import menu_with_redirect
 import datetime
-
+import pymongo
 client = Client()
 
 
@@ -27,8 +27,24 @@ def reset():
 with st.sidebar :
     st.button("대화 내역 초기화 하기", on_click=reset)
 
+@st.cache_resource
+def init_connection():
+    return pymongo.MongoClient(st.secrets["mongo_connection_string"])
 
-insurance_enrollment_info = st.secrets['INSURANCE_ENROLLMENT'][st.session_state.user]
+
+if 'user_data' not in st.session_state:
+    client = init_connection()
+    db = client['insurance_demo']
+    collection = db['users']
+    items = collection.find()
+    st.session_state.user_data = list(items)
+    
+    
+for item in st.session_state.user_data:
+    if item.get('name') == st.session_state.user:
+        insurance_enrollment_info = item.get('insurance_enrollment')
+
+#insurance_enrollment_info = st.secrets['INSURANCE_ENROLLMENT'][st.session_state.user]
 
 #config = {"configurable": {"thread_id": st.session_state.thread_id}}
 

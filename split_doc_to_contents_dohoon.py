@@ -10,12 +10,12 @@ import pandas as pd
 from dotenv import load_dotenv
 
 from langgraph.graph import StateGraph, START, END
-from typing import Annotated, List, TypedDict
+from typing import Annotated, List, TypedDict, Tuple, Union
 
 import tiktoken
 from langchain_openai import ChatOpenAI
 from langchain_core.documents import Document
-from langchain_core.prompts import PromptTemplate
+from langchain_core.prompts import PromptTemplate, ChatPromptTemplate
 from langchain_core.output_parsers import PydanticOutputParser
 from langchain_core.runnables import RunnablePassthrough, RunnableParallel
 
@@ -27,9 +27,15 @@ from pydantic import BaseModel, Field
 load_dotenv()
 
 
+# class TopicPageItem(BaseModel):
+#     """ Classify ['Topic', 'Page'] on documents."""
+#     check_topics_pages: List[Any] = None
+    
 class TopicPageItem(BaseModel):
-    """ Classify ['Topic', 'Page'] on documents."""
-    check_topics_pages: List[Any] = None
+    """list of extracted topics and pages from table of contents in a markdown document."""
+    check_topics_pages: list[list[Union[str, int]]] = Field(
+        description="List of [topic, page_number] pairs extracted from table of contents, where topic is a string and page_number is an integer"
+    )
     
 
 def pdf_file_loader(pdf_file_path):
@@ -86,22 +92,87 @@ def filtering_page_split_contents(docs):
     print(f"Filtering PAGE : {len(data_list)}")
     
 
-    parser = PydanticOutputParser(pydantic_object=TopicPageItem, encoding='utf-8')
+    # parser = PydanticOutputParser(pydantic_object=TopicPageItem, encoding='utf-8')
 
-    with open("contents_prompt_template", "r") as f:
-        contents_prompt_template = f.read()
+    # with open("contents_prompt_template", "r") as f:
+    #     contents_prompt_template = f.read()
 
-    prompt = PromptTemplate(
-        template=contents_prompt_template,
-        input_variables=["doc"],
-        partial_variables={"format": parser.get_format_instructions()}
-    )
+    # prompt = PromptTemplate(
+    #     template=contents_prompt_template,
+    #     input_variables=["doc"],
+    #     partial_variables={"format": parser.get_format_instructions()}
+    # )
 
     # LLM with function call
-    llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
+    #llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
+    llm4omini = ChatOpenAI(
+        model="gpt-4o-mini",
+        temperature=0
+    )
+    
+    
+    content_extractor = llm4omini.with_structured_output(TopicPageItem)
+        
+    content_extractor_prompt = ChatPromptTemplate.from_messages([
+        ("system", 
+         """You are an expert in categorizing "topic" and "page" if the document contains a "table of contents".
+1. Check if the page contains a "table of contents". To determine if the document contains a "table of contents" and categorize the "topic" and "page", we need to look for a specific pattern that resembles a table of contents. 
+This pattern typically includes a list of topics followed by page numbers, often separated by dots or spaces.
+
+2. If the page contains a "table of contents", then categorize as follows:.
+Example :
+OOOOOOOOOOOO·························································13    
+Answer : [["OOOOOOOOOOOO",13]]
+
+
+Example :
+OOOOOOOO(OOOOOOOO) ·····································································································49
+Answer : [["OOOOOOOO(OOOOOOOO)",49]]
+
+
+Example :
+OOOOOOOO(OOOOOOOO)·························································159
+    OOOOOOOO(OOOOOOOO) ·····································································································164
+Answer : [["OOOOOOOO(OOOOOOOO)",159], ["OOOOOOOO(OOOOOOOO)",164]]
+
+
+Example :
+OOO OOO OOOO OO OOOOO·························································49
+    OOO OOO OOOO OO OOOOO ·····································································································67
+    OOO OOO OOOO OO OOOOO ·······················································································126
+    OOO OOO OOOO OO OOOOO····································································149
+    OOO OOO OOOO OO OOOOO··············································································205
+    OOO OOO OOOO OO OOOOO ·························································404
+Answer : 
+[["OOO OOO OOOO OO OOOOO",49],
+ ["OOO OOO OOOO OO OOOOO",67],
+ ["OOO OOO OOOO OO OOOOO",126],
+ ["OOO OOO OOOO OO OOOOO",149],
+ ["OOO OOO OOOO OO OOOOO",205],
+ ["OOO OOO OOOO OO OOOOO",404]]
+
+
+Example :
+Ⅱ. 질병 관련 특별약관·······························································98
+     2-1-1. 갱신형 질병사망보장 특별약관································98
+     2-1-2. 질병사망보장 특별약관·············································98
+     2-2-1. 갱신형 질병80%이상후유장해보장 특별약관·······100
+Answer : [["Ⅱ. 질병 관련 특별약관",98],
+          ["2-1-1. 갱신형 질병사망보장 특별약관",98],
+          ["2-1-2. 질병사망보장 특별약관",98],
+          ["2-2-1. 갱신형 질병80%이상후유장해보장 특별약관",100]]
+
+
+3. If the document does not appear to contain a "table of contents" as it lacks the pattern of topics followed by page numbers, then according to the criteria provided, the response should be: "check_topics_pages":[["None", "None"]]
+4. If a certain content does not have corresponding page number, copy and use the most recent page number. Do not return None for the page number.
+"""),
+        ("user", 
+         "[Document]\n{doc}")
+    ])
+    content_extractor_chain = content_extractor_prompt | content_extractor
 
     # chain 을 생성합니다.
-    chain = prompt | llm | parser
+    #chain = prompt | llm | parser
 
     contents_list = []
 
@@ -122,9 +193,7 @@ def filtering_page_split_contents(docs):
             tpm_count = 0
 
         
-        response = chain.batch(
-            data_list[i*BATCH_SIZE:(i+1)*BATCH_SIZE]
-        )
+        response = content_extractor_chain.batch([{"doc": x} for x in data_list[i*BATCH_SIZE:(i+1)*BATCH_SIZE]])
         print(i, len(response))
         
         
