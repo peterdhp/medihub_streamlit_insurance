@@ -5,3 +5,4 @@ langsmith
 langchain_community
 langgraph
 streamlit
+pymongo
