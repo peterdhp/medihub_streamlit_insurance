@@ -173,7 +173,7 @@ def render_policy_as_table_actual(contract_dict: dict) -> str:
     lines.append(f"증권번호: {policy_number}")
     lines.append(f"계약자: {policyholder}")
     lines.append(f"납입 주기: {payment_cycle}")
-    lines.append(f"납입 기간:      {payment_period} years")
+    lines.append(f"납입 기간: {payment_period} years")
     lines.append(f"1회 보험료: {premium} KRW")
 
     coverage_list  = contract_dict.get('resCoverageLists', [])

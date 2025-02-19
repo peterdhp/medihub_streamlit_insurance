@@ -19,7 +19,7 @@ if "birth" not in st.session_state:
 if "messages_w" not in st.session_state:
     st.session_state["messages_w"] = [{"type": "ai", "content": "보험과 관련해서 어떤게 궁금하신가요?"}]
     #st.session_state.thread_id = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
-menu_with_redirect()
+
 
 def reset():
     st.session_state["messages_w"] = [{"type": "ai", "content": "보험과 관련해서 어떤게 궁금하신가요?"}]
@@ -101,3 +101,5 @@ if st.session_state.get("run_id"):
         key="feedback",
     )
             
+
+menu_with_redirect()
