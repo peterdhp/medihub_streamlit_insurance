@@ -18,14 +18,13 @@ from langchain_core.documents import Document
 from langchain_core.prompts import PromptTemplate, ChatPromptTemplate
 from langchain_core.output_parsers import PydanticOutputParser
 from langchain_core.runnables import RunnablePassthrough, RunnableParallel
-
+from content_extractor_langgraph import content_extractor_langgraph
 from typing import List, Dict, Any, Optional
 
 from pydantic import BaseModel, Field
 
 # .env 파일 로드
 load_dotenv()
-
 
 # class TopicPageItem(BaseModel):
 #     """ Classify ['Topic', 'Page'] on documents."""
@@ -46,7 +45,8 @@ def pdf_file_loader(pdf_file_path):
 
     #docs = pymupdf4llm.to_markdown(pdf_file_path, page_chunks=True, show_progress=False)
     docs = pymupdf4llm.to_markdown(pdf_file_path, page_chunks=True, show_progress=True)
-    
+    #with open("250121_KB 5.10.10 금쪽같은 건강보험(무배당)(25.01)_해약환급금 미지급형.pickle", 'rb') as f:
+    #    docs = pickle.load(f)
     sec = time.time() - start
     times = str(datetime.timedelta(seconds=sec)) # 걸린시간 보기좋게 바꾸기
     short = times.split(".")[0] # 초 단위 까지만
@@ -105,77 +105,9 @@ def filtering_page_split_contents(docs):
 
     # LLM with function call
     #llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
-    llm4omini = ChatOpenAI(
-        model="gpt-4o-mini",
-        temperature=0
-    )
-    
-    
-    content_extractor = llm4omini.with_structured_output(TopicPageItem)
-        
-    content_extractor_prompt = ChatPromptTemplate.from_messages([
-        ("system", 
-         """You are an expert in categorizing "topic" and "page" if the document contains a "table of contents".
-1. Check if the page contains a "table of contents". To determine if the document contains a "table of contents" and categorize the "topic" and "page", we need to look for a specific pattern that resembles a table of contents. 
-This pattern typically includes a list of topics followed by page numbers, often separated by dots or spaces.
-
-2. If the page contains a "table of contents", then categorize as follows:.
-Example :
-OOOOOOOOOOOO·························································13    
-Answer : [["OOOOOOOOOOOO",13]]
-
-
-Example :
-OOOOOOOO(OOOOOOOO) ·····································································································49
-Answer : [["OOOOOOOO(OOOOOOOO)",49]]
-
-
-Example :
-OOOOOOOO(OOOOOOOO)·························································159
-    OOOOOOOO(OOOOOOOO) ·····································································································164
-Answer : [["OOOOOOOO(OOOOOOOO)",159], ["OOOOOOOO(OOOOOOOO)",164]]
-
-
-Example :
-OOO OOO OOOO OO OOOOO·························································49
-    OOO OOO OOOO OO OOOOO ·····································································································67
-    OOO OOO OOOO OO OOOOO ·······················································································126
-    OOO OOO OOOO OO OOOOO····································································149
-    OOO OOO OOOO OO OOOOO··············································································205
-    OOO OOO OOOO OO OOOOO ·························································404
-Answer : 
-[["OOO OOO OOOO OO OOOOO",49],
- ["OOO OOO OOOO OO OOOOO",67],
- ["OOO OOO OOOO OO OOOOO",126],
- ["OOO OOO OOOO OO OOOOO",149],
- ["OOO OOO OOOO OO OOOOO",205],
- ["OOO OOO OOOO OO OOOOO",404]]
-
-
-Example :
-Ⅱ. 질병 관련 특별약관·······························································98
-     2-1-1. 갱신형 질병사망보장 특별약관································98
-     2-1-2. 질병사망보장 특별약관·············································98
-     2-2-1. 갱신형 질병80%이상후유장해보장 특별약관·······100
-Answer : [["Ⅱ. 질병 관련 특별약관",98],
-          ["2-1-1. 갱신형 질병사망보장 특별약관",98],
-          ["2-1-2. 질병사망보장 특별약관",98],
-          ["2-2-1. 갱신형 질병80%이상후유장해보장 특별약관",100]]
-
-
-3. If the document does not appear to contain a "table of contents" as it lacks the pattern of topics followed by page numbers, then according to the criteria provided, the response should be: "check_topics_pages":[["None", "None"]]
-4. If a certain content does not have corresponding page number, copy and use the most recent page number. Do not return None for the page number.
-"""),
-        ("user", 
-         "[Document]\n{doc}")
-    ])
-    content_extractor_chain = content_extractor_prompt | content_extractor
-
-    # chain 을 생성합니다.
-    #chain = prompt | llm | parser
 
     contents_list = []
-
+    content_extractor = content_extractor_langgraph('gpt-4o-mini','','')
     tpm_count = 0
     
     for i in range((len(data_list)//BATCH_SIZE)+1):
@@ -193,16 +125,17 @@ Answer : [["Ⅱ. 질병 관련 특별약관",98],
             tpm_count = 0
 
         
-        response = content_extractor_chain.batch([{"doc": x} for x in data_list[i*BATCH_SIZE:(i+1)*BATCH_SIZE]])
+        response = content_extractor.batch([{"doc": x} for x in data_list[i*BATCH_SIZE:(i+1)*BATCH_SIZE]])
         print(i, len(response))
         
         
         #for j in range(len(response)):
         for item in response:
-            if len(item.check_topics_pages) > 1:
-                for content in item.check_topics_pages:
-                    print(content)
-                    contents_list.append(content)
+            if 'response' in item.keys():
+                if len(item['response'].check_topics_pages) > 1:
+                    for content in item['response'].check_topics_pages:
+                        print(content)
+                        contents_list.append(content)
                 #
             #print(i, response[i].check_topics_pages, len(response[i].check_topics_pages))
     
@@ -302,6 +235,8 @@ def split_doc_to_contents(pdf_path, data_list):
         file_path = os.path.join(pdf_path, code, data["pdf"])
         
         docs = pdf_file_loader(file_path)
+        
+        
         total_origin_docs.append(docs)
         contents_list = filtering_page_split_contents(docs)
         #contents_json = trans_contents_list_json(contents_list)

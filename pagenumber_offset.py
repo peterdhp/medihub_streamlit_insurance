@@ -61,6 +61,7 @@ Your job is to look for clues in the text—such as “Page 9”, “p. 9”, �
 **Examples**:
 - If the page text is: “This is page 12 of the company handbook.” then return `12`.
 - If the page text is: “Chapter 2. Footer: Page 34. Section …” then return `34`.
+- If the page text is: “56 KB 5.10.10 금쪽같은 건강보험 (name of the insurance)” then return `56`.
 - If the text does not mention any numeric page reference or has multiple conflicting references (e.g., “Page 5” in the header and “page 6” in the footer), return `None`.
 
 **Your output**:

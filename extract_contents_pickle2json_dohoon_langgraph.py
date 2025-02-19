@@ -174,38 +174,39 @@ def filtering_page_split_contents(docs, config):
         #)
         
         response = content_extractor.batch([{"doc": x} for x in data_list[i*config.batch_size:(i+1)*config.batch_size]])
-        response = response['response']
+        
         print(i, len(response))
         
         #for j in range(len(response)):
         for item in response:
-            #print(item)
-            if len(item.check_topics_pages) > 1:
-                
-                #for content in item.check_topics_pages:
-                for j in range(len(item.check_topics_pages)):
+            if 'response' in item.keys():
+                #print(item)
+                if len(item.check_topics_pages) > 1:
                     
-                    content = item.check_topics_pages[j]
-                    
-                    #print("content : \n", content)
-                    if len(content) > 1:
+                    #for content in item.check_topics_pages:
+                    for j in range(len(item['response'].check_topics_pages)):
+                        
+                        content = item['response'].check_topics_pages[j]
+                        
+                        #print("content : \n", content)
+                        if len(content) > 1:
 
-                        #if (content[1] != "None"):
-                        if (content[1] != "None") and (type(content[1]) == int):                        
-                            #print(content)
+                            #if (content[1] != "None"):
+                            if (content[1] != "None") and (type(content[1]) == int):                        
+                                #print(content)
 
-                            if j == 0:
-                                content_max_page = content[1]
+                                if j == 0:
+                                    content_max_page = content[1]
 
-                            # issue 
-                            # 이전 page index로 접근하면 안됨
-                            # ['관광진흥법 시행령', 159], ['【별표 2】해외체류자통지', 160], ['계약 전 알릴 의무', 2], ['계약 후 알릴 의무', 3], 
-                            # ['상해보험', 4], ['배상책임보험', 5], ['화재보험', 6], ['보 통 약 관', 7], ['특 별 약 관', 8], ['별 표', 9]] ...
-                            if content_max_page <= content[1]:
-                                #print("content_max_page : ", content_max_page)
-                                content_max_page = content[1]
+                                # issue 
+                                # 이전 page index로 접근하면 안됨
+                                # ['관광진흥법 시행령', 159], ['【별표 2】해외체류자통지', 160], ['계약 전 알릴 의무', 2], ['계약 후 알릴 의무', 3], 
+                                # ['상해보험', 4], ['배상책임보험', 5], ['화재보험', 6], ['보 통 약 관', 7], ['특 별 약 관', 8], ['별 표', 9]] ...
+                                if content_max_page <= content[1]:
+                                    #print("content_max_page : ", content_max_page)
+                                    content_max_page = content[1]
 
-                                contents_list.append(content)
+                                    contents_list.append(content)
 
                                             
             #print(i, response[i].check_topics_pages, len(response[i].check_topics_pages))

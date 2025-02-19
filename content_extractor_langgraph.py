@@ -1,14 +1,13 @@
 from langgraph.graph import END, StateGraph, START
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
-from langgraph.prebuilt.chat_agent_executor import AgentState
 
 from typing import Union, Any
 from pydantic import BaseModel, Field
 from dotenv import load_dotenv
+from typing_extensions import TypedDict
 
 load_dotenv()
-
 
 def content_extractor_langgraph(model,detector_prompt,extractor_prompt):
     
@@ -137,30 +136,30 @@ Answer : [[]]
         
         doc = state['doc']
         response = content_extractor.invoke({"doc": doc})
-        return response
+        return {'response': response}
     
     
-    class State(AgentState):
+    class graphState(TypedDict):
         doc :str
         response : list[Any] = []
         
         
-    graph = StateGraph(State)
+    graph = StateGraph(graphState)
 
 
 
-    graph.add_node("content_extractor_chain", content_extractor)
+    graph.add_node("content_extractor_node", content_extractor_node)
 
     graph.add_conditional_edges(
         START,
         content_extractvEND,
         {
-            "extract": "content_extractor_chain",
+            "extract": "content_extractor_node",
             "END": END,
         },
     )
     
-    graph.add_edge("content_extractor_chain",END)
+    graph.add_edge("content_extractor_node",END)
 
     content_extractor_langgraph = graph.compile()
     
