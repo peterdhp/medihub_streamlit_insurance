@@ -71,7 +71,7 @@ if uploaded_files is not None:
     
     new_user = {
     "name": contractor_name,
-    "birth": "medihub", 
+    "birthdate": "medihub", 
     "insurance_enrollment": insurance_data
     }
     
