@@ -58,10 +58,11 @@ table of contents normally have the title of the heading followed by the page nu
 
     ###prompt extractor
     if extractor_prompt == '':
-        extractor_prompt = """You are an expert in extracting "topic" and "page" from markdown documents that contain a "table of contents".
-1. The pattern for extracting table of contents and page numbers is expressed using tabs or dots between the table of contents and pages, as shown in the example below.
+        extractor_prompt = """You are an expert in extracting “topic” and “page” numbers from markdown documents that contain a table of contents.
 
-2. If the page contains a "table of contents", then categorize as follows:
+Extraction Rules:
+	1.	The table of contents follows a pattern where topics are separated from page numbers using either tabs or dots (············).
+	2.	If the document contains a table of contents, categorize the extracted topics and page numbers as follows:
 Example :
 OOOOOOOOOOOO·························································13\n
 Answer : [["OOOOOOOOOOOO",13]]
@@ -98,10 +99,7 @@ Example :
 전자서명 특별약관········································································97 화재, 폭발, 파열위험부담보 특별약관···········································98 급배수설비 누출위험부담보 특별약관············································98 건물에 부착된 유리위험부담보 특별약관·······································99 건물위험부담보 특별약관······························································99 지정대리청구서비스 특별약관···································································112 【별표 2】관련 법규·····································································148 상법····························································································148 전자서명법··················································································149 신용정보의 이용 및 보호에 관한 법률·········································150 신용정보의 이용 및 보호에 관한 법률 시행령·····························154 개인정보 보호법···································································163 장애아동 복지지원법···································································165 국가유공자 등 예우 및 지원에 관한 법률····································166 \n목 차 \n유 의\n사\n항 \n가 입\n자 \n요 약\n서 \n주 요\n내\n용 \n해 설 \n보 험\n용\n어 \n주\n요 분 쟁\n사\n례 \n오\n인\n하\n기 쉬 운 \n보 통\n약\n관 \n특 별\n약\n관 \n별 표 \n----- 
 Answer : [["전자서명 특별약관",97],["화재, 폭발, 파열위험부담보 특별약관",98],["급배수설비 누출위험부담보 특별약관",98],["건물에 부착된 유리위험부담보 특별약관",99],["건물위험부담보 특별약관",99],["지정대리청구서비스 특별약관",112],["【별표 2】관련 법규",148],["전자서명법",149],["신용정보의 이용 및 보호에 관한 법률",150],["신용정보의 이용 및 보호에 관한 법률 시행령",154],["개인정보 보호법",163],["장애아동 복지지원법",165],["국가유공자 등 예우 및 지원에 관한 법률",166]]
 
-
-3. If the document does not appear to contain a "table of contents" as it lacks the pattern of topics followed by page numbers, then according to the criteria provided, the response should be: "check_topics_pages":[["None", "None"]]
-
-4. Please exclude items that do not have any meaning in the table of contents.
+    3. Please exclude items that do not have any meaning in the table of contents.
 Example :
 유가\n\n의 입\n사 자\n항\n\n\n요주\n\n약 요\n서 내\n\n용\n\n\n해보\n\n설 험\n\n용\n어\n\n\n주\n요\n\n분\n\n쟁\n사\n례\n\n\n오\n인\n하\n기\n\n쉬\n\n운\n\n\n보\n\n통\n약\n관\n\n\n특\n\n별\n약\n관\n\n\n별\n\n표\n\n\n-----\n\n
 Answer : [[]]
@@ -164,8 +162,3 @@ Answer : [[]]
     content_extractor_langgraph = graph.compile()
     
     return content_extractor_langgraph
-        
-
-        
-    
-    
