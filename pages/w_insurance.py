@@ -98,7 +98,7 @@ if prompt := st.chat_input():
             with st.expander("See explanation"):
                 details_str = "\n\n".join(f"{key}: {value}" for key, value in details.items())
                 st.write(details_str)
-                st.session_state.log_str += '\n\nreport:\n' + st.session_state.details_str + '\n'
+                st.session_state.log_str += '\n\nreport:\n' + details_str + '\n'
                 
    
     
