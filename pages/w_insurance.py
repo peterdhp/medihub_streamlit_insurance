@@ -109,8 +109,6 @@ if prompt := st.chat_input():
             st.session_state.log_str += 'ai: 궁금한 점이 잘 해소되었나요? 더 질문을 하셔도 좋고 상담 요약을 전달드릴 수 있어요.' + '\n'
 
     
-if st.session_state.details_str != '' :
-    st.session_state.log_str += + '\n\n' + st.session_state.details_str 
             
 if st.session_state.get("run_id"):
     run_id = st.session_state.run_id
