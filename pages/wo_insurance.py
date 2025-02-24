@@ -23,19 +23,10 @@ if 'log_str' not in st.session_state:
 
 
 
-menu()
-
 def reset():
     st.session_state["messages_wo"] = [{"type": "ai", "content": "보험과 관련해서 어떤게 궁금하신가요?"}]
     # st.session_state.thread_id = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
-with st.sidebar :
-    st.button("대화 내역 초기화 하기", on_click=reset)
-    st.download_button(
-                label="대화내역 저장하기",
-                data=st.session_state.log_str,
-                file_name=datetime.datetime.now().strftime("%Y%m%d%H%M%S")+'_보장곰 내역.txt',
-                mime='text/plain'
-            )
+
 
 for msg in st.session_state.messages_wo:
     st.chat_message(msg["type"]).write(msg["content"])
@@ -85,5 +76,17 @@ if st.session_state.get("run_id"):
         on_change=submit_feedback,
         key="feedback",
     )
+    
+with st.sidebar :
+    st.button("대화 내역 초기화 하기", on_click=reset)
+    st.download_button(
+                label="대화내역 저장하기",
+                data=st.session_state.log_str,
+                file_name=datetime.datetime.now().strftime("%Y%m%d%H%M%S")+'_보장곰 내역.txt',
+                mime='text/plain'
+            )
                 
+
+
+menu()
         
