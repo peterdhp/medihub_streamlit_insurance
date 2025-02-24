@@ -19,7 +19,7 @@ if "birth" not in st.session_state:
 if "messages_wo" not in st.session_state:
     st.session_state["messages_wo"] = [{"type": "ai", "content": "보험과 관련해서 어떤게 궁금하신가요?"}]
 if 'log_str' not in st.session_state:
-    st.session_state['log_str'] = 'ai: 보험과 관련해서 어떤게 궁금하신가요?'
+    st.session_state['log_str'] = 'ai: 보험과 관련해서 어떤게 궁금하신가요?'+ '\n\n'
 
 
 
@@ -49,7 +49,7 @@ if prompt := st.chat_input():
 
     st.session_state.messages_wo.append({"type": "human", "content": prompt})
     st.chat_message("human").write(prompt)
-    st.session_state.log_str += 'human: ' + prompt
+    st.session_state.log_str += 'human: ' + prompt+ '\n\n'
     with collect_runs() as cb:
         response = insurance_wotc_engine.invoke({"user_input": prompt, "chat_history": st.session_state.messages_wo})
         st.session_state.run_id = cb.traced_runs[-1].id
@@ -57,7 +57,7 @@ if prompt := st.chat_input():
     if response['type'] == 'not_related' :
         st.session_state.messages_wo.append({"type": "ai", "content": "저는 보험 관련 질문에 대해서만 답변할 수 있어요."})
         st.chat_message("ai").write("저는 보험 관련 질문에 대해서만 답변할 수 있어요.")
-        st.session_state.log_str += 'ai: ' + "저는 보험 관련 질문에 대해서만 답변할 수 있어요." + '\n'
+        st.session_state.log_str += 'ai: ' + "저는 보험 관련 질문에 대해서만 답변할 수 있어요." + '\n\n'
     elif response['type'] == 'enroll_info_required' :
         st.session_state.messages_wo.append({"type": "ai", "content": "해당 질문에 답변하기 위해서는 보험 정보 연결이 필요합니다.\n보험 데이터를 연결하시면 좀 더 심층적인 고객님의 현재 상황 파악이 가능합니다."})
         st.chat_message("ai").write("해당 질문에 답변하기 위해서는 보험 정보 연결이 필요합니다.\n보험 데이터를 연결하시면 좀 더 심층적인 고객님의 현재 상황 파악이 가능합니다.")
@@ -67,7 +67,7 @@ if prompt := st.chat_input():
         msg = response["response"]
         st.session_state.messages_wo.append({"type": "ai", "content": msg})
         st.chat_message("ai").write(msg)
-        st.session_state.log_str += 'ai: ' + msg + '\n'
+        st.session_state.log_str += 'ai: ' + msg + '\n\n'
 if st.session_state.get("run_id"):
     run_id = st.session_state.run_id
     st.text_input('[선택] 코멘트를 입력해주세요.',key="feedback_text")

@@ -20,7 +20,7 @@ if "messages_w" not in st.session_state:
     st.session_state["messages_w"] = [{"type": "ai", "content": "보험과 관련해서 어떤게 궁금하신가요?"}]
     #st.session_state.thread_id = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
 if 'log_str' not in st.session_state:
-    st.session_state['log_str'] = 'ai: 보험과 관련해서 어떤게 궁금하신가요?'
+    st.session_state['log_str'] = 'ai: 보험과 관련해서 어떤게 궁금하신가요?'+ '\n\n'
 
 
 def reset():
@@ -67,7 +67,7 @@ if prompt := st.chat_input():
 
     st.session_state.messages_w.append({"type": "human", "content": prompt})
     st.chat_message("human").write(prompt)
-    st.session_state.log_str += 'human: ' + prompt
+    st.session_state.log_str += 'human: ' + prompt+ '\n\n'
     with collect_runs() as cb:
         with st.spinner('보장곰이 가입하신 보험들을 살펴보고 있습니다.'):
             response = insurance_engine.invoke({"user_input": prompt, "insurance_enrollment_info" : insurance_enrollment_info, "chat_history": st.session_state.messages_w},config={"recursion_limit": 15})
@@ -76,13 +76,13 @@ if prompt := st.chat_input():
     if response['non_related'] == 'F' :
         st.session_state.messages_w.append({"type": "ai", "content": "저는 건강보험 관련 질문에 대해서만 답변할 수 있어요."})
         st.chat_message("ai").write("저는 건강보험 관련 질문에 대해서만 답변할 수 있어요.")
-        st.session_state.log_str += 'ai: ' + "저는 건강보험 관련 질문에 대해서만 답변할 수 있어요." + '\n'
+        st.session_state.log_str += 'ai: ' + "저는 건강보험 관련 질문에 대해서만 답변할 수 있어요." + '\n\n'
     else :
         msg = response["response"]
         details = response.get("report")
         st.session_state.messages_w.append({"type": "ai", "content": msg})
         st.chat_message("ai").write(msg)
-        st.session_state.log_str += 'ai: ' + msg + '\n'
+        st.session_state.log_str += 'ai: ' + msg + '\n\n'
         
         
         if details :
