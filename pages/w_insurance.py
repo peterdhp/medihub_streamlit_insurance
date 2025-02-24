@@ -28,15 +28,6 @@ def reset():
 
     
 
-with st.sidebar :
-    st.button("대화 내역 초기화 하기", on_click=reset)
-    st.download_button(
-                label="대화내역 저장하기",
-                data=st.session_state.log_str,
-                file_name=datetime.datetime.now().strftime("%Y%m%d%H%M%S")+'_보장곰 내역.txt',
-                mime='text/plain'
-            )
-
 @st.cache_resource
 def init_connection():
     return pymongo.MongoClient(st.secrets["mongo_connection_string"])
@@ -120,4 +111,12 @@ if st.session_state.get("run_id"):
     )
             
 
+with st.sidebar :
+    st.button("대화 내역 초기화 하기", on_click=reset)
+    st.download_button(
+                label="대화내역 저장하기",
+                data=st.session_state.log_str,
+                file_name=datetime.datetime.now().strftime("%Y%m%d%H%M%S")+'_보장곰 내역.txt',
+                mime='text/plain'
+    )
 menu_with_redirect()
