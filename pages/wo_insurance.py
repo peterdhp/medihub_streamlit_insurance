@@ -82,7 +82,7 @@ with st.sidebar :
     st.download_button(
                 label="대화내역 저장하기",
                 data=st.session_state.log_str,
-                file_name=datetime.datetime.now().strftime("%Y%M%D%h%m")+'_보장곰 내역.txt',
+                file_name=datetime.datetime.now().strftime("%Y%m%d_%H%M")+'_보장곰 내역.txt',
                 mime='text/plain'
             )
                 
