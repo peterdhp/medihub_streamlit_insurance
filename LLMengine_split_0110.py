@@ -202,7 +202,7 @@ This is useful for finding context or specific information related to insurance 
         toc_list = matching_item.get("sections", [])
         formatted_toc = "\n".join([f"{item['title']} - Page {item['page']}" for index, item in enumerate(toc_list)])
         
-        page_selector_system_prompt = """Given a query and insurance enrollment info, select up to 10 relevant pages from the terms and conditions.
+        page_selector_system_prompt = """Given a query and insurance enrollment info, select up to ONLY 10 relevant pages from the terms and conditions.
 
 Key Considerations:
 	•	Some policies prohibit duplicate payments
