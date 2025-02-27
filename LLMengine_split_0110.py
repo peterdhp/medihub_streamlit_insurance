@@ -6,7 +6,7 @@ from pydantic import BaseModel, Field
 from typing import Optional
 from typing_extensions import TypedDict
 from langgraph.graph import END, StateGraph, START, MessagesState
-from langgraph.prebuilt.chat_agent_executor import AgentState
+from langgraph.chat_agent_executor import AgentState
 import os 
 import streamlit as st
 from typing import TypedDict, Annotated, List, Union, Sequence
