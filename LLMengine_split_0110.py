@@ -6,7 +6,7 @@ from pydantic import BaseModel, Field
 from typing import Optional
 from typing_extensions import TypedDict
 from langgraph.graph import END, StateGraph, START, MessagesState
-from langgraph.chat_agent_executor import AgentState
+#from langgraph.prebuilt.chat_agent_executor import AgentState
 import os 
 import streamlit as st
 from typing import TypedDict, Annotated, List, Union, Sequence
@@ -578,7 +578,7 @@ def run_oracle(state) :
     }
 
 
-class State(AgentState):
+class State(TypedDict):
     user_input: str
     insurance_enrollment_info : dict
     chat_history: list[BaseMessage]
