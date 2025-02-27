@@ -86,69 +86,65 @@ if prompt := st.chat_input():
         
         
         if details :
-            with st.expander("See explanation"):
-                title = details.items()["title"]
-                chat_summary = details.items()["chat_summary"]
-                answer = details.items()["answer"]
-                source = details.items()["source"]
+            with st.expander("상담 일지 펼쳐보기"):
                 if response['end_of_session'] == 'general':
-                    details_str = """#{title}
-                    ###상담요약
-                    {chat_summary}
-                    
-                    ###답변
-                    {answer}
-                    
-                    ###참조
-                    {source}""".format({"title": details.items()["title"], "chat_summary":details.items()["chat_summary"], "answer": details.items()["answer"], "source":details.items()["source"]})
+                    details_str = """# {title}
+### 상담요약
+{chat_summary}
+
+### 답변
+{answer}
+                
+### 참조
+{source}""".format(title= details['title'], chat_summary=details["chat_summary"], answer=details["answer"], source=details["source"])
                 elif response['end_of_session'] == 'estimated_insurance_payout':
-                    details_str = """#{title}
-                    ###상담요약
-                    {chat_summary}
+                    details_str = """# {title}
+### 상담요약
+{chat_summary}
                     
-                    ###예상 보장금액
-                    {estimate}
+### 예상 보장금액
+{estimate}
                     
-                    ###보장금액 산정 세부내용
-                    {estimate_details}
+### 보장금액 산정 세부내용
+{estimate_details}
                     
-                    ###참조
-                    {source}""".format({"title": details.items()["title"], "chat_summary":details.items()["chat_summary"], "estimate": details.items()["estimate"], "estimate_details": details.items()["estimate_details"], "source":details.items()["source"]})
+### 참조
+{source}""".format(title= details["title"], chat_summary=details["chat_summary"], estimate=details["estimate"], estimate_details= details["estimate_details"], source=details["source"])
                 elif response['end_of_session'] == 'claims_adjuster':
-                    details_str = """#{title}
-                    ###상담요약
-                    {chat_summary}
+                    details_str = """# {title}
+### 상담요약
+{chat_summary}
                     
-                    ###답변
-                    {answer}
+### 답변
+{answer}
                     
-                    ###보장금액 관련 불만 사항
-                    {dispute_reason}
+### 보장금액 관련 불만 사항
+{dispute_reason}
                     
-                    ###보장금액 관련 희망사항
-                    {wanted_outcome}
+### 보장금액 관련 희망사항
+{wanted_outcome}
                     
-                    ###사건 세부 내용
-                    {case_details}
+### 사건 세부 내용
+{case_details}
                     
-                    ###참조
-                    {source}""".format({"title": details.items()["title"], "chat_summary":details.items()["chat_summary"], "answer": details.items()["answer"], "dispute_reason": details.items()["dispute_reason"],"wanted_outcome": details.items()["wanted_outcome"],"case_details": details.items()["case_details"],"source":details.items()["source"]})
+### 참조
+{source}""".format(title=details["title"], chat_summary=details["chat_summary"], answer= details["answer"], dispute_reason= details["dispute_reason"],wanted_outcome= details["wanted_outcome"],case_details= details["case_details"],source=details["source"])
                 elif response['end_of_session'] == 'medical_consulation':
-                    details_str = """#{title}
-                    ###상담요약
-                    {chat_summary}
+                    details_str = """# {title}
+### 상담요약
+{chat_summary}
                     
-                    ###답변
-                    {answer}
+### 답변
+{answer}
                     
-                    ###의학적 세부 내역
-                    {medical_details}
+### 의학적 세부 내역
+{medical_details}
                     
-                    ###사용자의 과거력
-                    {medical_history}
-                    
-                    ###참조
-                    {source}""".format({"title": details.items()["title"], "chat_summary":details.items()["chat_summary"], "answer": details.items()["answer"], "medical_details": details.items()["medical_details"], "medical_history": details.items()["medical_history"], "source":details.items()["source"]})
+### 사용자의 과거력
+{medical_history}
+                
+### 참조
+{source}""".format(title= details["title"], chat_summary=details["chat_summary"], answer=details["answer"], medical_details= details["medical_details"], medical_history= details["medical_history"], source=details["source"])
                 else:
                     details_str = "\n\n".join(f"{key}: {value}" for key, value in details.items())
                 st.write(details_str)
