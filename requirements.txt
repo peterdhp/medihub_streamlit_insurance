@@ -1,4 +1,5 @@
 langgraph
+langgraph-prebuilt
 langchain_openai
 langchain_core
 langchain
