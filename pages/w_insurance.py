@@ -87,17 +87,95 @@ if prompt := st.chat_input():
         
         if details :
             with st.expander("See explanation"):
-                details_str = "\n\n".join(f"{key}: {value}" for key, value in details.items())
+                title = details.items()["title"]
+                chat_summary = details.items()["chat_summary"]
+                answer = details.items()["answer"]
+                source = details.items()["source"]
+                if response['end_of_session'] == 'general':
+                    details_str = """#{title}
+                    ###상담요약
+                    {chat_summary}
+                    
+                    ###답변
+                    {answer}
+                    
+                    ###참조
+                    {source}""".format({"title": details.items()["title"], "chat_summary":details.items()["chat_summary"], "answer": details.items()["answer"], "source":details.items()["source"]})
+                elif response['end_of_session'] == 'estimated_insurance_payout':
+                    details_str = """#{title}
+                    ###상담요약
+                    {chat_summary}
+                    
+                    ###예상 보장금액
+                    {estimate}
+                    
+                    ###보장금액 산정 세부내용
+                    {estimate_details}
+                    
+                    ###참조
+                    {source}""".format({"title": details.items()["title"], "chat_summary":details.items()["chat_summary"], "estimate": details.items()["estimate"], "estimate_details": details.items()["estimate_details"], "source":details.items()["source"]})
+                elif response['end_of_session'] == 'claims_adjuster':
+                    details_str = """#{title}
+                    ###상담요약
+                    {chat_summary}
+                    
+                    ###답변
+                    {answer}
+                    
+                    ###보장금액 관련 불만 사항
+                    {dispute_reason}
+                    
+                    ###보장금액 관련 희망사항
+                    {wanted_outcome}
+                    
+                    ###사건 세부 내용
+                    {case_details}
+                    
+                    ###참조
+                    {source}""".format({"title": details.items()["title"], "chat_summary":details.items()["chat_summary"], "answer": details.items()["answer"], "dispute_reason": details.items()["dispute_reason"],"wanted_outcome": details.items()["wanted_outcome"],"case_details": details.items()["case_details"],"source":details.items()["source"]})
+                elif response['end_of_session'] == 'medical_consulation':
+                    details_str = """#{title}
+                    ###상담요약
+                    {chat_summary}
+                    
+                    ###답변
+                    {answer}
+                    
+                    ###의학적 세부 내역
+                    {medical_details}
+                    
+                    ###사용자의 과거력
+                    {medical_history}
+                    
+                    ###참조
+                    {source}""".format({"title": details.items()["title"], "chat_summary":details.items()["chat_summary"], "answer": details.items()["answer"], "medical_details": details.items()["medical_details"], "medical_history": details.items()["medical_history"], "source":details.items()["source"]})
+                else:
+                    details_str = "\n\n".join(f"{key}: {value}" for key, value in details.items())
                 st.write(details_str)
                 st.session_state.log_str += '\n\nreport:\n' + details_str + '\n'
                 
    
     
     if 'end_of_session' in response :    
-        if response['end_of_session'] != 'continue' :
-            st.session_state.messages_w.append({"type": "ai", "content": "궁금한 점이 잘 해소되었나요? \n 더 질문을 하셔도 좋고 상담 요약을 전달드릴 수 있어요.\n [end_of_session token] : " + response['end_of_session']})
-            st.chat_message("ai").write("궁금한 점이 잘 해소되었나요? \n 더 질문을 하셔도 좋고 상담 요약을 전달드릴 수 있어요.\n [end_of_session token] : " + response['end_of_session'])
-            st.session_state.log_str += 'ai: 궁금한 점이 잘 해소되었나요? 더 질문을 하셔도 좋고 상담 요약을 전달드릴 수 있어요.' + '\n'
+        if response['end_of_session'] == 'general' :
+            st.session_state.messages_w.append({"type": "ai", "content": "궁금한 점이 잘 해소되었나요?"})
+            st.chat_message("ai").write("궁금한 점이 잘 해소되었나요?")
+            st.session_state.log_str += 'ai: 궁금한 점이 잘 해소되었나요?'
+            
+        if response['end_of_session'] == 'estimated_insurance_payout' :
+            st.session_state.messages_w.append({"type": "ai", "content": "*실제 보장 금액이 예상 금액과 다를 수 있습니다. 보장 금액을 충분히 받지 못했다고 생각될 때는 닥터플렉스의 도움을 받아보세요."})
+            st.chat_message("ai").write("*실제 보장 금액이 예상 금액과 다를 수 있습니다. 보장 금액을 충분히 받지 못했다고 생각될 때는 닥터플렉스의 도움을 받아보세요.")
+            st.session_state.log_str += 'ai: *실제 보장 금액이 예상 금액과 다를 수 있습니다. 보장 금액을 충분히 받지 못했다고 생각될 때는 닥터플렉스의 도움을 받아보세요.'
+            
+        if response['end_of_session'] == 'claims_adjuster' :
+            st.session_state.messages_w.append({"type": "ai", "content": "보험사의 보장금액에 대해 문제를 겪고 계신 것 같군요. 닥터플렉스의 보험 의료 자문 서비스를 이용해보세요."})
+            st.chat_message("ai").write("보험사의 보장금액에 대해 문제를 겪고 계신 것 같군요. 닥터플렉스의 보험 의료 자문 서비스를 이용해보세요.")
+            st.session_state.log_str += 'ai: 보험사의 보장금액에 대해 문제를 겪고 계신 것 같군요. 닥터플렉스의 보험 의료 자문 서비스를 이용해보세요.'
+            
+        if response['end_of_session'] == 'medical_consulation' :
+            st.session_state.messages_w.append({"type": "ai", "content": "보험과 관련해서 의학적인 도움이 필요하신 것 같군요. 닥터플렉스의 닥터나이트와 의료자문 서비스를 이용해보세요."})
+            st.chat_message("ai").write("보험과 관련해서 의학적인 도움이 필요하신 것 같군요. 닥터플렉스의 닥터나이트와 의료자문 서비스를 이용해보세요.")
+            st.session_state.log_str += 'ai: 보험과 관련해서 의학적인 도움이 필요하신 것 같군요. 닥터플렉스의 닥터나이트와 의료자문 서비스를 이용해보세요.'
 
     
             

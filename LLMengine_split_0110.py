@@ -49,7 +49,7 @@ def purpose_classifier(state):
 
     class Purpose_Type(BaseModel):
         purpose: str = Field(
-            description="One of: 'Payout Estimate', 'Claim Dispute', 'Medical Support for Claims', 'General Inquiry','Unrelated'"
+            description="One of: 'Payout Estimate', 'Claim Dispute', 'Medical Support for Claims', 'General Inquiry about enrolled insurance', 'General Inquiry','Unrelated'"
         )
     
     # Define the LLM with structured output
@@ -65,7 +65,8 @@ def purpose_classifier(state):
     1. **Payout Estimate**: The user is inquiring about an estimated insurance payout for a life or health insurance policy.
     2. **Claim Dispute**: The user has received a payout for a life or health insurance claim but is dissatisfied and requires assistance from a claim adjuster.
     3. **Medical Support for Claims**: The user is seeking medical advice or documentation to support a life or health insurance claim adjustment.
-    4. **General Inquiry**: The user has a question related to life or health insurance that does not fit into the above categories.
+    4. **General Inquiry about enrolled insurance**: The user has a question related to their own life or health insurance that does not fit into the above categories.
+    4. **General Inquiry**: The user has a question related to life or health insurance that does not need information about the insurances they are enrolled in.
     5. **Unrelated**: The conversation is not about life or health insurance.
 Your task is to read the chat history and return the most appropriate category."""),
         ("user", 
@@ -418,9 +419,8 @@ def continue_v_error(state):
 def final_answer_general(
     title : str,
     chat_summary : str,
-    answer : str,
     source : str,
-    abstract : str 
+    answer : str
 ):
     """When enough details are provided, returns a natural language response to the user in the form of a report. 
 The tone should be as polite as possible and attentive. Use korean and markdown format for readability.
@@ -429,9 +429,8 @@ The arguments recieved are the sections to this report.
     Args :
         title : The title of the report
         chat_summary : A summary of the chat conversation that includes the main question of the user.
+        source: A list of referenced insurance clauses, including the policy name, explanation, and specific article and section numbers. Empty string if there are no sources.
         answer : The answer to the user's question
-        source: A list of referenced insurance clauses, including the policy name, explanation, and specific article and section numbers.
-        abstract : A brief summary of the report for the user
     """
     
     return ""
@@ -440,10 +439,10 @@ The arguments recieved are the sections to this report.
 def final_answer_payoutEstimate(
     title : str,
     chat_summary : str,
-    estimate : str,
     estimate_details : str,
+    estimate : str,
     source : str,
-    abstract : str 
+    answer : str
 ):
     """When enough details are provided, returns a natural language response to the user in the form of a report. 
 The tone should be as polite as possible and attentive. Use korean and markdown format for readability.
@@ -452,10 +451,10 @@ The arguments recieved are the sections to this report.
     Args :
         title : The title of the report
         chat_summary : A summary of the chat conversation that includes the main question of the user.
-        estimate : The estimated payout ammount of the user's case
-        estimate_details : A detailed explanation of how the estimate was calculated. Also information of how it could vary. Be specific, not ambiguous
+        estimate_details : A detailed explanation of how the estimate should be calculated. Also information of how it could vary. Be specific, not ambiguous
+        estimate : The estimated payout amount of the user's case
         source: A list of referenced insurance clauses, including the policy name, explanation, and specific article and section numbers.
-        abstract : A brief summary of the report for the user
+        answer : The answer to the user's question
     """
     
     return ""
@@ -464,12 +463,11 @@ The arguments recieved are the sections to this report.
 def final_answer_dispute(
     title : str,
     chat_summary : str,
-    answer : str,
     dispute_reason : str,
     wanted_outcome : str,
     case_details : str,
     source : str,
-    abstract : str 
+    answer : str,
 ):
     """When enough details are provided, returns a natural language response to the user in the form of a report. 
 The tone should be as polite as possible and attentive. Use korean and markdown format for readability.
@@ -478,12 +476,11 @@ The arguments recieved are the sections to this report.
     Args :
         title : The title of the report
         chat_summary : A summary of the chat conversation that includes the main question of the user.
-        answer : The answer to the user's question
         dispute_reason : What the user is dissatisfied with and the reason for the dispute
         wanted_outcome : The desired outcome of the claim of the user
         case_details : case details that are relevant to the dispute. Information that would help the claim adjuster understand the situation.
         source: A list of referenced insurance clauses, including the policy name, explanation, and specific article and section numbers.
-        abstract : A brief summary of the report for the user
+        answer : The answer to the user's question
     """
     
     return ""
@@ -492,11 +489,10 @@ The arguments recieved are the sections to this report.
 def final_answer_medicalSupport(
     title : str,
     chat_summary : str,
-    answer : str,
     medical_details: str,
     medical_history : str,
     source : str,
-    abstract : str 
+    answer : str,
 ):
     """When enough details are provided, returns a natural language response to the user in the form of a report. 
 The tone should be as polite as possible and attentive. Use korean and markdown format for readability.
@@ -505,11 +501,10 @@ The arguments recieved are the sections to this report.
     Args :
         title : The title of the report
         chat_summary : A summary of the chat conversation that includes the main question of the user.
-        answer : The answer to the user's question
         medical_details : medical details of the case related to the insurance claim adjustment. (diagnostic code, test results, etc.)
         medical_history : medical history of the user that is relevant to the insurance claim adjustment.
         source: A list of referenced insurance clauses, including the policy name, explanation, and specific article and section numbers.
-        abstract : A brief summary of the report for the user
+        answer : The answer to the user's question
     """
     
     return ""
@@ -520,8 +515,8 @@ The tone should be as polite as possible and attentive. Use korean and markdown 
 The arguments recieved are the sections to this report.
     """
     args = state["messages"][-1].tool_calls[0]['args']
-    response = args.pop("abstract", None)
-    end_of_session_map = {"Payout Estimate" : "estimated_insurance_payout", "Claim Dispute" : "claims_adjuster", "Medical Support for Claims" : "medical_consulation", "General Inquiry" : "continue"}
+    response = args["answer"]
+    end_of_session_map = {"Payout Estimate" : "estimated_insurance_payout", "Claim Dispute" : "claims_adjuster", "Medical Support for Claims" : "medical_consulation", "General Inquiry" : "general"}
     end_of_session_str = end_of_session_map[state["purpose"]]
     
     
@@ -531,7 +526,7 @@ The arguments recieved are the sections to this report.
 def run_oracle(state) :
     purpose = state["purpose"]
     
-    purpose_final_answer_map = {"Payout Estimate" : "final_answer_payoutEstimate", "Claim Dispute" : "final_answer_dispute", "Medical Support for Claims" : "final_answer_medicalSupport", "General Inquiry" : "final_answer_general"}
+    purpose_final_answer_map = {"Payout Estimate" : "final_answer_payoutEstimate", "Claim Dispute" : "final_answer_dispute", "Medical Support for Claims" : "final_answer_medicalSupport", "General Inquiry" : "final_answer_general","General Inquiry about enrolled insurance":"final_answer_general"}
     final_answer_str = purpose_final_answer_map[purpose]
 
     oracle_system_prompt = """You are an insurance consultant. 
@@ -560,6 +555,8 @@ def run_oracle(state) :
     if purpose == "Medical Support for Claims":
         tools=[fetch_insurance_term_con,human_retrieval,final_answer_medicalSupport]
     if purpose == "General Inquiry":
+        tools=[human_retrieval,final_answer_general]
+    if purpose == "General Inquiry about enrolled insurance":
         tools=[fetch_insurance_term_con,human_retrieval,final_answer_general]
 
 
