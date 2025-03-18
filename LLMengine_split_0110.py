@@ -515,7 +515,7 @@ The arguments recieved are the sections to this report.
     """
     args = state["messages"][-1].tool_calls[0]['args']
     response = args["answer"]
-    end_of_session_map = {"Payout Estimate" : "estimated_insurance_payout", "Claim Dispute" : "claims_adjuster", "Medical Support for Claims" : "medical_consulation", "General Inquiry" : "general"}
+    end_of_session_map = {"Payout Estimate" : "estimated_insurance_payout", "Claim Dispute" : "claims_adjuster", "Medical Support for Claims" : "medical_consulation", "General Inquiry" : "general","General Inquiry about enrolled insurance":"general"}
     end_of_session_str = end_of_session_map[state["purpose"]]
     
     

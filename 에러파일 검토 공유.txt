@@ -1,0 +1,1544 @@
+
+
+offset 충족, contents 결과 없음     /workspace/data1/insurance_pickle_2/DB손보/판매중/장기/제도성특약/230601_다자녀가정할인Ⅲ 특별약관.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/230901_프로미 다이렉트 주택화재보험(CM).pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240725_이동통신단말기보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/210101_프로미 다이렉트 주택화재보험(CM).pickle
+offset 충족, contents 결과 없음     /workspace/data1/insurance_pickle_2/DB손보/판매중/장기/제도성특약/250101_무배당 프로미라이프 반려동물 특정 질병 보장제한부 인수 특별약관(반려견).pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/220101_프로미 다이렉트 주택화재보험(CM).pickle
+offset 충족, contents 결과 없음     /workspace/data1/insurance_pickle_2/DB손보/판매중/장기/제도성특약/140701_장기요양등급 변경적용 특별약관.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/230101_이동통신단말기보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/220622_이동통신단말기보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/241014_이동통신단말기보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240101_프로미 반려동물보험Ⅱ.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/210101_프로미 다이렉트 골프보험(CM).pickle
+offset 충족, contents 결과 없음     /workspace/data1/insurance_pickle_2/DB손보/판매중/장기/제도성특약/110901_실손의료비 보장(추가납입형) 무사고할인 제도성특별약관.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/220823_이동통신단말기보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/210801_프로미 반려동물보험Ⅱ.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240101_프로미 가전제품고장수리비용보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/231025_프로미 가전제품고장수리비용보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/220921_프로미 다이렉트 반려동물보험(CM).pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240101_프로미 반려동물보험Ⅲ.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/230207_프로미 반려동물배상책임보험Ⅱ.pickle
+offset 충족, contents 결과 없음     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/230101_수리비용보상보험Ⅳ.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240326_프로미 휠체어배상책임보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/231031_프로미 반려동물보험Ⅲ.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240101_이동통신단말기보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/231031_프로미 반려동물보험Ⅱ.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/230101_프로미 반려동물보험Ⅱ.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240101_프로미 맹견배상책임보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240719_이동통신단말기보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240101_프로미 휠체어배상책임보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/220622_프로미 다이렉트 해외여행 실손의료비보험(CM).pickle
+offset 충족, contents 결과 없음     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/230202_프로미 해외장기체류보험Ⅲ.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/241008_프로미 반려동물보험Ⅲ.pickle
+offset 충족, contents 결과 없음     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/210101_아파트종합보험Ⅱ.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/230101_프로미 자동차고장수리비용보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/230320_프로미 다이렉트 반려동물보험(CM).pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/220307_프로미 반려동물보험Ⅱ.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/220622_프로미 반려동물보험Ⅲ.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/220921_프로미 반려동물보험Ⅲ.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/220622_프로미 반려동물보험Ⅱ.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/230720_프로미 휠체어배상책임보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/250101_프로미 휠체어배상책임보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240725_프로미 자동차고장수리비용보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/230101_프로미 휠체어배상책임보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/220215_프로미 휠체어배상책임보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/240725_프로미 주택화재보험Ⅱ.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/241008_프로미 다이렉트 골프보험(CM).pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/230101_프로미 주택화재보험Ⅱ.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/230320_프로미 반려동물배상책임보험Ⅱ.pickle
+offset 충족, contents 결과 없음     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/210101_프로미 다이렉트 OUTDOOR레저보험(CM).pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240101_프로미 반려동물배상책임보험Ⅱ.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/220622_프로미 다이렉트 해외여행보험(CM).pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/230101_프로미 다이렉트 반려동물보험(CM).pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/220622_프로미 휠체어배상책임보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/230101_프로미 반려동물보험Ⅲ.pickle
+offset 충족, contents 결과 없음     /workspace/data1/insurance_pickle_2/DB손보/판매중/장기/제도성특약/231101_지정대리청구서비스Ⅱ 제도성 특별약관.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240101_프로미 자동차고장수리비용보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/240101_프로미 다이렉트 주택화재보험(CM).pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240725_프로미 휠체어배상책임보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/210101_프로미 주택화재보험.pickle
+offset 충족, contents 결과 없음     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/240101_아파트종합보험Ⅱ.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240725_프로미 다이렉트 반려동물보험(CM).pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/220905_이동통신단말기보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/241008_프로미 가전제품고장수리비용보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240725_프로미 반려동물배상책임보험Ⅱ.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/210401_프로미 다이렉트 골프보험(CM).pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/230207_프로미 반려동물보험Ⅱ.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/231031_프로미 다이렉트 반려동물보험(CM).pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240904_프로미 휠체어배상책임보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/240101_New 프로미 반려동물보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/241008_프로미 다이렉트 반려동물보험(CM).pickle
+offset 충족, contents 결과 없음     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/210801_위탁아동단체상해보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240701_프로미 맹견배상책임보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/221222_프로미 다이렉트 해외여행보험(CM).pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/200401_프로미 골프보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/241008_프로미 골프보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240725_프로미 반려동물보험Ⅱ.pickle
+offset 충족, contents 결과 없음     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/230202_프로미 다이렉트 프리미엄해외여행보험(CM).pickle
+offset 충족, contents 결과 없음     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/220622_프로미 다이렉트 프리미엄해외여행 실손의료비보험(CM).pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240725_프로미 반려동물보험Ⅲ.pickle
+offset 충족, contents 결과 없음     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/250101_위탁아동단체상해보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/화재/171019_동부화재 다이렉트 주택화재보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/250101_프로미 다이렉트 골프보험(CM).pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/240101_수상레저종합보험.pickle
+offset 충족, contents 결과 없음     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/210701_프로미고객사랑보험Ⅱ.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/241008_프로미 반려동물배상책임보험Ⅱ.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240919_프로미 휠체어배상책임보험.pickle
+offset 충족, contents 결과 없음     /workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/종합/160401_수렵보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/230202_프로미 다이렉트 해외여행보험(CM).pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/220622_업그레이드대학종합보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/220921_프로미 반려동물보험Ⅱ.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/241008_업그레이드대학종합보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/240101_프로미 주택화재보험(방카).pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240725_프로미 맹견배상책임보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/200901_프로미 주택화재보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/241008_프로미 반려동물보험Ⅱ.pickle
+offset 충족, contents 결과 없음     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/240101_위탁아동단체상해보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/230101_프로미 다이렉트 골프보험(CM).pickle
+offset 충족, contents 결과 없음     /workspace/data1/insurance_pickle_2/DB손보/판매중/장기/제도성특약/20250101_무배당 프로미라이프 반려동물 특정 질병 보장제한부 인수 특별약관(반려묘)'.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/230202_프로미 맹견배상책임보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/화재/171101_프로미 다이렉트 주택화재보험(CM).pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/210319_프로미 주택화재보험.pickle
+offset 충족, contents 결과 없음     /workspace/data1/insurance_pickle_2/DB손보/판매중/자동차/기타/240725_프로미카다이렉트대리운전기사보험약관.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/210801_업그레이드대학종합보험.pickle
+offset 충족, contents 결과 없음     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/220101_아파트종합보험Ⅱ.pickle
+offset 충족, contents 결과 없음     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/230101_프로미 교육안전보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/240725_수상레저종합보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/240725_업그레이드대학종합보험.pickle
+60% 미달     /workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/210401_수상레저종합보험.pickle
+offset 충족, contents 결과 없음     /workspace/data1/insurance_pickle_2/DB손보/판매중/장기/제도성특약/200101_연금저축보험 계약이전수수료 면제 특별약관.pickle
+offset 충족, contents 결과 없음     /workspace/data1/insurance_pickle_2/DB손보/판매중/장기/제도성특약/190101_장애인전용보험전환 특별약관.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/240901_프로미 다이렉트 주택화재보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240101_이동통신단말기보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/220215_프로미 휠체어배상책임보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/230101_이동통신단말기보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/220823_이동통신단말기보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/장기/제도성특약/250101_자동차사고 변호사선임비용 변호사 직접지급Ⅱ(실손) 특별약관.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/220622_이동통신단말기보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/230901_프로미 다이렉트 주택화재보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/210801_프로미 반려동물보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/231025_프로미 가전제품고장수리비용보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240101_프로미 반려동물보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/220307_프로미 반려동물보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/240101_New 프로미 반려동물보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/241008_프로미 맹견배상책임보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/장기/제도성특약/200101_연금저축보험 계약이전수수료 면제 특별약관.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240101_프로미 맹견배상책임보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/220921_프로미 다이렉트 반려동물보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240101_프로미 휠체어배상책임보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240725_프로미 반려동물보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/241014_이동통신단말기보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/230320_프로미 다이렉트 반려동물보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/231031_프로미 반려동물보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240725_프로미 맹견배상책임보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/220905_이동통신단말기보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/230101_프로미 반려동물보험Ⅲ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/220622_프로미 반려동물보험Ⅲ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/220101_프로미 다이렉트 주택화재보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/211122_프로미 다이렉트 해외여행보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/230207_프로미 반려동물배상책임보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240101_프로미 가전제품고장수리비용보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/220921_프로미 반려동물보험Ⅲ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/210319_프로미 주택화재보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/220622_프로미 휠체어배상책임보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240725_프로미 가전제품고장수리비용보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/220921_프로미 반려동물보험Ⅱ.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/종합/180101_프로미 다이렉트 골프보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/220622_프로미 반려동물보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240101_프로미 반려동물보험Ⅲ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/230202_프로미 맹견배상책임보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/210401_수상레저종합보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/210801_프로미 주택화재보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/250101_프로미 휠체어배상책임보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/220101_아파트종합보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240725_프로미 휠체어배상책임보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/240725_프로미 국내여행 실손의료비보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/230207_프로미 반려동물보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/231031_프로미 다이렉트 반려동물보험(CM).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/230101_수리비용보상보험Ⅳ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240101_프로미 반려동물배상책임보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240725_프로미 다이렉트 반려동물보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240719_이동통신단말기보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/220101_프로미 주택화재보험(방카).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240725_이동통신단말기보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/241008_프로미 다이렉트 골프보험(CM).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/240725_프로미 탄 만큼 내는 운전자보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240326_프로미 휠체어배상책임보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/230720_프로미 휠체어배상책임보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240101_프로미 다이렉트 반려동물보험(CM).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/210701_프로미고객사랑보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/220622_프로미 다이렉트 해외여행 실손의료비보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/230101_프로미 다이렉트 반려동물보험(CM).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/240101_아파트종합보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240701_프로미 맹견배상책임보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/자동차/기타/240725_프로미카다이렉트대리운전기사보험약관.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/210401_프로미 다이렉트 해외여행 실손의료비보험(CM).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/210801_아파트종합보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/210101_프로미 다이렉트 골프보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/230901_프로미 주택화재보험(방카).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/230202_프로미 해외장기체류보험Ⅲ.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/장기/제도성특약/250101_무배당 프로미라이프 반려동물 특정 질병 보장제한부 인수 특별약관(반려견).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/250101_아파트종합보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/240725_유아교육기관종합보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/200423_프로미고객사랑보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/250101_프로미 맹견배상책임보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/210401_위탁아동단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/종합/170717_골프보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/230202_프로미 다이렉트 해외여행보험(CM).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/200101_아파트종합보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240725_프로미 자동차고장수리비용보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/240101_프로미 다이렉트 주택화재보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/220622_수상레저종합보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/240725_아파트종합보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/250101_프로미 다이렉트 주택화재보험(CM).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/230101_프로미 해외장기체류보험Ⅲ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/221222_프로미 다이렉트 해외여행보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/241008_프로미 반려동물보험Ⅲ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/230101_프로미 반려동물보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240725_프로미 반려동물보험Ⅲ.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/230202_프로미 다이렉트 프리미엄해외여행보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/230101_프로미 골프보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/241008_프로미 다이렉트 반려동물보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/240101_유아교육기관종합보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/171101_프로미 보통상해보험(방카).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/화재/190101_프로미 다이렉트 주택화재보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/240101_프로미 주택화재보험(방카).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/230101_수상레저종합보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/241008_프로미 반려동물배상책임보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/자동차보험/업무용/030101_프로미비즈니스자동차보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/210801_빅히트단체상해보험Ⅱ.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/장기/제도성특약/230101_실손의료보험 중지 및 재개Ⅳ 특별약관.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/241008_업그레이드대학종합보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/220622_프로미 골프보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/170830_해외여행보험Ⅱ.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/장기/통합보험/190426_무배당 프로미라이프 컨버전스통합보험(자동차보험 개인용).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/230101_프로미 자동차고장수리비용보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/230401_프로미 해외여행보험Ⅲ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/210101_프로미 주택화재보험(방카).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/240101_위탁아동단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/220622_아파트종합보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/210101_프로미 주택화재보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/230101_프로미 다이렉트 주택화재보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/241008_프로미 골프보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/071101_무배당 프로미라이프 으뜸안심보험0711.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/160418_동부화재 다이렉트 프로미운전자보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240919_프로미 휠체어배상책임보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/200401_프로미 골프보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/230101_프로미 휠체어배상책임보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/241008_프로미 가전제품고장수리비용보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/장기/제도성특약/110901_실손의료비 보장(추가납입형) 무사고할인 제도성특별약관.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/241008_프로미 반려동물보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/240101_업그레이드대학종합보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240725_프로미 반려동물배상책임보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/241008_프로미 주택화재보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/071001_무배당 프로미라이프 다이렉트운전자보험0710.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/자동차/기타/210801_프로미카다이렉트대리운전기사보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/210801_프로미 다이렉트 주택화재보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/230320_프로미 반려동물배상책임보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/240725_프로미 주택화재보험Ⅱ.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/210401_프로미 수렵보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/장기/제도성특약/230101_실손의료보험 개인실손전환(단체→개인)Ⅱ 특별약관.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/170101_보통상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/241008_프로미 휠체어배상책임보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/장기/제도성특약/250101_업무외사망보험수익자지정 특별약관.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/230101_업그레이드대학종합보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/241202_프로미 해외여행보험Ⅲ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/화재/180401_프로미 주택화재보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/240101_프로미 다이렉트 국내여행보험(CM).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/170830_동부화재 프로미 보통상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/장기/제도성특약/110901_실손의료비 보장(적립대체형) 무사고할인 제도성특별약관.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/240725_수상레저종합보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/210801_프로미 주택화재보험Ⅱ.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/240822_프로미 다이렉트 프리미엄해외여행 실손의료비보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/000303_장기상해 철수와영희만의사랑보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/종합/160401_수렵보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/210101_아파트종합보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/240101_프로미 주택화재보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/210801_수상레저종합보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/210401_프로미 주택화재보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/231031_프로미 반려동물보험Ⅲ.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/170101_동부화재 프로미 보통상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/210401_아파트종합보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/250101_프로미 반려동물배상책임보험Ⅱ.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/230101_프로미 다이렉트 프리미엄해외여행보험(CM).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/230609_프로미 다이렉트 프리미엄해외여행 실손의료비보험(CM).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/종합/171101_프로미 다이렉트 골프보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/자동차보험/기타/050222_모터바이크종합보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/240101_프로미 다이렉트 골프보험(CM).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/240101_프로미 다이렉트 프리미엄해외여행 실손의료비보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/자동차보험/개인용/030701_프로미SUV자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/230101_프로미 주택화재보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/230101_프로미 다이렉트 해외여행 실손의료비보험(CM).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/장기/제도성특약/230601_다자녀가정할인Ⅲ 특별약관.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/200901_프로미 다이렉트 주택화재보험(CM).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/170717_동부화재 다이렉트 프로미운전자보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/160101_해외여행보험Ⅱ.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/220330_아파트종합보험Ⅱ.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/170830_프로미운전자보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/230101_프로미 실손의료비보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/종합/170101_골프보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/장기/제도성특약/190101_장애인전용보험전환 특별약관.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/200901_아파트종합보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/241008_프로미 주택화재보험(방카).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/240201_프로미 교육안전보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/화재/171101_프로미 다이렉트 주택화재보험(CM).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/170501_동부화재 다이렉트 국내여행보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/종합/170717_동부화재 다이렉트 골프보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/250101_아파트종합보험Ⅱ.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/장기/통합보험/220728_무배당 프로미라이프 컨버전스통합보험(자동차보험 업무용).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/240101_프로미 골프보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/160101_자전거상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240904_프로미 휠체어배상책임보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/220622_프로미 다이렉트 해외여행보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/220622_프로미 다이렉트 프리미엄해외여행 실손의료비보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/250101_프로미 주택화재보험Ⅱ.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/241202_프로미 다이렉트 해외여행보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/241008_유아교육기관종합보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/장기/통합보험/211021_무배당 프로미라이프 컨버전스통합보험(자동차보험 업무용).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/250101_프로미 골프보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/230101_프로미 다이렉트 해외여행보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/화재/171101_프로미 주택화재보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/041018_무배당 다이렉트운전자플러스보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/240725_프로미 주택화재보험(방카).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/240725_프로미 다이렉트 주택화재보험(CM)'.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/190701_프로미 다이렉트 OUTDOOR레저보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/241008_New 프로미 반려동물보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/250101_프로미 다이렉트 프리미엄해외여행 실손의료비보험(CM).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/210401_프로미 다이렉트 프리미엄해외여행보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/종합/231031_프로미 반려동물 펫키지종합보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/장기/제도성특약/231101_지정대리청구서비스Ⅱ 제도성 특별약관.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/장기/제도성특약/240701_실손의료보험 군 장병 중지 및 재개 특별약관.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/화재/180401_프로미 다이렉트 주택화재보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/240725_프로미 골프보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/220622_위탁아동단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/210101_프로미 다이렉트 OUTDOOR레저보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/기타/240101_프로미 자동차고장수리비용보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/090818_무배당 프로미라이프 베스트자녀저축보험0908.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/화재/190101_프로미 주택화재보험(방카).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/화재/170522_주택화재보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/250101_프로미 다이렉트 골프보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/070401_무배당 프로미라이프 베스트자녀사랑보험0704(자녀사랑OK플랜Ⅱ).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/210319_프로미 주택화재보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/080401_무배당 프로미라이프 다이렉트상조보험0804.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/화재/171019_동부화재 다이렉트 주택화재보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/220622_프로미 실손의료비보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/210401_프로미 다이렉트 주택화재보험(CM).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/장기/통합보험/200520_무배당 프로미라이프 컨버전스통합보험(자동차보험 업무용).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/210801_위탁아동단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/180101_프로미 실손의료비보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/060401_무배당 프로미라이프 유니버설 골드라이프보험0603(신채널).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/200901_유아교육기관종합보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/210801_프로미 다이렉트 해외여행 실손의료비보험(CM).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/170501_해외여행보험Ⅱ.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/종합/160427_동부화재 다이렉트 골프보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/210101_프로미 다이렉트 주택화재보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/220622_아파트종합보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/250101_프로미 주택화재보험(방카).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/241014_스포츠단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/190411_빅히트신용안심보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/240725_프로미 다이렉트 골프보험(CM).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/170501_프로미 실손의료비보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/장기/제도성특약/20250101_무배당 프로미라이프 반려동물 특정 질병 보장제한부 인수 특별약관(반려묘)'.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/220622_업그레이드대학종합보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/200901_프로미 주택화재보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/장기/TM,CM/250101_무배당 프로미라이프 다이렉트 더간단 펫블리 반려묘보험2501(PM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/250101_New 프로미 반려동물보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/종합/181001_아파트종합보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/070401_무배당 프로미라이프 건강OK의료보험0704(다이렉트OK의료플랜).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/170501_해외장기체류보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/210801_유아교육기관종합보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/종합/180901_프로미 골프보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/230101_프로미 다이렉트 프리미엄해외여행 실손의료비보험(CM).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/장기/통합보험/180326_무배당 프로미라이프 컨버전스통합보험(자동차보험 업무용).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/220622_프로미 다이렉트 주택화재보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/화재/180101_프로미 주택화재보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/종합/221228_프로미 반려동물 펫키지종합보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/240401_프로미 다이렉트 프리미엄해외여행 실손의료비보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/240725_New 프로미 반려동물보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/180101_프로미 해외여행보험Ⅱ.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/230101_프로미 교육안전보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/250101_프로미 주택화재보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/자동차/기타/170211_프로미카운전자보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/070401_무배당 프로미라이프 골드라이프보험0704(신채널).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/210801_프로미 주택화재보험(방카).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/200101_프로미 다이렉트 주택화재보험(CM).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/230101_위탁아동단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/230101_유아교육기관종합보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/자동차보험/업무용/030701_프로미포터자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/090401_무배당 프로미라이프 샛별사랑보험0904(신채널).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/종합/190101_업그레이드대학종합보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/090401_다이렉트100세건강보험0904(아이러브100세플랜).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/241008_수상레저종합보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/070401_무배당 프로미라이프 으뜸안심보험0704(VIP의료보장플랜A~E).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/250101_프로미 다이렉트 프리미엄해외여행보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/화재/171019_주택화재보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/180101_프로미 자전거상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/240725_프로미 프리미엄 해외여행 실손의료비보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/170401_보통상해보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/230101_프로미 다이렉트 골프보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/210401_프로미 주택화재보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/자동차보험/기타/930206_모터바이크보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/240101_프로미 실손의료비보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/121005_무배당 프로미라이프 스마트 아이사랑보험1210(1,2,3종)(TM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/090801_무배당 프로미라이프 브라보라이프보험0907(자녀형,GA전용TM).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/060401_무배당 프로미라이프 다이렉트헬스보험0604.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/240101_프로미 실손의료비보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/200901_프로미 주택화재보험(방카).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/종합/160418_동부화재 다이렉트 골프보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/장기/TM,CM/250101_무배당 프로미라이프 다이렉트 더간단 펫블리 반려견보험2501(PM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/210401_프로미 다이렉트 골프보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/040615_무배당다이렉트헬스플러스보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/170717_동부화재 다이렉트 국내여행보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/200101_프로미 골프보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/241008_프로미 다이렉트 주택화재보험(CM).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/051208_무배당 프로미골드라이프보험0512.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/161201_동부프로미 보통상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/종합/170830_수렵보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/170717_해외여행보험Ⅱ.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/180101_프로미 다이렉트 OUTDOOR레저보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/화재/170101_주택화재보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/240613_프로미 프리미엄 해외여행보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/160101_OUTDOOR레저보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/장기/TM,CM/250101_무배당 프로미라이프 다이렉트 더간단 펫블리 반려견보험2501(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/화재/180101_프로미 다이렉트 주택화재보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/050502_베스트자녀사랑0505.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/070401_무배당 프로미라이프 다이렉트운전자보험0704.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/170101_동부화재 다이렉트 해외여행보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/200901_프로미가정종합보험(범용).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/210401_프로미 주택화재보험(방카).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/자동차보험/개인용/020401_프로미가족사랑자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/220622_프로미 주택화재보험Ⅱ.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/종합/170609_골프보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/종합/170609_동부화재 다이렉트 골프보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/장기/제도성특약/110901_실손의료비 보장(차액대체형) 무사고할인 제도성특별약관.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/250101_업그레이드대학종합보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/170501_프로미 실손의료비보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/기타/220622_프로미 반려동물배상책임보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/170717_동부화재 프로미 보통상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/화재/171101_프로미 주택화재보험(방카).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/종합/190724_아파트종합보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/★170830, 시작일 동일함_동부화재 다이렉트 국내여행보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/170501_OUTDOOR레저보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/240725_업그레이드대학종합보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/화재/181001_프로미 다이렉트 주택화재보험(CM).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/230701_프로미 국내여행보험Ⅱ.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/장기/통합보험/210226_무배당 프로미라이프 컨버전스통합보험(자동차보험 업무용).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/200401_무배당 프로미라이프 다이렉트 자녀보험2004(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/241008_아파트종합보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/화재/160418_주택화재보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/060401_무배당 프로미라이프 다이렉트운전자보험0604.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/장기/통합보험/220101_무배당 프로미라이프 컨버전스통합보험(자동차보험 업무용).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/화재/181001_프로미 주택화재보험(방카).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/210801_프로미 다이렉트 해외여행보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/화재/181001_프로미 주택화재보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/121002_무배당 프로미라이프 슈퍼스타아이사랑보험1206(1,2종).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/121002_무배당 프로미라이프 베스트저축보험1204.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/240401_위탁아동단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/종합/191202_프로미 골프보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/장기/제도성특약/230101_실손의료비보장 계약전환제도Ⅲ 특별약관.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/화재/160401_주택화재보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/050502_무배당 장기주택마련저축보험 0505 .pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/화재/160418_동부화재 다이렉트 주택화재보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/장기/TM,CM/250101_무배당 프로미라이프 다이렉트 더간단 펫블리 반려묘보험2501(CM).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/장기/통합보험/180529_무배당 프로미라이프 컨버전스통합보험(자동차보험 업무용).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/171101_프로미 해외여행보험Ⅰ.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/010501_무배당 사업안전종합보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/050816_무배당 다이렉트다보장보험0505(순수보장성).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/170830_보통상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/화재/170101_동부화재 다이렉트 주택화재보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/230101_프로미 주택화재보험(방카).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/종합/190101_아파트종합보험Ⅱ.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/010501_무배당 장기상해 참좋은운전자보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/화재/160427_동부프로미주택화재보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/170401_동부화재 다이렉트 국내여행보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/090801_무배당 프로미라이프 다이렉트100세건강보험0907(자녀형).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/090401_무배당 프로미라이프 웰스파트너보험0904 .pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/기타/220921_프로미 반려동물보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/200101_프로미 주택화재보험(방카).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/071001_무배당 프로미라이프 건강OK의료보험0710(다이렉트OK의료).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/종합/181001_아파트종합보험Ⅱ.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/241008_아파트종합보험Ⅱ.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/자동차/기타/220728_프로미카다이렉트대리운전기사보험약관.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/070701_무배당 프로미라이프 탑프라이드보험0706(신채널).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/091001_연금저축손해보험 다이렉트미래설계보험0910.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/080401_무배당 프로미라이프 다이렉트운전자보험0804.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/070401_무배당 프로미라이프 브라보상해보험0704.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/241008_프로미 주택화재보험Ⅱ.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/060110_무배당 프로미골드라이프보험0512(신채널).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/170101_국내여행보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/종합/171101_프로미 수렵보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/상해/241014_프로미 다이렉트 프리미엄해외여행 실손의료비보험(CM).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/171101_프로미 해외여행보험Ⅱ.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/170609_OUTDOOR레저보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/070401_무배당 프로미라이프 드림케어보험0704.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/장기/통합보험/200717_무배당 프로미라이프 컨버전스통합보험(자동차보험 업무용).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/000710_무배당 장기상해 이레목회자보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/230701_프로미 실손의료비보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/종합/170101_동부화재 다이렉트 골프보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/종합/171101_프로미 골프보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/종합/170717_수렵보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/070401_무배당 프로미라이프 가족사랑보험0704(신채널).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/040809_무배당 유니버설 영재보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/050502_무배당 유니버설영재보험 0505.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/종합/230101_프로미 반려동물 펫키지종합보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/070401_무배당 프로미라이프 다이렉트헬스보험0704.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/240101_수상레저종합보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/화재/180401_프로미 주택화재보험(방카).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/181001_위탁아동단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/090401_무배당 장기주택마련저축보험0904.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/230101_아파트종합보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/050502_무배당 엑설런트 A헬스케어보험0505.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/031001_무배당 동부 참좋은 운전자보험Ⅲ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/081022_무배당 프로미라이프 참좋은운전자보험0810.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/기타/220622_프로미 반려동물보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/자동차보험/개인용/020401_프로미엑설런트A자동차보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/180704_프로미 실손의료비보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/031001_무배당 동부 건강OK 의료보장보험Ⅲ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/화재/190101_프로미 주택화재보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/020801_무배당 동부건강 OK 의료보장보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/071001_무배당 프로미라이프 비즈안심종합보험0710.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/화재/160101_주택화재보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/장기/제도성특약/140701_장기요양등급 변경적용 특별약관.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/120829_무배당 프로미라이프 골드플러스파트너보험1204.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/종합/160427_골프보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/080801_무배당 프로미라이프 리더스보장보험0804.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/190701_프로미 OUTDOOR레저보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/080401_무배당 프로미라이프 참좋은운전자보험0804.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/기타/210801_프로미 반려동물보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/050110_(무)베스트라이프(홈쇼핑).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/091001_무배당 프로미라이프 T운전자보험0910(TM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/071001_무배당 프로미라이프 탑프라이드보험0710(신채널).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/화재/180101_프로미 주택화재보험(방카).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/030801_무배당 직장인 베스트 4U보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/050502_무배당 다이렉트운전자플러스보험0505.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/071001_무배당 프로미라이프 브라보운전자보험0710 (3,5년 만기).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/070401_무배당 프로미라이프 가족건강보험0704[2].pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/050502_무배당 다이렉트헬스플러스0505.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/160101_인바운드유학생보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/080610_무배당 프로미라이프 프로직장인보험0806.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/111001_무배당 프로미라이프 화재저축플러스보험1108.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/091001_무배당 프로미라이프 T운전자보험0910.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/121002_무배당 프로미라이프 스마트 아이사랑보험1210(1,2,3종)(TM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/130902_무배당 프로미라이프 웰스플러스저축보험1309.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/010401_무배당 근로자우대저축상해보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/210401_업그레이드대학종합보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/070401_무배당 프로미라이프 으뜸안심보험0704(VIP상해,의료보장, 프리미엄의료보장).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/화재/160101_동부프로미주택화재보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/170201_동부화재 프로미 보통상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/050502_무배당 장기간병 훼밀리케어보험 0505.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/110601_무배당 프로미라이프 스마트저축보험1106.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/종합/160101_골프보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/090401_무배당 프로미라이프 샛별사랑보험0904.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/170101_동부화재 다이렉트 국내여행보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/050103_무배당 장기간병 훼밀리케어보험0501.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/160104_무배당 프로미라이프 다이렉트참좋은운전자보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/000501_무배당 장기상해 슈퍼운전자보험Ⅰ.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/종합/190304_프로미 골프보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/040102_무배당 베스트 라이프 상해보험(영라이프).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/071001_무배당 프로미라이프 세븐스타웰페어보험0710.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/240704_무배당 프로미라이프 더간단 펫블리 반려묘보험2407_TM.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/화재/170522_동부화재 다이렉트 주택화재보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/040802_무배당 다이렉트多보장보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/방카슈랑스/060116_무배당 프로미 프리미엄골드보험0601.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/011004_플러스 약국종합보험Ⅲ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/화재/220622_프로미 주택화재보험(방카).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/방카슈랑스/041018_무배당프로미운전자보험0410.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/140401_무배당 프로미라이프 웰스플러스저축보험1404(TM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/070621_무배당 프로미라이프 탑프라이드보험0706.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/021202_무배당 동부 참좋은 운전자보험Ⅱ.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/170201_프로미운전자보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/090401_무배당 프로미라이프 웰스인덱스보험0904.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/060401_무배당 프로미라이프 노블보장보험0604.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/050502_무배당 행복가득우리집보험0505.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/110601_무배당 프로미라이프 베스트저축보험1106.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/060401_무배당 프로미라이프 상해보험0604.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/020506_무배당동부훼밀리케어설계보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/170401_실손의료비보장 계약전환제도Ⅱ 특별약관.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/170501_동부화재 다이렉트 해외여행보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/131220_무배당 프로미라이프 꿈사랑보험1311.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/170830_동부화재 다이렉트 프로미운전자보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/011201_무배당 장기종합 큰사랑자녀보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/080801_무배당 프로미라이프 리더스보장보험0804.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/030102_무배당 엑설런트A헬스케어보험Ⅲ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/080401_무배당 장기주택마련저축보험0804.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/120326_무배당 프로미라이프 내인생플러스보장보험1203(생활약속).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/방카슈랑스/051219_무배당 프로미 베스트 운전자보험0512.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/050502_무배당 건강 OK의료보장보험0505.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/010201_연금저축손해보험 미래행복보험Ⅰ.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/200401_공무원단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/230701_프로미 실손의료비보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/051107_무배당 프로미상해보험0511.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/970310_장기종합자녀사랑보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/방카슈랑스/130304_연금저축손해보험 프로미라이프 연금보험1303.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/180101_프로미 다이렉트 운전자보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/031001_무배당동부훼밀리케어설계보험Ⅲ.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/170101_특정교통사고피해보장 보험금 지급관련 특별약관.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/090923_무배당 프로미라이프 꿈사랑보험0909.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/041115_무배당 Noble보장보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/080401_무배당 프로미라이프 샛별사랑보험0804.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/방카슈랑스/140109_연금저축손해보험 프로미라이프 연금보험1401.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/230401_간편실손의료비보장 안정화 할인 특별약관2304.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/060401_무배당 프로미라이프 영재보험0604.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/200401_표준화Ⅱ 실손의료비보장 안정화할인 특별약관2004.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/071001_무배당 장기주택마련저축보험0710 .pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/130122_무배당 프로미라이프 화재저축플러스보험1301(TM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/120913_무배당 프로미라이프 100세청춘보험1204.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/화재/160401_동부프로미주택화재보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/031001_무배당 동부 큰보장 사업안심보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/040401_무배당New훼밀리케어설계보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/121002_무배당 프로미라이프 스마트 아이사랑보험1210(1,2,3종).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단독실손의료보험/160401_해외장기체류 실손의료보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/221107_무배당 프로미라이프 골드클래스저축보험2211(PA).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/140401_무배당 프로미라이프 웰스플러스저축보험1404.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/240704_무배당 프로미라이프 더간단 펫블리 반려견보험2407_TM.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/210801_코스모스 가을향기 단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/240912_무배당 프로미라이프 더간단 펫블리 반려묘보험2409_TM.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/070401_무배당 프로미라이프 골드라이프보험0704.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/080401_무배당 프로미라이프 브라보운전자보험0804 (3,5년만기).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_상해보험/210101_NH운전자상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/050203_(무)다이렉트운전자플러스(홈쇼핑).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/061214_무배당 프로미라이프 베스트자녀사랑보험0611.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/200817_단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/121005_무배당 프로미라이프 스마트 아이사랑보험1210(1,2,3종).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/081001_무배당 프로미라이프 골드인덱스보험0809.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중/일반/종합/250101_수상레저종합보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/181115_공무원단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/111001_무배당 프로미라이프 상조저축보험1108 .pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/120719_무배당 프로미라이프 부모효(孝)상해저축보험1207 .pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/990501_장기상해마이라이프상해보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/030301_무배당 동부큰사랑자녀보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/171110_프로미 다이렉트 OUTDOOR레저보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/080401_무배당 프로미라이프 탑프라이드보험0804 (신채널).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/031001_무배당 동부 직장인 베스트 4U보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/220401_실손의료비보장 안정화 추가할인 특별약관2204.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/951001_장기상해푸른생활보장보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/011201_무배당 장기상해 직장인슈퍼보장보험Ⅲ.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/020401_무배당 동부 참좋은 운전자보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/방카슈랑스/070401_무배당 프로미라이프 화재보험0704'.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/240220_공무원단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/210701_실손의료보험 중지 및 재개Ⅲ 특별약관.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/210501_무배당 장기종합 행복가득우리집보험Ⅱ.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/종합/190304_프로미 다이렉트 골프보험(CM).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/070401_무배당 장기주택마련저축보험0704.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/121120_무배당 프로미라이프 고혈압케어보험1211.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/장기/통합보험/210928_무배당 프로미라이프 컨버전스통합보험(자동차보험 개인용).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/180402_표준화Ⅱ 실손의료비보장 안정화 할인 특별약관1804.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/종합/230320_프로미 반려동물 펫키지종합보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_화재재물/250101_내집안심보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/210401_공무원단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/방카슈랑스/060401_무배당 프로미라이프 운전자보험0604.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/050801_연금저축 미래행복보험 0508.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/050617_무배당 베스트라이프보험0506.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단독실손의료보험/190101_해외장기체류 실손의료보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단독실손의료보험/181001_해외장기체류 실손의료보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/050502_무배당 노블보장보험 0505.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/070401_무배당 프로미라이프 청춘예찬보험0704.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단독실손의료보험/170101_해외장기체류 실손의료보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/220429_실손의료보장 계약전환 할인 특별약관2204.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/종합/190808_아파트종합보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/방카슈랑스/140116_무배당 프로미라이프 매월받는 우리가족생활보장보험1401.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/120829_무배당 프로미라이프 100세청춘보험1204.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/060401_무배당 프로미라이프 베스트자녀사랑보험0604.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/200608_교통사고처리지원금(어린이보호구역사고, 6주미만) 추가보장 특별약관.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/071101_무배당 프로미라이프 건강OK의료보험0711.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/890902_장기상해직장인상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/111223_무배당 프로미라이프 꿈사랑보험1112.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/기타/220720_프로미 반려동물배상책임보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/040102_무배당 베스트 라이프 상해보험(파워라이프).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/방카슈랑스/130902_무배당 프로미라이프 고운아이저축보험1309.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/050502_무배당 베스트라이프상해보험0505[2].pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/200401_코스모스 가을향기 단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/190401_표준화Ⅱ 실손의료비보장 안정화 할인 특별약관1904.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/210101_코스모스 가을향기 단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/960916_세제지원개인연금손해보험직장인노후보장연금보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/200201_단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/201109_공무원단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_재물배상보험/170110_재난배상책임보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/150102_무배당 프로미라이프 상조보험1501.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/081216_다이렉트100세건강보험0812(100세든든플랜).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/121002_무배당 프로미라이프 골드플러스파트너보험1210.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_재물배상보험/230101_다중이용업소화재배상책임보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/090801_무배당 프로미라이프 리더스파트너보험0907.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/150601_무배당 프로미라이프 상조보험1506.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단독실손의료보험/200101_단체상해 실손의료보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/상해/171101_프로미 OUTDOOR레저보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_통합종합/250101_동산종합보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_통합종합/250101_주택종합보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/180401_코스모스 가을향기 단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/190607_실손의료비보장 계약전환제도Ⅱ 특별약관'.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 자동차보험_정책보험/240201_농기계종합보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_상해보험/210401_NH운전자상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_재물배상보험/210401_다중이용업소화재배상책임보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 장기보험_건강어린이/250102_(무) NH더간편해진치매플러스보험[4종표준형(간편)]2404.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/070401_무배당 프로미라이프 브라보운전자보험0704 (7,10,15년만기).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/950116_장기상해마이라이프보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/070401_무배당 프로미라이프 이지스종합보험0704(GA).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/071001_무배당 프로미라이프 리더스보장보험0710.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/통합보험/070116_무배당 프로미라이프 컨버전스보험(07.1월 판매개시).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/210401_단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/190601_단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/230701_실손의료보장 계약전환 할인 특별약관2307.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/990501_장기상해슈퍼운전자보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/090401_무배당 프로미라이프 비즈파트너보험0904.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단독실손의료보험/180401_국내여행 실손의료보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_재물배상보험/230101_맹견사고배상책임보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/020902_무배당 동부 큰보장 사업안심보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/100928_무배당 프로미라이프 꿈사랑보험1009.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/071001_무배당 프로미라이프 노블보장보험0710.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/120829_무배당 프로미라이프 스마트 아이사랑보험1204(1,2,3종).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/221001_단체상해보험.pickle
+offset 미충족                 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/통합보험/110901_무배당 프로미라이프 컨버전스통합보험(11.09월 판매개시).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/방카슈랑스/051219_무배당 프로미 베스트 골드클래스보험0512.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/050714_무배당유니버설브라보운전자0507(7_10_15년만기).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/방카슈랑스/070401_무배당 프로미라이프 가족건강보험0704.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/081016_무배당 프로미라이프 베스트자녀저축보험0810.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/방카슈랑스/070401_무배당 프로미라이프 가족사랑보험0704.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/101108_무배당 프로미라이프 샛별사랑보험1011.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/060401_무배당 프로미라이프 브라보운전자보험0604(7,10,15년만기).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/170401_표준화Ⅱ 실손의료비보장 안정화 할인 특별약관.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단독실손의료보험/220101_단체상해 실손의료보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/071101_무배당 장기주택마련저축보험0711.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/201001_공무원단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단독실손의료보험/250101_국내여행 실손의료보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/080401_무배당 프로미라이프 노블보장보험0804.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/방카슈랑스/130204_무배당 프로미라이프 내인생건강보험1302.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/121107_무배당 프로미라이프 스마트운전자보험1204.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/170101_실손의료비보장 안정화 할인 특별약관1701.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/240201_단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/220630_공무원단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/210401_교통사고처리지원금(어린이보호구역사고, 6주미만) 추가보장 특별약관.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 자동차보험_정책보험/230301_농기계종합보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/200701_공무원단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/130304_연금저축손해보험 스마트 연금보험1303.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/010501_무배당 장기종합 프로미건강보험Ⅱ.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단독실손의료보험/160401_해외여행 실손의료보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/210701_실손의료비보장 계약전환제도Ⅲ 특별약관.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/210101_실손의료비보장 안정화 추가할인 특별약관2101.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/050502_무배당 직장인베스트 4U보험0505.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/041115_무배당 브라보상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/050502_다이렉트다보장신한.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/111001_무배당 프로미라이프 상조저축보험1108(TM).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/210901_단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단독실손의료보험/180401_해외장기체류 실손의료보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/150401_무배당 프로미라이프 내인생플러스종합보험1501(생활약속).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/060401_무배당 프로미라이프 베스트상해보험0604.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_통합종합/230101_동산종합보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/090401_무배당 프로미라이프 웰스파트너보험0904 [2].pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/241101_자동차사고 변호사선임비용(타인사망및중대법규위반사고(1-3급)) 변호사 직접지급(실손) 특별약관.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/210401_(무)NH헤아림건강보험2101.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/자동차보험/업무용/020401_플러스업무용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/방카슈랑스/030904_무배당스페셜상해저축보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단독실손의료보험/180401_해외여행 실손의료보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/210701_실손의료보험 개인실손전환(단체→개인)Ⅱ 특별약관.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/220401_실손의료보장 계약전환 할인 특별약관2204.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/090801_무배당 프로미라이프 컬러풀어린이안심보험0907.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/150102_무배당 프로미라이프 노후실손의료비보험1501.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/220516_단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/201101_공무원단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/220314_공무원단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_상해보험/221001_NH운전자상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/200110_단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/200701_단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단독실손의료보험/190101_국내여행 실손의료보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_화재재물/160401_주택화재보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 장기보험_건강어린이/240401_(무) NH맘대로골라보장보험[3종수술비플랜]2404.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 장기보험_운전자상해/240401_(무) NH위너스상해보험[2종VIP플러스플랜(금리확정형)]2404.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/방카슈랑스/080616_무배당 프로미라이프 유니버설저축보험0806.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/130102_무배당 프로미라이프 화재저축플러스보험1301.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_통합종합/230101_주택종합보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_화재재물/180713_주택화재보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/110401_무배당 프로미라이프 참좋은운전자보험1104.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/220429_실손의료비보장 안정화 추가할인 특별약관2204.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/210401_(무)NH다솜플러스종합보험2101.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/231004_(무)NH가성비굿건강보험[6종해약환급금미지급형Ⅱ]2310.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_상해보험/200907_NH운전자상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/종합/190101_수상레저종합보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/221001_(무) NH가성비굿플러스어린이보험2210.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/210801_(무)갱신형 간병인지원입원일당 보장 특별약관2104.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/200401_단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_상해보험/230101_NH운전자상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230102_(무)NH80튼튼치아보험2301.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/230101_간편실손의료비보장 안정화 할인 특별약관2301.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 장기보험_건강어린이/240401_(무) NH맘대로골라보장보험[4종암플랜]2404.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 자동차보험_정책보험/220812_농기계종합보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/240401_(무) NH가성비굿건강보험[8종표준형]2404.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/120326_무배당 프로미라이프 내인생플러스보장보험1203(건강약속).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/220401_무배당 프로미라이프 골드플러스저축보험2204(PA).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/201001_단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/210401_코스모스 가을향기 단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/220630_단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/000501_무배당 장기상해 직장인슈퍼보장보험Ⅰ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/960401_장기상해가족사랑운전자보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/150102_연금저축손해보험 스마트 연금저축계약이전보험1501.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/201109_단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/210801_공무원단체상해보험.pickle
+offset 미충족                 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/통합보험/110801_무배당 프로미라이프 컨버전스통합보험(11.08월 판매개시).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_재물배상보험/190101_다중이용업소화재배상책임보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_재물배상보험/210401_맹견사고배상책임보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/951001_장기상해한마음보장보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/990501_장기종합내맘에쏙드는암보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/방카슈랑스/060401_무배당 프로미라이프 골드클래스보험0604.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_재물배상보험/230101_재난배상책임보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_상해보험/210129_NH운전자상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/990501_무배당 장기종합 참좋은 우리집보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/060401_무배당 프로미라이프 브라보운전자보험0604(3,5년만기).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230101_(무)NH3대진단비보험[해약환급금미지급형(납입중 0% 납입후50%)]2301.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/방카슈랑스/130701_연금저축손해보험 프로미라이프 연금보험1307.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/181201_실손의료보험 중지 및 재개 특별약관.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/231004_(무)NH헤아림355건강보험[5종세만기형(해약환급금미지급형Ⅱ납면)]2310.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/181201_실손의료보험 개인실손전환(단체→개인) 특별약관.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/240509_보험료 특별할인 제도성 특별약관Ⅰ.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_재물배상보험/250101_맹견사고배상책임보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/160101_표준화 실손의료비보장 안정화 할인 특별약관.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_통합종합/240101_주택종합보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_통합종합/250101_행사종합보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단독실손의료보험/240101_해외장기체류 실손의료보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/210801_(무)New간편한가성비플러스건강보험2101.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 장기보험_단독실손의료보험/210701_실손의료보험 개인실손전환(단체→개인) 특별약관.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단독실손의료보험/190301_단체상해 실손의료보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/210801_(무)2040NH3대진단비보험2101.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/210601_(무)NH힘이되는치매보험2106.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/방카슈랑스/050502_무배당 프로미가족사랑보험 (자녀형)0505.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단독실손의료보험/160101_해외장기체류 실손의료보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/방카슈랑스/090401_무배당 프로미라이프 자녀사랑보험0904.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230102_(무) 간편해진335건강보험[3종해약환급금미지급형Ⅱ(간편심사)]2301.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230102_(무) NH335굿패스건강보험[5종해약환급금미지급형Ⅱ(335간편심사형납입면제형)]2301.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/통합보험/050502_무배당컨버전스보험(0505판매).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/930409_으뜸안심생활보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230102_(무) NH335굿패스건강보험[4종갱신형(일반심사형납입면제미부가형)]2301.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/240902_자동차사고 변호사선임비용(타인사망및중대법규위반사고(1-3급)) 변호사 직접지급(실손) 특별약관.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/200501_공무원단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/240401_(무) NH가성비굿건강보험[6종해약환급금미지급형Ⅱ]2404.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/방카슈랑스/041125_무배당프로미웰빙보험0411.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/961202_가족안심종합보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/220401_(무) NH가성비굿건강보험2204.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/220221_공무원단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/210801_(무)갱신형 간병인지원입원일당(간편가입)보장 특별약관2104.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/240401_(무) NH건강할수록스마트암보험[1종해약환급금미지급형Ⅱ남성형]2404.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/210401_(무)원패스초간편건강보험(갱신형)2101.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/220502_(무) NH335굿패스건강보험[3종갱신형(일반심사형납입면제형)].pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/210801_(무)NH계속든든암보험2102.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단독실손의료보험/230101_해외여행 실손의료보험.pickle
+kle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/방카슈랑스/121002_무배당 프로미라이프 New고운아이사랑보험1210.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단독실손의료보험/210401_단체상해 실손의료보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_상해보험/210801_NH운전자상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중/장기/제도성특약/210801_교통사고처리지원금(어린이보호구역사고, 6주미만) 추가보장 특별약관.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/방카슈랑스/050711_무배당 프로미 골드클래스보험0507.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230401_(무) NH헤아림355건강보험[3종갱신형(해약환급금미지급형납입면제형)].pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/200101_단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230401_(무)갱신형 간병인지원입원일당(335간편가입Ⅱ)보장 특별약관2304.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/011201_무배당 사업안전종합보험Ⅲ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230901_(무)NH가성비굿건강보험[2종표준형갱신형]2304.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 장기보험_건강어린이/230401_(무) 간편해진335건강보험[1종갱신형(간편심사)]2304.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230401_(무)갱신형 간병인지원입원일당(간편가입)보장 특별약관2304.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/230101_실손의료보장 계약전환 할인 특별약관2301.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/240401_(무) NH헤아림355건강보험[1종갱신형(납면)]2404.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/240812_(무) NH헤아림3.10.10건강보험[3종갱신형(해약환급금미지급형납면)].pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_단독실손의료보험/230102_(무)간편가입헤아림실손의료비보험2301.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/201101_코스모스 가을향기 단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/240812_(무) NH헤아림3.10.10건강보험[5종세만기형(해약환급금미지급형Ⅱ납면)].pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230102_(무) NH간편해진치매플러스보험2301.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_화재재물/180101_내집안심보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/210201_단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/230101_코스모스 가을향기 단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/240401_(무) NH335굿패스건강보험[4종해약환급금미지급형Ⅱ(간편심사)]2404.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/230501_단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/190601_공무원단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/220701_실손의료보장 계약전환 할인 특별약관2207.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/1101_자동차사고 변호사선임비용(타인사망및중대법규위반사고(1-3급)) 변호사 직접지급(실손) 특별약관.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/화재/160427_주택화재보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/050714_무배당 유니버설브라보 운전자보험0507(3,5년만기).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_재물배상보험/201101_재난배상책임보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/240902_단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_화재재물/140401_주택화재보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/방카슈랑스/220707_무배당 프로미라이프 골드클래스저축보험2207.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_화재재물/230101_내집안심보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/990501_장기종합참좋은우리집보험Ⅱ.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단독실손의료보험/201101_단체상해 실손의료보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_재물배상보험/220608_다중이용업소화재배상책임보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단독실손의료보험/130101_국내여행 실손의료보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/250126_공무원단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_단독실손의료보험/230101_(무)헤아림다이렉트실손의료비보험2301.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 장기보험_건강어린이/250102_(무) NH하나로간편한건강보험[9종해약환급금미지급형Ⅱ,305간편심사형]2404.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/070401_무배당 프로미라이프 가족건강보험0704.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/방카슈랑스/060801_무배당 프로미라이프 로얄스타보험0607.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/200501_단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/220221_단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_통합종합/240101_동산종합보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단독실손의료보험/160101_국내여행 실손의료보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/210601_공무원단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230401_(무)갱신형 간병인지원입원일당(355간편가입)특별약관.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/231004_(무)NH헤아림355건강보험[6종세만기형(해약환급금미지급형Ⅱ)]2310.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/240812_(무) NH헤아림3.10.10건강보험[4종갱신형(해약환급금미지급형)].pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/210801_(무)갱신형 표적항암약물허가치료비(최초1회한)보장 특별약관.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 자동차보험_정책보험/220401_농기계종합보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_재물배상보험/240101_맹견사고배상책임보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/220701_실손의료비보장 안정화 추가할인 특별약관2207.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/방카슈랑스/130902_무배당 프로미라이프 내인생질병보장보험1309.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/961202_사업안전종합보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/200101_실손의료비 안정화 추가할인 특별약관2001.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/TM,CM/090801_무배당 프로미라이프 다이렉트헬스보험0907.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/210801_단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_화재재물/120302_주택화재보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 자동차보험_정책보험/180101_농기계종합보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단독실손의료보험/180101_단체상해 실손의료보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/181115_단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/240401_(무) NH건강할수록스마트암보험[2종표준형남성형]2404.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 장기보험_단독실손의료보험/240401_(무) 헤아림실손의료비보험[2종중지재개용]2404.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/210401_(무)New간편한가성비플러스건강보험2101.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_화재재물/140901_주택화재보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/200401_실손의료비보장 안정화 추가할인 특별약관 2004.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/221001_(무)New계속지켜주는암보험2209.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/190701_단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/220401_(무) NH가성비굿플러스어린이보험2204.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/일반보험/종합/190101_아파트종합보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/220331_공무원단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230607_(무) NH베스트간병보험[2종단기납형해약환급금저지급형(간편심사)].pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_화재재물/180101_아파트단체화재보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/231004_(무)NH헤아림355건강보험[1종갱신형(납면)]2310.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_상해보험/220101_NH운전자상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/940411_약국종합.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/200801_공무원단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/240812_(무) NH헤아림3.10.10건강보험[6종세만기형(해약환급금미지급형Ⅱ)].pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 장기보험_건강어린이/240401_(무) NH더간편해진치매플러스보험[2종해약환급금저지급형(간편)]2404.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/221001_(무) NH가성비굿건강보험2209.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/방카슈랑스/110401_무배당 프로미라이프 New고운아이사랑보험1104.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_단독실손의료보험/210401_(무)간편가입헤아림실손의료비보험2101.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/240704_무배당 프로미라이프 더간단 펫블리 반려견보험2407.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/220103_(무)New계속지켜주는암보험2201.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/220401_(무)NH다이렉트암보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/061107_무배당 프로미라이프 드림케어보험0611.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/120319_(무)내가정채움종합프로젝트보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230901_(무) NH더간편해진치매플러스보험[1종해약환급금저지급형(일반)].pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/200801_단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/240812_(무) NH헤아림355건강보험[4종갱신형(해약환급금미지급형)]2408.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/160401_실손의료비보장 안정화 할인 특별약관.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_상해보험/240101_NH운전자상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/231004_(무)NH헤아림355건강보험[2종갱신형]2310.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/091001_연금저축손해보험 미래로(路)보험0910.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 장기보험_건강어린이/240401_(무) NH하나로간편한건강보험[10종갱신형,305간편심사형]2404.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/240220_단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/230918_(무) NH하나로간편한건강보험[9종해약환급금미지급형Ⅱ,005간편심사형].pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단독실손의료보험/230101_해외장기체류 실손의료보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/231201_요양실손 보장한도 변경 제도성 특별약관.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/210118_(무)NH간병인지원입원일당(갱신형)보장 특별약관.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단독실손의료보험/160401_국내여행 실손의료보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_상해보험/250101_NH운전자상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/021201_무배당동부훼밀리케어설계보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/220801_(무) NH335굿패스건강보험[3종갱신형(일반심사형납입면제형)].pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/220401_(무)NH올바른지구굿데이운전자보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/221001_(무)투패스초간편건강보험2209.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 장기보험_건강어린이/240401_(무) NH헤아림치매플러스보험[4종표준형(간편심사)]2404.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단독실손의료보험/200401_단체상해 실손의료보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230915_(무) NH헤아림치매플러스보험[2종해약환급금저지급형(간편심사)].pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/990501_장기종합금수강산여행보험II.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/방카슈랑스/★시작일 동일, 종료기간 다름 070401_무배당 프로미라이프 가족건강보험0704.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_단독실손의료보험/220401_(무)헤아림다이렉트실손의료비보험2201.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/231004_(무)NH헤아림355건강보험[3종갱신형(해약환급금미지급형납면)]2310.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/220401_(무)NH탑클래스상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/230102_(무) NH탑클래스상해보험2301.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/200101_코스모스 가을향기 단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/050502_무배당뉴라이프상해보험0505.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/230213_공무원단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/210104_(무)투패스리치상해보험2101.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/통합보험/061101_무배당 프로미라이프 컨버전스보험(06.11월 판매개시).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_화재재물/120305_(무)채움해피하우스저축보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/970701_신직장인노후보장보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/220401_(무)NEW프레스티지상해보험2201.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230901_(무) NH헤아림치매플러스보험[1종해약환급금저지급형(일반심사)].pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/071001_무배당 프로미라이프 탑프라이드보험0710.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/230701_간편실손의료비보장 안정화 할인 특별약관2307.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/210801_(무)NH다솜플러스종합보험2101.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/210801_(무)New계속지켜주는암보험2101.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/190621_단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/970701_신노후안심보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/방카슈랑스/050502_무배당 프로미OK상해보험0505.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/220502_(무) NH335굿패스건강보험[2종갱신형(335간편심사형납입면제미부가형)].pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230102_(무) NH힘이되는치매보험2301.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/240401_(무) NH헤아림355건강보험[5종세만기형(해약환급금미지급형Ⅱ납면)]2404.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/220101_실손의료보장 계약전환 할인 특별약관2201.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230102_(무) 투패스초간편건강보험2301.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_화재재물/120312_(무)채움해피하우스보장보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230901_(무)NH가성비굿건강보험[1종납입면제형표준형갱신형]2304.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/231004_(무)NH헤아림355건강보험[4종갱신형(해약환급금미지급형)]2310.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/240401_(무) NH가성비굿건강보험[7종납입면제형표준형]2404.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/210901_공무원단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/240401_(무) NH가성비굿건강보험[1종납입면제형표준형갱신형]2404.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_단독실손의료보험/230102_(무)헤아림실손의료비보험2301.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/220801_(무) NH335굿패스건강보험[2종갱신형(335간편심사형납입면제미부가형)].pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/220103_(무)투패스리치상해보험2201.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/통합보험/050905_컨버전스보험0509.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/250101_공무원단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단독실손의료보험/190101_해외여행 실손의료보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/방카슈랑스/070401_무배당 프로미라이프 골드클래스보험0704.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/110401_무배당 프로미라이프 건강생활보험1104.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단독실손의료보험/230101_단체상해 실손의료보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230915_(무) NH헤아림치매플러스보험[1종해약환급금저지급형(일반심사)].pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 자동차보험_정책보험/201110_농기계종합보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230401_(무)NH335더블굿패스건강보험[1종갱신형(간편심사납면)]2304.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/240401_(무) NH굿스타트건강보험[1종해약환급금미지급형Ⅱ]2404.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 장기보험_운전자상해/200611_교통사고처리지원금(스쿨존,어린이6주미만치료)추가보장특별약관.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/220101_단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/230918_(무) NH하나로간편한건강보험[10종갱신형,005간편심사형].pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단독실손의료보험/210801_단체상해 실손의료보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/210503_표준화Ⅱ 실손의료비보장 안정화할인 특별약관2104.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230102_(무) NH335굿패스건강보험[6종해약환급금미지급형Ⅱ(335간편심사형납입면제미부가형)]2301.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/190315_공무원단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/210601_(무)NH간편해진치매플러스보험2106.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 일반보험_여행레져/230101_On-Off 해외여행보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_화재재물/190101_아파트단체화재보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230102_(무) NH335굿패스건강보험[3종갱신형(일반심사형납입면제형)]2301.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230102_(무) NH가성비굿플러스어린이보험2301.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/210101_단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/240401_(무) NH올바른지구굿데이운전자보험2404.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/240401_(무) NH335굿패스건강보험[2종갱신형(간편심사)]2404.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/220502_(무) NH335굿패스건강보험[4종갱신형(일반심사형납입면제미부가형)].pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단독실손의료보험/181001_국내여행 실손의료보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 장기보험_운전자상해/250102_(무) 투패스리치상해보험[3종일반심사형2]2404.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230901_(무)NH가성비굿건강보험[3종납입면제형해약환급금미지급형갱신형]2304.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/210701_실손의료비보장 안정화 추가할인 특별약관2107.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_재물배상보험/210801_맹견사고배상책임보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단독실손의료보험/190101_단체상해 실손의료보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/220331_단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/090801_무배당 프로미라이프 브라보라이프보험0907(자녀형).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/231101_(무) NH위너스상해보험2311.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/방카슈랑스/030903_무배당 스위트홈 저축보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 자동차보험_정책보험/210412_농기계종합보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/220425_단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/230101_단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/220707_무배당 프로미라이프 골드클래스저축보험2207(PA).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/190315_단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/220801_(무) NH335굿패스건강보험[4종갱신형(일반심사형납입면제미부가형)].pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/210401_(무)원패스초간편건강보험(세만기형)2101.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_화재재물/190101_주택화재보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/990501_슈퍼사업안전보험Ⅱ.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_재물배상보험/250101_다중이용업소화재배상책임보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_단독실손의료보험/181201_개인실손의료보험 중지 및 재개 특별약관.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/240610_단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/201101_단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230102_(무) NH335굿패스건강보험[2종갱신형(335간편심사형납입면제미부가형)]2301.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 장기보험_운전자상해/250102_(무) 투패스리치상해보험[4종31초간편심사형2]2404.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/240902_공무원단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230915_(무) NH헤아림치매플러스보험[3종표준형(일반심사)].pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_단독실손의료보험/240401_(무) 헤아림실손의료비보험[1종단체전환용]2404.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_화재재물/120401_주택화재보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/120305_(무)채움스마트상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/220401_(무)갱신형 표적항암약물허가치료비(최초1회한)보장 특별약관2201.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/220801_(무) NH80튼튼치아보험2208.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 자동차보험_정책보험/220701_농기계종합보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/210101_공무원단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230901_(무) NH베스트간병보험[4종보장강화형해약환급금저지급형(간편심사)]2309.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_재물배상보험/201101_다중이용업소화재배상책임보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/220103_(무)원패스초간편건강보험(갱신형)2201.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 자동차보험_정책보험/150302_농기계종합보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/220401_(무)헤아림다이렉트운전자보험2201.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/방카슈랑스/050117_무배당프로미운전자보험0501 (금리연동형).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230401_(무)NH335더블굿패스건강보험[3종해약환급금미지급형Ⅱ(간편심사납면)]2304.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/240909_(무) NH무암도전미니암보험[1종실속플랜].pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/240401_(무) NH베스트간병보험[3종보장강화형해약환급금저지급형(일반심사)]2404.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_재물배상보험/210401_재난배상책임보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/120326_(무)채움안심보장보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/240701_(무) NH굿스타트건강보험[1종해약환급금미지급형Ⅱ]2407.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_단독실손의료보험/210104_(무)간편가입헤아림실손의료비보험2101.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/220401_(무)New간편한가성비플러스건강보험2204.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/통합보험/140410_무배당 프로미라이프 컨버전스통합보험(14.4월 판매개시).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230901_(무) NH더간편해진치매플러스보험[4종표준형(간편)].pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230401_(무)NH335굿패스건강보험[4종해약환급금미지급형Ⅱ(간편심사)]2304.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/240812_(무) NH헤아림355건강보험[5종세만기형(해약환급금미지급형Ⅱ납면)]2408.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/210817_(무)꼭필요한소득보상보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/240401_(무) NH헤아림355건강보험[6종세만기형(해약환급금미지급형Ⅱ)]2404.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/220425_공무원단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_단독실손의료보험/230101_(무)헤아림다이렉트실손의료비보험(전환계약용)2301.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_통합종합/230101_행사종합보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_단독실손의료보험/210401_(무)헤아림실손의료비보험(전환계약용)2101.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230401_(무) NH더블간편해진치매보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_화재재물/230102_(무) New리치하우스가정종합보험2301.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단독실손의료보험/240101_해외여행 실손의료보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/240401_(무) NH베스트간병보험[2종표준형(간편심사)]2404.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_통합종합/240101_행사종합보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB골프보험(B)/230101_KB골프보험(B).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/930515_장기상해새시대교통적립보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단독실손의료보험/250101_단체상해 실손의료보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/210401_(무)NH가성비굿플러스어린이보험2104.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/231004_(무)NH굿스타트건강보험[2종표준형]2310.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/210104_(무)NEW프레스티지상해보험2101.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/150102_표준화 실손의료비보장 안정화 할인 특별약관.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/230501_공무원단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/240101_공무원단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/210401_(무)리치팜생활안심보험2101.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단독실손의료보험/160101_해외여행 실손의료보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/060116_무배당 프로미 뷰티라이프보험0601.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/220519_(무)NH올바른지구굿데이운전자보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/190301_공무원단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/240601_단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/220801_(무) NH335굿패스건강보험[1종갱신형(335간편심사형납입면제형)].pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/110401_무배당 프로미라이프 컬러풀어린이안심보험1104.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230915_(무) NH베스트간병보험[4종보장강화형해약환급금저지급형(간편심사)]2309.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/201005_(무) NEW프레스티지상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/230918_(무) NH하나로간편한건강보험[2종갱신형,355간편심사형].pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/365세이프상해보험(신규계약판매중지)/180521_365세이프상해보험(신규계약판매중지).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/210801_(무)원패스초간편건강보험(갱신형)2101.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/200101_공무원단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_통합종합/190101_주택종합보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB골프보험(B)/241001_KB골프보험(B).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/240401_(무) NH건강할수록스마트암보험[3종해약환급금미지급형Ⅱ여성형]2404.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/방카슈랑스/110401_무배당 프로미라이프 New화재저축보험1104.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/220103_(무)투패스초간편건강보험2201.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/210801_(무)NH힘이되는치매보험2106.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/220602_(무) NH가성비굿플러스어린이보험2204.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_단독실손의료보험/220401_(무)간편가입헤아림실손의료비보험2201.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230401_(무)NH335더블굿패스건강보험[4종해약환급금미지급형Ⅱ(간편심사)]2304.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/221001_(무) 리치팜생활안심보험2209.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230102_(무) 간편해진335건강보험[1종갱신형(간편심사)]2301.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230915_(무) NH베스트간병보험[3종보장강화형해약환급금저지급형(일반심사)]2309.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/방카슈랑스/220401_무배당 프로미라이프 골드플러스저축보험2204.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/250101_코스모스 가을향기 단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/240401_(무) NH가성비굿건강보험[3종납입면제형해약환급금미지급형갱신형]2404.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/240701_(무) NH굿스타트건강보험[2종표준형]2407.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/060401_무배당 장기주택마련저축보험0604.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_화재재물/220103_(무)New리치하우스가정종합보험2201.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_화재재물/230302_(무)All New리치하우스가정종합보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/211015_(무)NH탑리더상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_단독실손의료보험/160101_(무)NH실손의료비(갱신형)특별약관1601.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/110401_연금저축손해보험 미래로(路)연금보험1104.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 자동차보험_정책보험/210802_농기계종합보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/240401_(무) NH건강할수록스마트암보험[5종갱신형]2404.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단독실손의료보험/250101_해외장기체류 실손의료보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/060306_무배당 프로미라이프 유니버설 골드라이프보험0603.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/220314_단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/365세이프상해보험(신규계약판매중지)/130401_365세이프상해보험(신규계약판매중지).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/210801_(무)NH헤아림건강보험2101.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/221001_(무) NH올바른지구굿데이운전자보험220926.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/220401_(무)NH계속든든암보험2201.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_화재재물/210401_(무)NH내사업파트너재산종합보험2101.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/210401_(무)굿데이운전자보험2101.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/220401_(무)갱신형 간병인지원입원일당보장 특별약관2204.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230401_(무) NH헤아림355건강보험[6종세만기형(해약환급금미지급형Ⅱ)].pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/240101_코스모스 가을향기 단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/240401_(무) NH헤아림355건강보험[4종갱신형(해약환급금미지급형)]2404.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB해외장기체류실손의료비보험/181001_KB해외장기체류실손의료비보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230401_(무)갱신형 간병인지원입원일당 보장 특별약관2304.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230901_(무) NH베스트간병보험[3종보장강화형해약환급금저지급형(일반심사)]2309.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/240812_(무) NH헤아림3.10.10건강보험[2종갱신형].pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/240902_(무) NH365일간병인보험[4종간병인지원형(335간편심사)].pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/365가족안심상해보험(신규계약판매중지)/130401_365가족안심상해보험(신규계약판매중지).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_단독실손의료보험/210104_(무)헤아림실손의료비보험(단체전환·중지재개용)2101.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/220801_(무) NH335굿패스건강보험[5종해지환급금미지급형Ⅱ(335간편심사형납입면제형)].pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/011101_무배당 장기상해 엑설런트A헬스케어보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/230915_(무) NH위너스상해보험2304.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/231004_(무)NH335굿패스건강보험[1종갱신형(간편심사납면)]2310.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/모바일기기보험/230101_모바일기기보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/210801_(무)헤아림다이렉트운전자보험2101.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/130701_연금저축손해보험 스마트 연금보험1307.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_화재재물/190101_내집안심보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단독실손의료보험/240101_국내여행 실손의료보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB국내여행보험/120401_KB국내여행보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/230918-(무) NH하나로간편한건강보험[1종해약환급금미지급형Ⅱ,355간편심사형].pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB골프보험/210101_KB골프보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 장기보험_운전자상해/250102_(무) 투패스리치상해보험[2종31초간편심사형1]2404.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/050502_연금저축 미래행복보험 0505.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB골프보험(B)/240101_KB골프보험(B).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/세이프플러스상해보험(신규계약판매중지)/210401_세이프플러스상해보험(신규계약판매중지).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/365세이프상해보험(신규계약판매중지)/180401_365세이프상해보험(신규계약판매중지).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/제도성특약/230703_자동차사고 변호사선임비용(타인사망및중대법규위반사고(1-3급)) 변호사 직접지급(실손) 특별약관.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB레저보험/181001_KB레저보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/시민안전상해보험/240422_시민안전상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/220101_(무)NH3대진단비보험[해지환급금미지급형(납입중 0%, 납입후50%)]2201.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/240812_(무) NH헤아림355건강보험[3종갱신형(해약환급금미지급형납면)]2408.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/210104_(무)원패스초간편건강보험(갱신형)2101.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/220801_(무) NH335굿패스건강보험[6종해지환급금미지급형Ⅱ(335간편심사형납입면제미부가형)].pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230401_(무) NH헤아림355건강보험[2종갱신형].pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/230918_(무) NH하나로간편한건강보험[5종해약환급금미지급형Ⅱ,325간편심사형].pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/231004_(무)NH335굿패스건강보험[2종갱신형(간편심사)]2310.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/방카슈랑스/050117_(무)프로미웰빙0501.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/220101_공무원단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/230213_단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/220502_(무)갱신형 간병인지원입원일당(335간편가입Ⅰ)보장 특별약관.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/180101_무배당 프로미라이프 참좋은우리아이보험(지자체)1708.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230915_(무) NH더간편해진치매플러스보험[3종표준형(일반)].pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/220103_(무)헤아림시니어암보험2201.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/365세이프상해보험(신규계약판매중지)/140401_365세이프상해보험(신규계약판매중지).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_화재재물/170801_주택화재보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/210401_(무)NEW프레스티지상해보험2101.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230401_(무)NH3대진단비보험[해약환급금미지급형(납입중 0% 납입후50%)]2304.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/210104_(무)헤아림다이렉트운전자보험2101.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/240812_(무) NH헤아림3.10.10건강보험[1종갱신형(납면)].pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB해외장기체류실손의료비보험/180701_KB해외장기체류실손의료비보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/190101_공무원단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/120319_(무)희망채움어린이보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/모바일기기보험/220501_모바일기기보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/사회적협동조합반려동물보험/181112_사회적협동조합반려동물보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/365세이프상해보험(신규계약판매중지)/160601_365세이프상해보험(신규계약판매중지).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB골프보험(B)/220801_KB골프보험(B).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/210801_(무)NH가성비굿플러스어린이보험2104.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/모바일기기보험/230828_모바일기기보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/240401_공무원단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB골프보험(B)/240401_KB골프보험(B).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230102_(무) NH335더블굿패스건강보험[3종해약환급금미지급형Ⅱ(335간편심사형납입면제형)]2301.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/시민안전상해보험/240401_시민안전상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/240401_(무) NH335굿패스건강보험[1종갱신형(간편심사납면)]2404.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/구매물품보상보험/181112_구매물품보상보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/220401_(무)New계속지켜주는암보험2201.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230901_(무) NH베스트간병보험[1종표준형(일반심사)]2309.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB국내여행실손의료비보험/150101_KB국내여행실손의료비보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/240812_(무) NH헤아림355건강보험[6종세만기형(해약환급금미지급형Ⅱ)]2408.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/이동통신단말기분실보험/210701_이동통신단말기분실보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_통합종합/170801_주택종합보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/365세이프상해보험(신규계약판매중지)/210701_365세이프상해보험(신규계약판매중지).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/220401_(무)투패스리치상해보험2201.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/시민안전상해보험/250101_시민안전상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/210801_(무)리치팜생활안심보험2101.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_단독실손의료보험/240401_(무)헤아림다이렉트실손의료비보험(전환계약용)2404.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB골프보험/170201_KB골프보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/365세이프상해보험(신규계약판매중지)/220101_365세이프상해보험(신규계약판매중지).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/170801_무배당 프로미라이프 참좋은우리아이보험(지자체)1708.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_화재재물/120326_(무)채움화재저축보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/실손·비례보상주택풍수해·지진재해보험(Ⅲ)(舊실손비례보상주택풍수해보험(Ⅲ))/181001_실손·비례보상주택풍수해·지진재해보험(Ⅲ)(舊실손비례보상주택풍수해보험(Ⅲ)).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB국내여행실손의료비보험/180430_KB국내여행실손의료비보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230901_(무) NH헤아림치매플러스보험[2종해약환급금저지급형(간편심사)].pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_단독실손의료보험/210701_개인실손의료보험 중지 및 재개 특별약관.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB국내여행보험/120501_KB국내여행보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/220103_(무)리치팜생활안심보험2201.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/220103_(무)NH탑클래스상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/210401_(무)헤아림다이렉트운전자보험2101.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/세이프플러스상해보험(신규계약판매중지)/200101_세이프플러스상해보험(신규계약판매중지).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/365세이프상해보험(신규계약판매중지)/220501_365세이프상해보험(신규계약판매중지).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/220103_(무)굿데이운전자보험2201.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/220502_(무) NH335굿패스건강보험[1종갱신형(335간편심사형납입면제형)].pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230901_(무) NH헤아림치매플러스보험[4종표준형(간편심사)].pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/230401_(무)갱신형 간병인지원입원일당(335간편가입Ⅰ)보장 특별약관2304.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB골프보험(B)/250101_KB골프보험(B).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/365가족안심상해보험(신규계약판매중지)/200101_365가족안심상해보험(신규계약판매중지).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB골프보험/180101_KB골프보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/990915_장기상해밀레니엄골드상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB골프보험/230101_KB골프보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/220901_(무)NH올바른지구굿데이운전자보험220901.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/220901_(무) NH위너스상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/365가족안심상해보험(신규계약판매중지)/190101_365가족안심상해보험(신규계약판매중지).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB해외장기체류보험(다이렉트공용)/150101_KB해외장기체류보험(다이렉트공용).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB국내여행실손의료비보험/181001_KB국내여행실손의료비보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/구매물품보상보험/240101_구매물품보상보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_단독실손의료보험/210801_(무)간편가입헤아림실손의료비보험2101.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_화재재물/210104_(무)NH내사업파트너재산종합보험2101.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/365세이프상해보험(신규계약판매중지)/120401_365세이프상해보험(신규계약판매중지).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_화재재물/210801_(무) NH화재배상책임보험[단독형]2106.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/세이프플러스상해보험(신규계약판매중지)/200401_세이프플러스상해보험(신규계약판매중지).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/세이프빌종합보험(주택물건)/210611_세이프빌종합보험(주택물건).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB골프보험/150101_KB골프보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/365가족안심상해보험(신규계약판매중지)/130501_365가족안심상해보험(신규계약판매중지).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/221001_(무) 투패스리치상해보험2209.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_화재재물/210618_(무) NH화재배상책임보험[단독형]2106.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/실손·비례보상주택풍수해·지진재해보험(Ⅲ)(舊실손비례보상주택풍수해보험(Ⅲ))/230101_실손·비례보상주택풍수해·지진재해보험(Ⅲ)(舊실손비례보상주택풍수해보험(Ⅲ)).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/365가족안심상해보험(신규계약판매중지)/150312_365가족안심상해보험(신규계약판매중지).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/230901_(무)NH굿스타트건강보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB국내여행보험(B)/180430_KB국내여행보험(B).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB스마트운전자보험/180101_KB스마트운전자보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB골프보험/190101_KB골프보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB골프보험/210222_KB골프보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/휠체어및스쿠터배상책임보험/220501_휠체어및스쿠터배상책임보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/세이프플러스상해보험(신규계약판매중지)/220101_세이프플러스상해보험(신규계약판매중지).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/365가족안심상해보험(신규계약판매중지)/160601_365가족안심상해보험(신규계약판매중지).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/365세이프상해보험(신규계약판매중지)/210801_365세이프상해보험(신규계약판매중지).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/220101_(무)헤아림다이렉트운전자보험2201.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB주택화재보험/150914_KB주택화재보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/365가족안심상해보험(신규계약판매중지)/210401_365가족안심상해보험(신규계약판매중지).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/대면/990501_장기종합 참좋은자녀사랑보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/세이프플러스상해보험(신규계약판매중지)/210101_세이프플러스상해보험(신규계약판매중지).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB해외여행실손의료비보험/180101_KB해외여행실손의료비보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB해외장기체류보험(다이렉트공용)/180701_KB해외장기체류보험(다이렉트공용).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/방카슈랑스/050117_무배당프로미운전자보험0501 (금리고정형).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB해외장기체류실손의료비보험/180430_KB해외장기체류실손의료비보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB골프보험/220501_KB골프보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB해외여행보험(다이렉트공용)/180101_KB해외여행보험(다이렉트공용).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/세이프플러스상해보험(신규계약판매중지)/210701_세이프플러스상해보험(신규계약판매중지).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB골프보험/170101_KB골프보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/365가족안심상해보험(신규계약판매중지)/190401_365가족안심상해보험(신규계약판매중지).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/365가족안심상해보험(신규계약판매중지)/140401_365가족안심상해보험(신규계약판매중지).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)개인용자동차보험/200101_KB다이렉트(인터넷)개인용자동차보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/사회적협동조합반려동물보험/240401_사회적협동조합반려동물보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/230918_(무) NH하나로간편한건강보험[6종갱신형,325간편심사형].pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/모바일기기보험/220101_모바일기기보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/단체가입주택풍수해·지진재해보험(Ⅱ)(舊단체가입주택풍수해보험(Ⅱ))/181001_단체가입주택풍수해·지진재해보험(Ⅱ)(舊단체가입주택풍수해보험(Ⅱ)).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단독실손의료보험/230101_국내여행 실손의료보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/220502_(무) NH335굿패스건강보험[6종해지환급금미지급형Ⅱ(335간편심사형납입면제미부가형)].pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230901_(무)NH가성비굿건강보험[4종해약환급금미지급형갱신형]2304.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/365세이프상해보험(신규계약판매중지)/200401_365세이프상해보험(신규계약판매중지).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB골프보험/210401_KB골프보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB국내여행실손의료비보험/180401_KB국내여행실손의료비보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/365세이프상해보험(신규계약판매중지)/240101_365세이프상해보험(신규계약판매중지).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/365세이프상해보험(신규계약판매중지)/240401_365세이프상해보험(신규계약판매중지).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/나라사랑군인상해보험/181022_나라사랑군인상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)업무용자동차보험/180101_KB다이렉트(인터넷)업무용자동차보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/365가족안심상해보험(신규계약판매중지)/140715_365가족안심상해보험(신규계약판매중지).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB골프보험/240101_KB골프보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/실손·비례보상주택풍수해·지진재해보험(Ⅲ)(舊실손비례보상주택풍수해보험(Ⅲ))/180518_실손·비례보상주택풍수해·지진재해보험(Ⅲ)(舊실손비례보상주택풍수해보험(Ⅲ)).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/사회적협동조합반려동물보험/190101_사회적협동조합반려동물보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/도난보험/240401_도난보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB해외여행보험(다이렉트공용)/180430_KB해외여행보험(다이렉트공용).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/세이프플러스상해보험(신규계약판매중지)/240401_세이프플러스상해보험(신규계약판매중지).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/230101_공무원단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/190101_단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB해외장기체류보험(다이렉트공용)/181001_KB해외장기체류보험(다이렉트공용).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/휠체어및스쿠터배상책임보험/230101_휠체어및스쿠터배상책임보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/사회적협동조합반려동물보험/220501_사회적협동조합반려동물보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/시민안전상해보험/240101_시민안전상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)영업용자동차보험/250111_KB다이렉트(인터넷)영업용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/모바일기기보험/200310_모바일기기보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB골프보험/120401_KB골프보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB스마트운전자보험/170101_KB스마트운전자보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/365세이프상해보험(신규계약판매중지)/181001_365세이프상해보험(신규계약판매중지).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/힘이되는상해보험(舊힘이되는간병보험)(신규계약판매중지)/210701_힘이되는상해보험(舊힘이되는간병보험)(신규계약판매중지).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB골프보험/210801_KB골프보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/실손·비례보상주택풍수해·지진재해보험(Ⅲ)(舊실손비례보상주택풍수해보험(Ⅲ))/160101_실손·비례보상주택풍수해·지진재해보험(Ⅲ)(舊실손비례보상주택풍수해보험(Ⅲ)).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/DB손보/판매중지/장기보험/방카슈랑스/221107_무배당 프로미라이프 골드클래스저축보험2211.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB국내여행보험(B)/181001_KB국내여행보험(B).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/단체가입주택풍수해·지진재해보험(Ⅱ)(舊단체가입주택풍수해보험(Ⅱ))/210801_단체가입주택풍수해·지진재해보험(Ⅱ)(舊단체가입주택풍수해보험(Ⅱ)).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB해외여행보험(B)/181001_KB해외여행보험(B).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/단체가입주택풍수해·지진재해보험(Ⅱ)(舊단체가입주택풍수해보험(Ⅱ))/220101_단체가입주택풍수해·지진재해보험(Ⅱ)(舊단체가입주택풍수해보험(Ⅱ)).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB국내여행보험/180430_KB국내여행보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB해외장기체류보험(다이렉트공용)/180101_KB해외장기체류보험(다이렉트공용).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/이동통신단말기분실보험/210401_이동통신단말기분실보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB스마트운전자보험/180401_KB스마트운전자보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/190301_단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/190101_코스모스 가을향기 단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/단체가입주택풍수해·지진재해보험(Ⅱ)(舊단체가입주택풍수해보험(Ⅱ))/200101_단체가입주택풍수해·지진재해보험(Ⅱ)(舊단체가입주택풍수해보험(Ⅱ)).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/도난보험/210401_도난보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/240610_공무원단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/240501_단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/240401_단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/단체가입주택풍수해·지진재해보험(Ⅱ)(舊단체가입주택풍수해보험(Ⅱ))/250101_단체가입주택풍수해·지진재해보험(Ⅱ)(舊단체가입주택풍수해보험(Ⅱ)).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)개인용자동차보험/200112_KB다이렉트(인터넷)개인용자동차보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/이동통신단말기분실보험/190515_이동통신단말기분실보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB주택화재보험/150724_KB주택화재보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)업무용자동차보험/180131_KB다이렉트(인터넷)업무용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/실손·비례보상주택풍수해·지진재해보험(Ⅲ)(舊실손비례보상주택풍수해보험(Ⅲ))/240401_실손·비례보상주택풍수해·지진재해보험(Ⅲ)(舊실손비례보상주택풍수해보험(Ⅲ)).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_통합종합/180101_주택종합보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/이동통신단말기분실보험/181112_이동통신단말기분실보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/구매물품보상보험/240401_구매물품보상보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/도난보험/250101_도난보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB주택화재보험/160101_KB주택화재보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/모바일기기보험/210101_모바일기기보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 자동차보험_정책보험/120302_농기계종합보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트업무용자동차보험/180131_KB다이렉트업무용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/365세이프상해보험(신규계약판매중지)/210401_365세이프상해보험(신규계약판매중지).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/사회적협동조합반려동물보험/210801_사회적협동조합반려동물보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)업무용자동차보험/210325_KB다이렉트(인터넷)업무용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트영업용자동차보험/210801_KB다이렉트영업용자동차보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/실손·비례보상주택풍수해·지진재해보험(Ⅲ)(舊실손비례보상주택풍수해보험(Ⅲ))/150101_실손·비례보상주택풍수해·지진재해보험(Ⅲ)(舊실손비례보상주택풍수해보험(Ⅲ)).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB업무용자동차보험/170501_KB업무용자동차보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)업무용자동차보험/200806_KB다이렉트(인터넷)업무용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/투게더홀인원보험/240401_투게더홀인원보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB해외여행보험(다이렉트공용)/180401_KB해외여행보험(다이렉트공용).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)이륜자동차/230101_KB다이렉트(인터넷)이륜자동차.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB개인용자동차보험/171208_KB개인용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/210104_(무)New계속지켜주는암보험2101.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/단체가입주택풍수해·지진재해보험(Ⅱ)(舊단체가입주택풍수해보험(Ⅱ))/240101_단체가입주택풍수해·지진재해보험(Ⅱ)(舊단체가입주택풍수해보험(Ⅱ)).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/365세이프상해보험(신규계약판매중지)/230101_365세이프상해보험(신규계약판매중지).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/220502_(무) NH335더블굿패스건강보험[4종해지환급금미지급형Ⅱ(335간편심사형납입면제미부가형)].pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)이륜자동차/210714_KB다이렉트(인터넷)이륜자동차.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/이동통신단말기분실보험/200101_이동통신단말기분실보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB업무용자동차보험/241106_KB업무용자동차보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/이동통신단말기분실보험/190101_이동통신단말기분실보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230901_(무)NH다이렉트종합보험2301.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/도난보험/181001_도난보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/365가족안심상해보험(신규계약판매중지)/170101_365가족안심상해보험(신규계약판매중지).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/세이프플러스상해보험(신규계약판매중지)/190101_세이프플러스상해보험(신규계약판매중지).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB운전자보험/210806_KB운전자보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB골프보험/140715_KB골프보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB레저보험/180401_KB레저보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/365가족안심상해보험(신규계약판매중지)/120401_365가족안심상해보험(신규계약판매중지).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/단체가입주택풍수해·지진재해보험(Ⅱ)(舊단체가입주택풍수해보험(Ⅱ))/190101_단체가입주택풍수해·지진재해보험(Ⅱ)(舊단체가입주택풍수해보험(Ⅱ)).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/세이프플러스상해보험(신규계약판매중지)/220501_세이프플러스상해보험(신규계약판매중지).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB이륜자동차보험Ⅱ/200501_KB이륜자동차보험Ⅱ.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/힘이되는상해보험(舊힘이되는간병보험)(신규계약판매중지)/180401_힘이되는상해보험(舊힘이되는간병보험)(신규계약판매중지).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230401_(무) NH헤아림355건강보험[4종갱신형(해약환급금미지급형)].pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB골프보험/240401_KB골프보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/240401_(무) NH헤아림355건강보험[2종갱신형]2404.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/휠체어및스쿠터배상책임보험/250101_휠체어및스쿠터배상책임보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB골프보험/200101_KB골프보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB전기자동차종합보험/210806_KB전기자동차종합보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/365가족안심상해보험(신규계약판매중지)/210701_365가족안심상해보험(신규계약판매중지).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB주택화재보험/150101_KB주택화재보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB개인용자동차보험/190201_KB개인용자동차보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/365가족안심상해보험(신규계약판매중지)/180101_365가족안심상해보험(신규계약판매중지).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)개인용자동차보험/180101_KB다이렉트(인터넷)개인용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/세이프플러스상해보험(신규계약판매중지)/181001_세이프플러스상해보험(신규계약판매중지).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB개인용자동차보험/170807_KB개인용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB플랫폼배달업자자동차보험/240131_KB플랫폼배달업자자동차보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB국내여행보험/150312_KB국내여행보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB해외장기체류보험(다이렉트공용)/180430_KB해외장기체류보험(다이렉트공용).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)개인용자동차보험/200531_KB다이렉트(인터넷)개인용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/피싱·해킹금융사기보상보험(II)/210801_피싱·해킹금융사기보상보험(II).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/영업용자동차보험(공동)/201110_영업용자동차보험(공동).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)업무용자동차보험/181011_KB다이렉트(인터넷)업무용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/실손·비례보상주택풍수해·지진재해보험(Ⅲ)(舊실손비례보상주택풍수해보험(Ⅲ))/240101_실손·비례보상주택풍수해·지진재해보험(Ⅲ)(舊실손비례보상주택풍수해보험(Ⅲ)).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/220502_(무)갱신형 간병인지원입원일당(335간편가입Ⅱ)보장 특별약관.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트업무용자동차보험/210325_KB다이렉트업무용자동차보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/제도성특별약관/자동차사고변호사선임비용손해직접지급Ⅱ특별약관/240801_자동차사고변호사선임비용손해직접지급Ⅱ특별약관.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)업무용자동차보험/180529_KB다이렉트(인터넷)업무용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/230915_(무) NH베스트간병보험[2종표준형(간편심사)]2309.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트종합자동차보험/200801_KB다이렉트종합자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)이륜자동차/190902_KB다이렉트(인터넷)이륜자동차.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB모바일하루자동차보험/201110_KB모바일하루자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/주택·온실풍수해·지진재해보험(Ⅰ)(舊주택·온실풍수해보험(Ⅰ))/180518_주택·온실풍수해·지진재해보험(Ⅰ)(舊주택·온실풍수해보험(Ⅰ)).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB골프보험/181001_KB골프보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/힘이되는상해보험(舊힘이되는간병보험)(신규계약판매중지)/180101_힘이되는상해보험(舊힘이되는간병보험)(신규계약판매중지).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB개인상해보험/180101_KB개인상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/단체가입주택풍수해·지진재해보험(Ⅱ)(舊단체가입주택풍수해보험(Ⅱ))/210401_단체가입주택풍수해·지진재해보험(Ⅱ)(舊단체가입주택풍수해보험(Ⅱ)).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단독실손의료보험/240101_단체상해 실손의료보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB개인용자동차보험/200525_KB개인용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)업무용자동차보험/211001_KB다이렉트(인터넷)업무용자동차보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/구매물품보상보험/190101_구매물품보상보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트개인용자동차보험/191118_KB다이렉트개인용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)업무용자동차보험/230401_KB다이렉트(인터넷)업무용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB업무용자동차보험/201015_KB업무용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/모바일기기보험/240401_모바일기기보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)영업용자동차보험/250121_KB다이렉트(인터넷)영업용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)업무용자동차보험/190605_KB다이렉트(인터넷)업무용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)이륜자동차/180620_KB다이렉트(인터넷)이륜자동차.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB영업용자동차보험/210121_KB영업용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB골프보험/250101_KB골프보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트업무용자동차보험/181120_KB다이렉트업무용자동차보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/힘이되는상해보험(舊힘이되는간병보험)(신규계약판매중지)/120401_힘이되는상해보험(舊힘이되는간병보험)(신규계약판매중지).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/365가족안심상해보험(신규계약판매중지)/210101_365가족안심상해보험(신규계약판매중지).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/365가족안심상해보험(신규계약판매중지)/210801_365가족안심상해보험(신규계약판매중지).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)이륜자동차/200531_KB다이렉트(인터넷)이륜자동차.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)업무용자동차보험/220510_KB다이렉트(인터넷)업무용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)업무용자동차보험/221101_KB다이렉트(인터넷)업무용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/피싱·해킹금융사기보상보험(II)/220501_피싱·해킹금융사기보상보험(II).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB이륜자동차보험/180817_KB이륜자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)개인용자동차보험/190927_KB다이렉트(인터넷)개인용자동차보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/구매물품보상보험/220101_구매물품보상보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)개인용자동차보험/191118_KB다이렉트(인터넷)개인용자동차보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB스마트운전자보험/170201_KB스마트운전자보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/세이프플러스상해보험(신규계약판매중지)/210801_세이프플러스상해보험(신규계약판매중지).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/도난보험/210801_도난보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)업무용자동차보험/171208_KB다이렉트(인터넷)업무용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)업무용자동차보험/171115_KB다이렉트(인터넷)업무용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)개인용자동차보험/190101_KB다이렉트(인터넷)개인용자동차보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중/● 일반보험_단체상해보험/230303_단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB주택화재보험/170101_KB주택화재보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/실손·비례보상주택풍수해·지진재해보험(Ⅲ)(舊실손비례보상주택풍수해보험(Ⅲ))/190101_실손·비례보상주택풍수해·지진재해보험(Ⅲ)(舊실손비례보상주택풍수해보험(Ⅲ)).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB종합자동차보험/210325_KB종합자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/도난보험/210101_도난보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)영업용자동차보험/240906_KB다이렉트(인터넷)영업용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/도난보험/190101_도난보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트개인용자동차보험/200531_KB다이렉트개인용자동차보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트업무용자동차보험/180201_KB다이렉트업무용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/이륜자동차보험(공동)/230101_이륜자동차보험(공동).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)대리운전종합보험/230401_KB다이렉트(인터넷)대리운전종합보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)업무용자동차보험/220728_KB다이렉트(인터넷)업무용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)업무용자동차보험/210714_KB다이렉트(인터넷)업무용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)영업용자동차보험/240905_KB다이렉트(인터넷)영업용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/세이프플러스상해보험(신규계약판매중지)/240101_세이프플러스상해보험(신규계약판매중지).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트업무용자동차보험/180620_KB다이렉트업무용자동차보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/퇴직연금/KB손보개인형퇴직연금(기업형)운용관리계약서/211208_KB손보개인형퇴직연금(기업형)운용관리계약서.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/130228_(무)NH다솜건강보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트이륜자동차보험/230621_KB다이렉트이륜자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/세이프빌종합보험(주택물건)/201101_세이프빌종합보험(주택물건).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/퇴직연금/KB손보확정기여형퇴직연금운용관리계약서/200430_KB손보확정기여형퇴직연금운용관리계약서.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)업무용자동차보험/210801_KB다이렉트(인터넷)업무용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB개인용자동차보험/190911_KB개인용자동차보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/승강기사고배상책임보험/190726_승강기사고배상책임보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/365가족안심상해보험(신규계약판매중지)/181001_365가족안심상해보험(신규계약판매중지).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트영업용자동차보험/220421_KB다이렉트영업용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트영업용자동차보험/230101_KB다이렉트영업용자동차보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트업무용자동차보험/190911_KB다이렉트업무용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트영업용자동차보험/210806_KB다이렉트영업용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB업무용자동차보험/171208_KB업무용자동차보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/퇴직연금/무배당KB손보개인형퇴직연금(기업형)자산관리보험/181120_무배당KB손보개인형퇴직연금(기업형)자산관리보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)개인용자동차보험/190217_KB다이렉트(인터넷)개인용자동차보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB해외여행보험(B)/180430_KB해외여행보험(B).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트업무용자동차보험/171208_KB다이렉트업무용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)이륜자동차/231115_KB다이렉트(인터넷)이륜자동차.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)업무용자동차보험/240831_KB다이렉트(인터넷)업무용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)이륜자동차/231127_KB다이렉트(인터넷)이륜자동차.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB업무용자동차보험/170620_KB업무용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/실손·비례보상주택풍수해·지진재해보험(Ⅲ)(舊실손비례보상주택풍수해보험(Ⅲ))/210801_실손·비례보상주택풍수해·지진재해보험(Ⅲ)(舊실손비례보상주택풍수해보험(Ⅲ)).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)개인용자동차보험/180529_KB다이렉트(인터넷)개인용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트개인용자동차보험/180131_KB다이렉트개인용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)업무용자동차보험/210416_KB다이렉트(인터넷)업무용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중지/개인연금/연금저축손해보험KB계약이전연금보험(15.06)/150624_연금저축손해보험KB계약이전연금보험(15.06).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB개인상해보험/181001_KB개인상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB모바일하루자동차보험/171115_KB모바일하루자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트영업용자동차보험/210401_KB다이렉트영업용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트영업용자동차보험/240116_KB다이렉트영업용자동차보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB영업용자동차보험/161130_KB영업용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB해외여행실손의료비보험/181001_KB해외여행실손의료비보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB업무용자동차보험/200407_KB업무용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)업무용자동차보험/210530_KB다이렉트(인터넷)업무용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/도난보험/220101_도난보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB영업용자동차보험/200407_KB영업용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)대리운전종합보험/240418_KB다이렉트(인터넷)대리운전종합보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB개인용자동차보험/190217_KB개인용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)이륜자동차/230221_KB다이렉트(인터넷)이륜자동차.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB업무용자동차보험/241216_KB업무용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)대리운전종합보험/210806_KB다이렉트(인터넷)대리운전종합보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB대리운전종합보험/210301_KB대리운전종합보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트업무용자동차보험/180101_KB다이렉트업무용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트업무용자동차보험/220510_KB다이렉트업무용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)이륜자동차/230401_KB다이렉트(인터넷)이륜자동차.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/365가족안심상해보험(신규계약판매중지)/150101_365가족안심상해보험(신규계약판매중지).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)개인용자동차보험/180131_KB다이렉트(인터넷)개인용자동차보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/주택·온실풍수해·지진재해보험(Ⅰ)(舊주택·온실풍수해보험(Ⅰ))/160101_주택·온실풍수해·지진재해보험(Ⅰ)(舊주택·온실풍수해보험(Ⅰ)).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB업무용자동차보험/180620_KB업무용자동차보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB국내여행보험(B)/180401_KB국내여행보험(B).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트업무용자동차보험/211001_KB다이렉트업무용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_화재재물/210618_(무)NH지킴이재산종합보험2106.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB대리운전종합보험/220101_KB대리운전종합보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/투게더홀인원보험/240311_투게더홀인원보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)업무용자동차보험/240925_KB다이렉트(인터넷)업무용자동차보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB운전자보험/230101_KB운전자보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB영업용자동차보험/180201_KB영업용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)업무용자동차보험/240321_KB다이렉트(인터넷)업무용자동차보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB업무용자동차보험/161130_KB업무용자동차보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB이륜자동차보험Ⅱ/200915_KB이륜자동차보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트업무용자동차보험/220728_KB다이렉트업무용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB이륜자동차보험Ⅱ/200531_KB이륜자동차보험Ⅱ.pickle
+offset 미충족                 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트개인용자동차보험/170709_KB다이렉트개인용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트업무용자동차보험/210801_KB다이렉트업무용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트종합자동차보험/211123_KB다이렉트종합자동차보험.pickle
+offset 미충족                 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB음주단속경찰관자동차보험/230401_KB음주단속경찰관자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트영업용자동차보험/210714_KB다이렉트영업용자동차보험.pickle
+offset 미충족                 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/주택·온실풍수해·지진재해보험(Ⅰ)(舊주택·온실풍수해보험(Ⅰ))/210401_주택·온실풍수해·지진재해보험(Ⅰ)(舊주택·온실풍수해보험(Ⅰ)).pickle
+offset 미충족                 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_운전자상해/230401_(무)NH다이렉트운전자보험.pickle
+offset 미충족                 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중지/기타보험/무배당KB손보실손의료비보장보험(계약전환용)(갱신형)/181001_무배당KB손보실손의료비보장보험(계약전환용)(갱신형).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트종합자동차보험/210325_KB다이렉트종합자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB업무용자동차보험/181011_KB업무용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB업무용자동차보험/240925_KB업무용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB종합자동차보험/200501_KB종합자동차보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/구매물품보상보험/230101_구매물품보상보험.pickle
+offset 미충족                 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트(인터넷)개인용자동차보험/220101_KB다이렉트(인터넷)개인용자동차보험.pickle
+offset 미충족                 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/퇴직공무원단체상해보험/240401_퇴직공무원단체상해보험.pickle
+offset 미충족                 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트개인용자동차보험/211226_KB다이렉트개인용자동차보험.pickle
+offset 미충족                 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/플러스사랑단체상해보험/200101_플러스사랑단체상해보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/사회적협동조합반려동물보험/210401_사회적협동조합반려동물보험.pickle
+offset 미충족                 |/workspace/data1/insurance_pickle_2/NH농협손해보험/판매중지/● 장기보험_건강어린이/150901_(무)헤아림NH다솜건강보험1501.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB개인용자동차보험/180201_KB개인용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB영업용자동차보험/180817_KB영업용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB이륜자동차보험Ⅱ/220101_KB이륜자동차보험Ⅱ.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/개인용자동차보험(공동)/220701_개인용자동차보험(공동).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트종합자동차보험/220421_KB다이렉트종합자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB전기자동차종합보험/220608_KB전기자동차종합보험.pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/365세이프상해보험(신규계약판매중지)/140715_365세이프상해보험(신규계약판매중지).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중지/독립특별약관/무배당실손의료비【갱신계약】특별약관/150102_무배당실손의료비【갱신계약】특별약관.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트업무용자동차보험/210714_KB다이렉트업무용자동차보험.pickle
+offset 미충족                 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/플러스사랑단체상해보험(II)/190117_플러스사랑단체상해보험(II).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB골프보험/220101_KB골프보험.pickle
+offset 미충족                 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/상해보험/KB닥터플러스건강보험(세만기)(해약환급금미지급형)(무배당)(25.01)/250101_KB닥터플러스건강보험(세만기)(해약환급금미지급형)(무배당)(25.01).pickle
+offset 미충족                 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB모바일하루자동차보험/220608_KB모바일하루자동차보험.pickle
+offset 미충족                 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB주택화재보험/210101_KB주택화재보험.pickle
+offset 미충족                 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/플러스메디컬단체상해보험/200101_플러스메디컬단체상해보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB업무용자동차보험/211001_KB업무용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB운전면허교습생자동차보험/231115_KB운전면허교습생자동차보험.pickle
+offset 미충족                 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/월드와이드해외장기체류보험/240101_월드와이드해외장기체류보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트종합자동차보험/210121_KB다이렉트종합자동차보험.pickle
+offset 미충족                 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/플러스사랑단체상해보험(II)/230201_플러스사랑단체상해보험(II).pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB개인용자동차보험/200531_KB개인용자동차보험.pickle
+offset 미충족                 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/자동차보험/KB다이렉트개인용자동차보험/240716_KB다이렉트개인용자동차보험.pickle
+60% 미달                      |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/세이프빌종합보험(주택물건)/210401_세이프빌종합보험(주택물건).pickle
+offset 충족, contents 결과 없음 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/제도성특별약관/장기보장성보험적립부분만기유지환급금제도특별약관/230501_장기보장성보험적립부분만기유지환급금제도특별약관.pickle
+offset 미충족                 |/workspace/data1/insurance_pickle_2/kb손해보험/판매중/일반보험/KB시티즌자전거보험/220101_KB시티즌자전거보험.pickle

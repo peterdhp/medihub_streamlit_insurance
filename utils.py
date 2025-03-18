@@ -1,28 +1,33 @@
 import datetime
 
-def is_active_policy(policy_dict):
+def is_active_policy(policy_dict,date):
     """
     Example logic: 
       - We consider a policy active if 'resContractStatus' == '정상'
       - Optionally also check date range (commEndDate in the future).
         But your data uses strings like '20200214'. You can parse them as needed.
     """
-    if policy_dict.get('resContractStatus') != '정상':
-        return False
+    #if policy_dict.get('resContractStatus') != '정상':
+    #    return False
     
     # Example: parse commEndDate and check if still in the future
     # (You can skip this if you just want to filter by '정상')
     end_date_str = policy_dict.get('commEndDate', '')  # e.g. "20200214"
     if not end_date_str:
         end_date_str = policy_dict.get('resCoverageLists','').get('commEndDate', '')
-        if not end_date_str:
-            return False
+        
+    start_date_str = policy_dict.get('commStartDate', '')  # e.g. "20200214"
+    if not start_date_str:
+        start_date_str = policy_dict.get('resCoverageLists','').get('commStartDate', '')
+        
     
     # Try to parse year-month-day
     try:
         end_date = datetime.datetime.strptime(end_date_str, "%Y%m%d").date()
-        today = datetime.date.today()  # or any reference date you want
-        return end_date >= today
+        start_date = datetime.datetime.strptime(start_date_str, "%Y%m%d").date()
+        date = datetime.datetime.strptime(date,"%Y%m%d").date()
+        #today = datetime.date.today()  # or any reference date you want
+        return (end_date >= date) and (date >= start_date)
     except ValueError:
         # If date format is wrong or missing, skip
         return False
@@ -32,22 +37,23 @@ def is_coverage_active(coverage_dict: dict) -> bool:
       - resCoverageStatus == '정상'
       - commEndDate >= today (if commEndDate exists)
     """
-    if coverage_dict.get('resCoverageStatus') != '정상':
-        return False
+    #if coverage_dict.get('resCoverageStatus') != '정상':
+    #    return False
 
     end_date_str = coverage_dict.get('commEndDate', '')
-    if not end_date_str:
-        return False  # If there's truly no end date, you can decide a default.
+    start_date_str = coverage_dict.get('commStartDate', '')
 
     try:
         end_date = datetime.datetime.strptime(end_date_str, "%Y%m%d").date()
-        return end_date >= datetime.date.today()
+        start_date = datetime.datetime.strptime(start_date_str, "%Y%m%d").date()
+        date = datetime.datetime.strptime(date, "%Y%m%d").date()
+        return (end_date >= date) and (date >= start_date)
     except ValueError:
         # If date parsing fails, consider coverage inactive or handle differently
         return False    
 
 
-def gather_active_contracts(demo_data: dict) -> list:
+def gather_active_contracts(demo_data: dict,date:str) -> list:
     """
     1) Gathers contracts from both flat-rate and actual-loss lists.
     2) Filters out non-'정상' contracts.
@@ -61,7 +67,7 @@ def gather_active_contracts(demo_data: dict) -> list:
     flat_rate_list = data_section.get('resFlatRateContractList', [])
     active_flat = []
     for c in flat_rate_list:
-        if c.get('resContractStatus') == '정상':
+        if is_active_policy(c,date):
             contract = dict(c)  # Make a shallow copy
             contract['contractType'] = 'flatRate'
             active_flat.append(contract)
@@ -70,7 +76,7 @@ def gather_active_contracts(demo_data: dict) -> list:
     actual_loss_list = data_section.get('resActualLossContractList', [])
     active_actual = []
     for c in actual_loss_list:
-        if c.get('resContractStatus') == '정상':
+        if is_active_policy(c,date):
             contract = dict(c)
             contract['contractType'] = 'actualLoss'
             active_actual.append(contract)
@@ -221,12 +227,12 @@ def render_policy_as_table_actual(contract_dict: dict) -> str:
 
     return "\n".join(lines) + "\n"
 
-def process_and_print_active_policies(demo_data) -> str:
+def process_and_print_active_policies(demo_data,date) -> str:
     """
     Filters for active policies, then builds and returns a
     single multiline string containing all those policies.
     """
-    active_policies = gather_active_contracts(demo_data)
+    active_policies = gather_active_contracts(demo_data,date)
     
     if not active_policies:
         return "No active policies found."
