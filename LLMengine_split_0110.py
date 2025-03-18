@@ -132,7 +132,7 @@ This is useful for finding context or specific information related to insurance 
             matching_contract = contract
             insurance_company = contract["resCompanyNm"]
             insurance_start_date = contract["commStartDate"]
-            matching_insurance_text = render_policy_as_table_flat(matching_contract)
+            matching_insurance_text = render_policy_as_table_flat(matching_contract, datetime.today().strftime("%Y%m%d"))
             break
         
     for contract in actualloss_contracts : 
@@ -140,7 +140,7 @@ This is useful for finding context or specific information related to insurance 
             matching_contract = contract
             insurance_company = contract["resCompanyNm"]
             insurance_start_date = contract["resCoverageLists"][0]["commStartDate"]
-            matching_insurance_text = render_policy_as_table_actual(matching_contract)
+            matching_insurance_text = render_policy_as_table_actual(matching_contract,datetime.today().strftime("%Y%m%d"))
             break
     #print(insurance_company)
     insurance_company_code_dict = {"메리츠화재보험" : "0101" , "한화손해보험" : "0102", "삼성화재해상보험" : "0108","KB손해보험":"0110", "DB손해보험" : "0111", "캐롯손해보험" :"0000","NH농협손해보험" : "0171", "삼성생명보험" : "0203","현대해상화재보험" : "0109"}
@@ -302,7 +302,7 @@ Key Considerations:
 def human_retrieval_node(state):
    """Prompts the user for information. Useful for gathering details directly from the user,
    Especially when clarifying or collecting information related to their health condition.
-   This tool should not be used to retrieve contents of the insurance term and conditions."""
+   It is IMPORTANT that the tool is not used to retrieve contents of the insurance term and conditions."""
    
    for tool_call in state["messages"][-1].tool_calls :
         if tool_call['name'] == "human_retrieval":
@@ -317,7 +317,7 @@ def human_retrieval_node(state):
 def human_retrieval(question : str):
    """Prompts the user for information. Useful for gathering details directly from the user,
    Especially when clarifying or collecting information related to their health condition.
-   This tool should not be used to retrieve contents of the insurance term and conditions.
+   It is IMPORTANT that the tool is not used to retrieve contents of the insurance term and conditions.
    
    args : 
        question : A question to ask the user.
