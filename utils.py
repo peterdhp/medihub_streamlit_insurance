@@ -31,7 +31,7 @@ def is_active_policy(policy_dict,date):
     except ValueError:
         # If date format is wrong or missing, skip
         return False
-def is_coverage_active(coverage_dict: dict) -> bool:
+def is_coverage_active(coverage_dict: dict,date) -> bool:
     """
     Decide if a coverage line is 'active':
       - resCoverageStatus == '정상'
@@ -83,7 +83,7 @@ def gather_active_contracts(demo_data: dict,date:str) -> list:
 
     return active_flat + active_actual
 
-def render_policy_as_table_flat(policy_dict):
+def render_policy_as_table_flat(policy_dict,date):
     """
     Returns a multiline string for a single policy in your desired format.
     """
@@ -154,7 +154,7 @@ def render_policy_as_table_flat(policy_dict):
     # Join them all with newlines
     return "\n".join(result_lines) + "\n"
 
-def render_policy_as_table_actual(contract_dict: dict) -> str:
+def render_policy_as_table_actual(contract_dict: dict,date) -> str:
     """
     Renders an Actual-Loss contract into a multiline string.
     We skip coverage lines that are not active (resCoverageStatus != '정상' or end date in past).
@@ -189,7 +189,7 @@ def render_policy_as_table_actual(contract_dict: dict) -> str:
     lines.append("| 보장구분                 | 보장명                               | 보장시작일  | 보장종료일    | 보장상태 | 보장금액 (원) |")
     lines.append("|-------------------------------|--------------------------------------------|------------|------------|--------|----------------|")
     for cov in coverage_list:
-        if not is_coverage_active(cov):
+        if not is_coverage_active(cov,date):
             # Skip coverage that is not active (status != 정�상 or end date < today)
             continue
 
@@ -241,12 +241,12 @@ def process_and_print_active_policies(demo_data,date) -> str:
     results = []
     for i, policy in enumerate(active_policies, start=1):
         if policy['contractType'] == 'flatRate':
-            table_str = render_policy_as_table_flat(policy)
+            table_str = render_policy_as_table_flat(policy,date)
         # Add a section header + the table + a separator line
             block = f"[Insurance #{i}]\n{table_str}\n" + ("-" * 10)
             results.append(block)
         elif policy['contractType'] == 'actualLoss':
-            table_str = render_policy_as_table_actual(policy)
+            table_str = render_policy_as_table_actual(policy,date)
         # Add a section header + the table + a separator line
             block = f"[Insurance #{i}]\n{table_str}\n" + ("-" * 10)
             results.append(block)
