@@ -14,11 +14,11 @@ def is_active_policy(policy_dict,date):
     # (You can skip this if you just want to filter by '정상')
     end_date_str = policy_dict.get('commEndDate', '')  # e.g. "20200214"
     if not end_date_str:
-        end_date_str = policy_dict.get('resCoverageLists','').get('commEndDate', '')
+        end_date_str = policy_dict.get('resCoverageLists','')[0].get('commEndDate', '')
         
     start_date_str = policy_dict.get('commStartDate', '')  # e.g. "20200214"
     if not start_date_str:
-        start_date_str = policy_dict.get('resCoverageLists','').get('commStartDate', '')
+        start_date_str = policy_dict.get('resCoverageLists','')[0].get('commStartDate', '')
         
     
     # Try to parse year-month-day
