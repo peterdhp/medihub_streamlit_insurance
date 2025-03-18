@@ -114,188 +114,191 @@ This is useful for finding context or specific information related to insurance 
     
     #insurance_enrollment_info_text = process_and_print_active_policies(insurance_enrollment_info)
     
-    result = []
+    try :
         
-    insurance_name = query.insurance_name
-    matching_contract = {}
-    insurance_company = ""
-    insurance_start_date = ""
-    
-    
-    flatrate_contracts = insurance_enrollment_info.get('data', {}).get('resFlatRateContractList', [])
-    actualloss_contracts = insurance_enrollment_info.get('data', {}).get('resActualLossContractList', [])
-    all_contracts = flatrate_contracts + actualloss_contracts
-    
-    #print(all_contracts)
-    for contract in flatrate_contracts:
-        if insurance_name in contract["resInsuranceName"] :
-            matching_contract = contract
-            insurance_company = contract["resCompanyNm"]
-            insurance_start_date = contract["commStartDate"]
-            matching_insurance_text = render_policy_as_table_flat(matching_contract, datetime.today().strftime("%Y%m%d"))
-            break
-        
-    for contract in actualloss_contracts : 
-        if insurance_name in contract["resInsuranceName"] :
-            matching_contract = contract
-            insurance_company = contract["resCompanyNm"]
-            insurance_start_date = contract["resCoverageLists"][0]["commStartDate"]
-            matching_insurance_text = render_policy_as_table_actual(matching_contract,datetime.today().strftime("%Y%m%d"))
-            break
-    #print(insurance_company)
-    insurance_company_code_dict = {"메리츠화재보험" : "0101" , "한화손해보험" : "0102", "삼성화재해상보험" : "0108","KB손해보험":"0110", "DB손해보험" : "0111", "캐롯손해보험" :"0000","NH농협손해보험" : "0171", "삼성생명보험" : "0203","현대해상화재보험" : "0109"}
-    insurance_company_code = insurance_company_code_dict.get(insurance_company, "Unknown")
-    
-    
-    #print("insurance_company_code is ", insurance_company_code)
-    
-    
-    # insurance_name을 이용해서 insurance_enrollment_info에서 해당 보험에 대한 정보를 가져올 옴
-    # 이정보를 통해서 보험사 코드와 보험가입일 가졍오기
-    # 이를 이용해서 해당 보험에 대한 보험약관 목차와 본문 json 파일을 가져와서 loaded_toc, loaded_documents에 저장
-    query = query.query
-    if insurance_company_code != "Unknown":
-
-        with open("documents/contents_json/"+ insurance_company_code +".json", "r", encoding="utf-8") as json_file:
-            loaded_company_toc = json.load(json_file)
-
-
-        matching_items = [item for item in loaded_company_toc if item['name'] == insurance_company]
-        
-        if matching_items == []:  # If no exact matches found, use difflib for the closest match
-            names = [item['name'] for item in loaded_company_toc]
-            insurance_name_normalized = unicodedata.normalize('NFC', insurance_name)
-            names_normalized = [unicodedata.normalize('NFC', c) for c in names]
-            closest_match = get_close_matches(insurance_name_normalized, names_normalized, n=3)
-            #print(insurance_name_normalized)
-            #print(names_normalized)
-            #print(closest_match)
-
-            if closest_match:
-                
-                matching_items = [item for item in loaded_company_toc if unicodedata.normalize('NFC', item['name']) == closest_match[0]]
-
-        
-        if matching_items == []:  # If no valid items found, return None
-            return "해당 약관에 대한 정보가 조회 불가능합니다. 약관 정보가 없는 선에서 최대한 답변을 주고 서비스 업데이트를 기다려달라는 안내해줘"
-        
-        # Filter items with start_date before insurance_start_date
-
-        if len(str(insurance_start_date)) == 6:
-            year = int(insurance_start_date[:2])
-            current_year = datetime.now().year % 100
-            century = "20" if year <= current_year else "19"
-            insurance_start_date = century + insurance_start_date
-            #print(insurance_start_date)
-        valid_items = [
-            item for item in matching_items
-            if datetime.strptime(item['start_date'], "%y%m%d") < datetime.strptime(str(insurance_start_date), "%Y%m%d")
-        ]
-        
-        
-        if not valid_items:  # If no valid items found, return None
-            return "해당 약관에 대한 정보가 조회 불가능합니다. 약관 정보가 없는 선에서 최대한 답변을 주고 서비스 업데이트를 기다려달라는 안내해줘"
-        
-        # Sort by start_date to find the latest one
-        matching_item = max(valid_items, key=lambda x: datetime.strptime(x['start_date'], "%y%m%d"))
-        #print(matching_item)
-        toc_list = matching_item.get("sections", [])
-        formatted_toc = "\n".join([f"{item['title']} - Page {item['page']}" for index, item in enumerate(toc_list)])
-        
-        page_selector_system_prompt = """Given a query and insurance enrollment info, select up to ONLY 10 relevant pages from the terms and conditions.
-
-Key Considerations:
-	•	Some policies prohibit duplicate payments
-	•	Prioritize sections on : 지급사유, 보험금을 지급하지 않는 사유 etc.
-[Insurance enrollment information]
-{enroll_info}
-
-[Table of contents] : The Table of Content below only lists the starting page numbers for each section. If you think a section should be selected, please output all the pages.
-{table_of_contents}"""
-
-        page_selector_prompt = ChatPromptTemplate.from_messages([
-        ("system", page_selector_system_prompt),
-        ("user", "query : {query}"),])
-        
-        class Pagelist(BaseModel):
-            """list of page numbers to retrieve information from."""
-
-            page_numbers: list[str] = Field(
-            description="list of page numbers to retrieve information from."
-        )
+        result = []
             
-        structured_pagenum_llm = llm4o.with_structured_output(Pagelist)
-
-
-        # Combine the prompt and classifier
-        page_selector = page_selector_prompt | structured_pagenum_llm
-
-        response = page_selector.invoke({"query" : query , "table_of_contents" : formatted_toc,"enroll_info" :matching_insurance_text})
-        pages_to_include = response.page_numbers
-        #print(pages_to_include)
+        insurance_name = query.insurance_name
+        matching_contract = {}
+        insurance_company = ""
+        insurance_start_date = ""
+        
+        
+        flatrate_contracts = insurance_enrollment_info.get('data', {}).get('resFlatRateContractList', [])
+        actualloss_contracts = insurance_enrollment_info.get('data', {}).get('resActualLossContractList', [])
+        all_contracts = flatrate_contracts + actualloss_contracts
+        
+        #print(all_contracts)
+        for contract in flatrate_contracts:
+            if insurance_name in contract["resInsuranceName"] :
+                matching_contract = contract
+                insurance_company = contract["resCompanyNm"]
+                insurance_start_date = contract["commStartDate"]
+                matching_insurance_text = render_policy_as_table_flat(matching_contract, datetime.today().strftime("%Y%m%d"))
+                break
             
+        for contract in actualloss_contracts : 
+            if insurance_name in contract["resInsuranceName"] :
+                matching_contract = contract
+                insurance_company = contract["resCompanyNm"]
+                insurance_start_date = contract["resCoverageLists"][0]["commStartDate"]
+                matching_insurance_text = render_policy_as_table_actual(matching_contract,datetime.today().strftime("%Y%m%d"))
+                break
+        #print(insurance_company)
+        insurance_company_code_dict = {"메리츠화재보험" : "0101" , "한화손해보험" : "0102", "삼성화재해상보험" : "0108","KB손해보험":"0110", "DB손해보험" : "0111", "캐롯손해보험" :"0000","NH농협손해보험" : "0171", "삼성생명보험" : "0203","현대해상화재보험" : "0109"}
+        insurance_company_code = insurance_company_code_dict.get(insurance_company, "Unknown")
         
-        base_path = f"documents/vector_db/{insurance_company_code}/"
+        
+        #print("insurance_company_code is ", insurance_company_code)
+        
+        
+        # insurance_name을 이용해서 insurance_enrollment_info에서 해당 보험에 대한 정보를 가져올 옴
+        # 이정보를 통해서 보험사 코드와 보험가입일 가졍오기
+        # 이를 이용해서 해당 보험에 대한 보험약관 목차와 본문 json 파일을 가져와서 loaded_toc, loaded_documents에 저장
+        query = query.query
+        if insurance_company_code != "Unknown":
 
-        # Use a wildcard to match files that start with the expected format
-        pattern = f"{base_path}{matching_item['start_date']}_{matching_item['name']}*.json"
+            with open("documents/contents_json/"+ insurance_company_code +".json", "r", encoding="utf-8") as json_file:
+                loaded_company_toc = json.load(json_file)
 
-        # Find matching files
-        matching_files = glob.glob(pattern)
-        
-        #with open("documents/vector_db/"+insurance_company_code+'/'+matching_item["start_date"]+'_'+matching_item['name']+".json", 'r', encoding='utf-8') as f:
-        #    loaded_documents = json.load(f)
-        if matching_files:
-            with open(matching_files[0], 'r', encoding='utf-8') as f:
-                loaded_documents = json.load(f)
-        
-        page_results =[]
-        # Fetch and add sections once for each insurance
-        for page in pages_to_include:
-            matching_doc = retrieve_documents_by_metadata(
-                loaded_documents,
-                page=page
+
+            matching_items = [item for item in loaded_company_toc if item['name'] == insurance_company]
+            
+            if matching_items == []:  # If no exact matches found, use difflib for the closest match
+                names = [item['name'] for item in loaded_company_toc]
+                insurance_name_normalized = unicodedata.normalize('NFC', insurance_name)
+                names_normalized = [unicodedata.normalize('NFC', c) for c in names]
+                closest_match = get_close_matches(insurance_name_normalized, names_normalized, n=3)
+                #print(insurance_name_normalized)
+                #print(names_normalized)
+                #print(closest_match)
+
+                if closest_match:
+                    
+                    matching_items = [item for item in loaded_company_toc if unicodedata.normalize('NFC', item['name']) == closest_match[0]]
+
+            
+            if matching_items == []:  # If no valid items found, return None
+                return "해당 약관에 대한 정보가 조회 불가능합니다. 약관 정보가 없는 선에서 최대한 답변을 주고 서비스 업데이트를 기다려달라는 안내해줘"
+            
+            # Filter items with start_date before insurance_start_date
+
+            if len(str(insurance_start_date)) == 6:
+                year = int(insurance_start_date[:2])
+                current_year = datetime.now().year % 100
+                century = "20" if year <= current_year else "19"
+                insurance_start_date = century + insurance_start_date
+                #print(insurance_start_date)
+            valid_items = [
+                item for item in matching_items
+                if datetime.strptime(item['start_date'], "%y%m%d") < datetime.strptime(str(insurance_start_date), "%Y%m%d")
+            ]
+            
+            
+            if not valid_items:  # If no valid items found, return None
+                return "해당 약관에 대한 정보가 조회 불가능합니다. 약관 정보가 없는 선에서 최대한 답변을 주고 서비스 업데이트를 기다려달라는 안내해줘"
+            
+            # Sort by start_date to find the latest one
+            matching_item = max(valid_items, key=lambda x: datetime.strptime(x['start_date'], "%y%m%d"))
+            #print(matching_item)
+            toc_list = matching_item.get("sections", [])
+            formatted_toc = "\n".join([f"{item['title']} - Page {item['page']}" for index, item in enumerate(toc_list)])
+            
+            page_selector_system_prompt = """Given a query and insurance enrollment info, select up to ONLY 10 relevant pages from the terms and conditions.
+
+    Key Considerations:
+        •	Some policies prohibit duplicate payments
+        •	Prioritize sections on : 지급사유, 보험금을 지급하지 않는 사유 etc.
+    [Insurance enrollment information]
+    {enroll_info}
+
+    [Table of contents] : The Table of Content below only lists the starting page numbers for each section. If you think a section should be selected, please output all the pages.
+    {table_of_contents}"""
+
+            page_selector_prompt = ChatPromptTemplate.from_messages([
+            ("system", page_selector_system_prompt),
+            ("user", "query : {query}"),])
+            
+            class Pagelist(BaseModel):
+                """list of page numbers to retrieve information from."""
+
+                page_numbers: list[str] = Field(
+                description="list of page numbers to retrieve information from."
             )
-            page_content = matching_doc.get("page_content", "")
-            metadata = matching_doc.get("metadata", "")
-            section = metadata.get("topic", "")
-            insurance_name = metadata.get("name", "")
-            formatted_content = {
-                "insurance_name" : insurance_name,
-                "query" : query,
-                "section" : section,
-                "page" : page,
-                "content" : page_content
-            }
-            page_results.append(formatted_content)
-        grouped = {}
-        for d in page_results:
-            key = (d["insurance_name"], d["page"])
-            if key not in grouped:
-                grouped[key] = {
-                    "insurance_name": d["insurance_name"],
-                    "page": d["page"],
-                    "content": d["content"],  # Assuming content is identical for the same key
-                    "sections": set(),
-                    "queries": set()
-                }
-            grouped[key]["sections"].add(d["section"])
-            grouped[key]["queries"].add(d["query"])
-    
-        for key, value in grouped.items():
-            value["sections"] = list(value["sections"])  # Convert to list (or ','.join(value["topics"]) for a string)
-            value["queries"] = list(value["queries"])  # Convert to list (or ','.join(value["queries"]) for a string)
-            result.append(value)
+                
+            structured_pagenum_llm = llm4o.with_structured_output(Pagelist)
 
-    if result is not [] :
-        result = sorted(result, key=lambda x: (x["insurance_name"], x["page"]))
+
+            # Combine the prompt and classifier
+            page_selector = page_selector_prompt | structured_pagenum_llm
+
+            response = page_selector.invoke({"query" : query , "table_of_contents" : formatted_toc,"enroll_info" :matching_insurance_text})
+            pages_to_include = response.page_numbers
+            #print(pages_to_include)
+                
+            
+            base_path = f"documents/vector_db/{insurance_company_code}/"
+
+            # Use a wildcard to match files that start with the expected format
+            pattern = f"{base_path}{matching_item['start_date']}_{matching_item['name']}*.json"
+
+            # Find matching files
+            matching_files = glob.glob(pattern)
+            
+            #with open("documents/vector_db/"+insurance_company_code+'/'+matching_item["start_date"]+'_'+matching_item['name']+".json", 'r', encoding='utf-8') as f:
+            #    loaded_documents = json.load(f)
+            if matching_files:
+                with open(matching_files[0], 'r', encoding='utf-8') as f:
+                    loaded_documents = json.load(f)
+            
+            page_results =[]
+            # Fetch and add sections once for each insurance
+            for page in pages_to_include:
+                matching_doc = retrieve_documents_by_metadata(
+                    loaded_documents,
+                    page=page
+                )
+                page_content = matching_doc.get("page_content", "")
+                metadata = matching_doc.get("metadata", "")
+                section = metadata.get("topic", "")
+                insurance_name = metadata.get("name", "")
+                formatted_content = {
+                    "insurance_name" : insurance_name,
+                    "query" : query,
+                    "section" : section,
+                    "page" : page,
+                    "content" : page_content
+                }
+                page_results.append(formatted_content)
+            grouped = {}
+            for d in page_results:
+                key = (d["insurance_name"], d["page"])
+                if key not in grouped:
+                    grouped[key] = {
+                        "insurance_name": d["insurance_name"],
+                        "page": d["page"],
+                        "content": d["content"],  # Assuming content is identical for the same key
+                        "sections": set(),
+                        "queries": set()
+                    }
+                grouped[key]["sections"].add(d["section"])
+                grouped[key]["queries"].add(d["query"])
+        
+            for key, value in grouped.items():
+                value["sections"] = list(value["sections"])  # Convert to list (or ','.join(value["topics"]) for a string)
+                value["queries"] = list(value["queries"])  # Convert to list (or ','.join(value["queries"]) for a string)
+                result.append(value)
+
+        if result is not [] :
+            result = sorted(result, key=lambda x: (x["insurance_name"], x["page"]))
 
         #f"Insurance Name: {insurance_name}\n"
         # # Combine all results for this insurance name
         # query_result = (f"보험명: {insurance_name}\n"f"Query: {query}")
         # query_result = "\n".join(page_results)
         # insurance_context += '\n\n---\n\n' + query_result #insurance_context를 dict로  
-       
+    except :
+        return "해당 약관에 대한 정보가 조회 불가능합니다. 약관 정보가 없는 선에서 최대한 답변을 주고 서비스 업데이트를 기다려달라는 안내해줘"
     return result
 
 
