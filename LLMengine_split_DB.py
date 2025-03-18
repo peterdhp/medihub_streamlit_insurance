@@ -531,7 +531,7 @@ The arguments recieved are the sections to this report.
     """
     args = state["messages"][-1].tool_calls[0]['args']
     response = args["answer"]
-    end_of_session_map = {"Payout Estimate" : "estimated_insurance_payout", "Claim Dispute" : "claims_adjuster", "Medical Support for Claims" : "medical_consulation", "General Inquiry" : "general"}
+    end_of_session_map = {"Payout Estimate" : "estimated_insurance_payout", "Claim Dispute" : "claims_adjuster", "Medical Support for Claims" : "medical_consulation", "General Inquiry" : "general","General Inquiry about enrolled insurance":"general"}
     end_of_session_str = end_of_session_map[state["purpose"]]
     
     
@@ -556,7 +556,7 @@ def run_oracle(state) :
 
     oracle_prompt = ChatPromptTemplate.from_messages([
         ("system", oracle_system_prompt),
-        ("ai", "먼저 오늘 날짜와 보험 가입 정보를 알려주세요."),
+        ("ai", "먼저 오늘 날짜와 사용자의 보험 가입 정보를 알려주세요."),
         ("user", "오늘 날짜: {today}\n 보험 가입 정보:\n{insurance_enrollment_info}"),
         ("ai", "알려주신 보험과 관련하여 어떤 것이 궁금하신가요?"),
         MessagesPlaceholder(variable_name="chat_history"),
@@ -580,7 +580,7 @@ def run_oracle(state) :
             "user_input": lambda x: x["user_input"],
             "chat_history": lambda x: x["chat_history"],
             "today" : lambda x : datetime.today().strftime("%Y.%m.%d"),
-            "insurance_enrollment_info": lambda x: process_and_print_active_policies(x["insurance_enrollment_info"]),
+            "insurance_enrollment_info": lambda x: process_and_print_active_policies(x["insurance_enrollment_info"],datetime.today().strftime("%Y%m%d")),
             "messages": lambda x: x["messages"],
         }
         | oracle_prompt
