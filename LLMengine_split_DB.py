@@ -109,11 +109,19 @@ def retrieve_documents_by_metadata(documents, source=None, page=None):
 
 @tool("fetch_enrollment_info")
 def fetch_enrollment_info(
-    date : str
+    date : str,
+    insurance_enrollment_info: Annotated[dict, InjectedState("insurance_enrollment_info")]
 ):
-    """
-Retrieves the user’s insurance enrollments as of the specified event date.  
-If no date is provided, the tool should be called with today’s date to return the user’s insurance enrollments as of today.
+    """Retrieves the user’s insurance enrollment information as of the specified event date.
+
+- If no date is provided and the user question is a general inquiry, the tool should be called with today’s date to return the user’s insurance enrollments as of today.
+- If the inquiry is related to an insurance claim, the event date provided to the tool should follow these rules based on the type of claim:
+
+  - 실손 의료비 (Actual Medical Expenses): 영수증 수납일 (Receipt Payment Date)
+  - 암 진단비 (Cancer Diagnosis Benefit): 진단서 발급일 (Diagnosis Certificate Issuance Date)
+  - 질병 일당 (Daily Disease Allowance): 진단서 발급일 (Diagnosis Certificate Issuance Date)
+  - 후유장해 (Permanent Disability Benefit): 후유장해진단서 발급일 (Permanent Disability Diagnosis Certificate Issuance Date)
+  - 사망보험금 (Death Benefit): 사망진단서 발급일 (Death Certificate Issuance Date)
 
 Args:
     date(str): The date of the event. In YYYYMMDD format.
@@ -550,7 +558,8 @@ def run_oracle(state) :
 
     If you need more info, ask the user via the human_retrieval tool. 
     You have full access to insurance policy, terms and conditions(보험약관) yourself through fetch_insurance_term_con to get coverage details from the documents.
-    Never tell the user to contact the insurance company or read the insurance policy themselves. 
+    Never use the human retrieval to find contents in the insurance policy themselves. 
+    Never tell the user to contact the insurance company.
 
     Once you have collected plenty of information to answer the user's question use the {final_answer_str} tool. 
     """.format(final_answer_str=final_answer_str)

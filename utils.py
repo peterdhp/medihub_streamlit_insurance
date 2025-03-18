@@ -90,6 +90,7 @@ def render_policy_as_table_flat(policy_dict,date):
     # Basic policy fields
     company_name = policy_dict.get('resCompanyNm', 'Unknown')
     insurance_name = policy_dict.get('resInsuranceName', 'Unknown')
+    contract_status = policy_dict.get('resContractStatus', 'Unknown')
     policy_number = policy_dict.get('resPolicyNumber', 'Unknown')
     policyholder = policy_dict.get('resContractor', 'Unknown')
     start_date = policy_dict.get('commStartDate', 'Unknown')
@@ -137,6 +138,7 @@ def render_policy_as_table_flat(policy_dict,date):
     result_lines.append("[정액보험]")
     result_lines.append(f"보험사 : {company_name}")
     result_lines.append(f"보험명 : {insurance_name}")
+    result_lines.append(f"보장상태 : {contract_status}")
     result_lines.append(f"증권번호 : {policy_number}")
     result_lines.append(f"계약자 : {policyholder}")
     result_lines.append(f"보장시작일 : {start_date_str}")
@@ -162,6 +164,7 @@ def render_policy_as_table_actual(contract_dict: dict,date) -> str:
     """
     company_name   = contract_dict.get('resCompanyNm', 'Unknown')
     insurance_name = contract_dict.get('resInsuranceName', 'Unknown')
+    contract_status = contract_dict.get('resContractStatus', 'Unknown')
     policy_number  = contract_dict.get('resPolicyNumber', 'Unknown')
     policyholder   = contract_dict.get('resContractor', 'Unknown')
 
@@ -176,6 +179,7 @@ def render_policy_as_table_actual(contract_dict: dict,date) -> str:
     lines.append("[실손보험]")
     lines.append(f"보험사: {company_name}")
     lines.append(f"보험명: {insurance_name}")
+    lines.append(f"보장상태: {contract_status}")
     lines.append(f"증권번호: {policy_number}")
     lines.append(f"계약자: {policyholder}")
     lines.append(f"납입 주기: {payment_cycle}")
