@@ -16,6 +16,8 @@ from langchain_core.tools import tool
 import operator
 import json
 from langgraph.prebuilt import InjectedState, ToolNode
+from langchain_core.tools.base import InjectedToolCallId
+from langgraph.types import Command
 from collections import defaultdict
 from langgraph.graph.message import add_messages
 from datetime import datetime
@@ -77,9 +79,9 @@ Your task is to read the chat history and return the most appropriate category."
     purpose = result.purpose
     
     if purpose == "Unrelated":
-        return {"non_related" : "F"}
+        return {"non_related" : "F", "specified_date" : datetime.today().strftime("%Y%m%d")}
     else :
-        return {"purpose": purpose, "non_related" : "T"}
+        return {"purpose": purpose, "non_related" : "T", "specified_date" : datetime.today().strftime("%Y%m%d")}
 class InsuranceQuery(BaseModel):
     """Represents a pair consisting of an insurance name and a related query."""
     insurance_name: str= Field(
@@ -107,15 +109,16 @@ def retrieve_documents_by_metadata(documents, source=None, page=None):
     ]
     return doclist[0]
 
-@tool("fetch_enrollment_info")
-def fetch_enrollment_info(
-    date : str,
-    insurance_enrollment_info: Annotated[dict, InjectedState("insurance_enrollment_info")]
+@tool("update_specified_date")
+def update_specified_date(
+    specified_date: str,
+    tool_call_id: Annotated[str, InjectedToolCallId]
 ):
-    """Retrieves the user’s insurance enrollment information as of the specified event date.
+    """Updates the stored `specified_date` in the state for insurance-related inquiries.
 
-- If no date is provided and the user question is a general inquiry, the tool should be called with today’s date to return the user’s insurance enrollments as of today.
-- If the inquiry is related to an insurance claim, the event date provided to the tool should follow these rules based on the type of claim:
+- This tool updates the `specified_date` based on the provided input. The stored `specified_date` is used to retrieve insurance enrollments of the specified date and also used for `fetch_insurance_term_con` tool.
+- If no specific date is provided, the stored `specified_date` should default to today’s date for general insurance inquiries.
+- For insurance claims, the `specified_date` is recommended to be set based on the type of claim as follows:
 
   - 실손 의료비 (Actual Medical Expenses): 영수증 수납일 (Receipt Payment Date)
   - 암 진단비 (Cancer Diagnosis Benefit): 진단서 발급일 (Diagnosis Certificate Issuance Date)
@@ -124,13 +127,20 @@ def fetch_enrollment_info(
   - 사망보험금 (Death Benefit): 사망진단서 발급일 (Death Certificate Issuance Date)
 
 Args:
-    date(str): The date of the event. In YYYYMMDD format.
+    specified_date (str): The `specified_date` to be stored. Must be in YYYYMMDD format.
 """
     
-    return ""
+    return Command(
+        update={
+            # update the state keys
+            "specified_date": specified_date,
+            # update the message history
+            "messages": [ToolMessage("`specified_date` updated to {}".format(specified_date), tool_call_id=tool_call_id)]
+        }
+    )
 
 @tool("fetch_insurance_term_con")
-def fetch_insurance_term_con(query : InsuranceQuery, insurance_enrollment_info: Annotated[dict, InjectedState("insurance_enrollment_info")]):
+def fetch_insurance_term_con(query : InsuranceQuery, insurance_enrollment_info: Annotated[dict, InjectedState("insurance_enrollment_info")],specified_date : Annotated[dict, InjectedState("specified_date")] ):
     """Retrieves relevant information from insurance terms and conditions based on a list of queries. 
 Each query specifies an 'insurance_name(보험명)' and a 'query' describing the details to be extracted.
 The company of the insurance should not be included in the insurance_name.
@@ -156,7 +166,7 @@ This is useful for finding context or specific information related to insurance 
                 matching_contract = contract
                 insurance_company = contract["resCompanyNm"]
                 insurance_start_date = contract["commStartDate"]
-                matching_insurance_text = render_policy_as_table_flat(matching_contract)
+                matching_insurance_text = render_policy_as_table_flat(matching_contract,specified_date)
                 break
             
         for contract in actualloss_contracts : 
@@ -164,7 +174,7 @@ This is useful for finding context or specific information related to insurance 
                 matching_contract = contract
                 insurance_company = contract["resCompanyNm"]
                 insurance_start_date = contract["resCoverageLists"][0]["commStartDate"]
-                matching_insurance_text = render_policy_as_table_actual(matching_contract)
+                matching_insurance_text = render_policy_as_table_actual(matching_contract,specified_date)
                 break
         #print(insurance_company)
         insurance_company_code_dict = {"메리츠화재보험" : "0101" , "한화손해보험" : "0102", "삼성화재해상보험" : "0108","KB손해보험":"0110", "DB손해보험" : "0111", "캐롯손해보험" :"0000","NH농협손해보험" : "0171", "삼성생명보험" : "0203","현대해상화재보험" : "0109"}
@@ -567,30 +577,31 @@ def run_oracle(state) :
     oracle_prompt = ChatPromptTemplate.from_messages([
         ("system", oracle_system_prompt),
         ("ai", "먼저 오늘 날짜와 고객님의 보험 가입 정보를 알려주세요."),
-        ("user", "오늘 날짜: {today}\n 보험 가입 정보:\n{insurance_enrollment_info}"),
+        ("user", "오늘 날짜: {today}\n {specified_date_str} 기준 보험 가입 정보:\n{insurance_enrollment_info}"),
         ("ai", "알려주신 보험과 관련하여 어떤 것이 궁금하신가요?"),
         MessagesPlaceholder(variable_name="chat_history"),
         MessagesPlaceholder(variable_name="messages"),
         ])
 
     if purpose == "Payout Estimate":
-        tools=[fetch_insurance_term_con,human_retrieval,final_answer_payoutEstimate]
+        tools=[fetch_insurance_term_con,human_retrieval,final_answer_payoutEstimate,update_specified_date]
     if purpose == "Claim Dispute":
-        tools=[fetch_insurance_term_con,human_retrieval,final_answer_dispute]
+        tools=[fetch_insurance_term_con,human_retrieval,final_answer_dispute,update_specified_date]
     if purpose == "Medical Support for Claims":
-        tools=[fetch_insurance_term_con,human_retrieval,final_answer_medicalSupport]
+        tools=[fetch_insurance_term_con,human_retrieval,final_answer_medicalSupport,update_specified_date]
     if purpose == "General Inquiry":
-        tools=[human_retrieval,final_answer_general]
+        tools=[human_retrieval,final_answer_general,update_specified_date]
     if purpose == "General Inquiry about enrolled insurance":
-        tools=[fetch_insurance_term_con,human_retrieval,final_answer_general]
+        tools=[fetch_insurance_term_con,human_retrieval,final_answer_general,update_specified_date]
 
 
     oracle = (
         {
             "user_input": lambda x: x["user_input"],
             "chat_history": lambda x: x["chat_history"],
+            "specified_date_str" : lambda x: datetime.strptime(x["specified_date"], "%Y%m%d").strftime("%Y년 %m월 %d일") ,
             "today" : lambda x : datetime.today().strftime("%Y.%m.%d"),
-            "insurance_enrollment_info": lambda x: process_and_print_active_policies(x["insurance_enrollment_info"],datetime.today().strftime("%Y%m%d")),
+            "insurance_enrollment_info": lambda x: process_and_print_active_policies(x["insurance_enrollment_info"],x["specified_date"]),
             "messages": lambda x: x["messages"],
         }
         | oracle_prompt
@@ -608,6 +619,7 @@ class State(AgentState):
     user_input: str
     insurance_enrollment_info : dict
     chat_history: list[BaseMessage]
+    specified_date : str 
     non_related : str
     messages: Annotated[Sequence[BaseMessage], add_messages]
     response : str
@@ -632,7 +644,7 @@ def router(state: list):
         return "final_answer"
 
 
-tools = tools=[fetch_insurance_term_con]
+tools = tools=[fetch_insurance_term_con,update_specified_date]
 tool_node = ToolNode(tools)
 
 from langgraph.graph import StateGraph, END
