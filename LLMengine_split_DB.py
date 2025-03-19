@@ -140,7 +140,7 @@ Args:
     )
 
 @tool("fetch_insurance_term_con")
-def fetch_insurance_term_con(query : InsuranceQuery, insurance_enrollment_info: Annotated[dict, InjectedState("insurance_enrollment_info")],specified_date : Annotated[dict, InjectedState("specified_date")] ):
+def fetch_insurance_term_con(query : InsuranceQuery, insurance_enrollment_info: Annotated[dict, InjectedState("insurance_enrollment_info")],specified_date : Annotated[str, InjectedState("specified_date")] ):
     """Retrieves relevant information from insurance terms and conditions based on a list of queries. 
 Each query specifies an 'insurance_name(보험명)' and a 'query' describing the details to be extracted.
 The company of the insurance should not be included in the insurance_name.
