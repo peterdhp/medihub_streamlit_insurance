@@ -109,33 +109,42 @@ def retrieve_documents_by_metadata(documents, source=None, page=None):
     ]
     return doclist[0]
 
-@tool("update_specified_date")
-def update_specified_date(
+@tool("fetch_insurance_enrollment_info")
+def fetch_insurance_enrollment_info(
     specified_date: str,
+    insurance_enrollment_info: Annotated[dict, InjectedState("insurance_enrollment_info")],
     tool_call_id: Annotated[str, InjectedToolCallId]
 ):
-    """Updates the stored `specified_date` in the state for insurance-related inquiries.
+    """Fetches the user’s insurance enrollment information for a specified date and updates the session state with that date.
 
-- This tool updates the `specified_date` based on the provided input. The stored `specified_date` is used to retrieve insurance enrollments of the specified date and also used for `fetch_insurance_term_con` tool.
-- If no specific date is provided, the stored `specified_date` should default to today’s date for general insurance inquiries.
-- For insurance claims, the `specified_date` is recommended to be set based on the type of claim as follows:
+    Usage:
+      - If no specific date is provided, defaults to today’s date for general insurance inquiries.
+      - For insurance claims, set `specified_date` based on the type of claim:
+        • 실손 의료비 (Actual Medical Expenses): 영수증 수납일 (Receipt Payment Date)
+        • 암 진단비 (Cancer Diagnosis Benefit): 진단서 발급일 (Diagnosis Certificate Issuance Date)
+        • 질병 일당 (Daily Disease Allowance): 진단서 발급일 (Diagnosis Certificate Issuance Date)
+        • 후유장해 (Permanent Disability Benefit): 후유장해진단서 발급일 (Permanent Disability Diagnosis Certificate Issuance Date)
+        • 사망보험금 (Death Benefit): 사망진단서 발급일 (Death Certificate Issuance Date)
 
-  - 실손 의료비 (Actual Medical Expenses): 영수증 수납일 (Receipt Payment Date)
-  - 암 진단비 (Cancer Diagnosis Benefit): 진단서 발급일 (Diagnosis Certificate Issuance Date)
-  - 질병 일당 (Daily Disease Allowance): 진단서 발급일 (Diagnosis Certificate Issuance Date)
-  - 후유장해 (Permanent Disability Benefit): 후유장해진단서 발급일 (Permanent Disability Diagnosis Certificate Issuance Date)
-  - 사망보험금 (Death Benefit): 사망진단서 발급일 (Death Certificate Issuance Date)
+    Args:
+        specified_date (str): Date string in YYYYMMDD format. If omitted, today’s date is used.
+        insurance_enrollment_info (dict): A dictionary containing the user’s full insurance
+                                          enrollment details (e.g., coverage start/end dates,
+                                          policy types, etc.).
+        tool_call_id (str): Unique identifier for this tool call.
 
-Args:
-    specified_date (str): The `specified_date` to be stored. Must be in YYYYMMDD format.
+    Returns:
+        Command: Updates the session state with the new `specified_date` and returns
+                 a message containing the relevant insurance enrollment information.
 """
     
+    result = process_and_print_active_policies(insurance_enrollment_info,specified_date)
     return Command(
         update={
             # update the state keys
             "specified_date": specified_date,
             # update the message history
-            "messages": [ToolMessage("`specified_date` updated to {}".format(specified_date), tool_call_id=tool_call_id)]
+            "messages": [ToolMessage("insurance enrollment information of the user at {} : \n".format(datetime.strptime(specified_date, "%Y%m%d").strftime("%Y년 %m월 %d일"))+ result, tool_call_id=tool_call_id)]
         }
     )
 
@@ -576,28 +585,28 @@ def run_oracle(state) :
 
     oracle_prompt = ChatPromptTemplate.from_messages([
         ("system", oracle_system_prompt),
-        ("ai", "먼저 오늘 날짜와 고객님의 보험 가입 정보를 알려주세요."),
-        ("user", "오늘 날짜: {today}\n {specified_date_str} 기준 보험 가입 정보:\n{insurance_enrollment_info}"),
-        ("ai", "알려주신 보험과 관련하여 어떤 것이 궁금하신가요?"),
+        ("ai", "먼저 오늘 날짜와 고객님의 성함을 알려주세요."),
+        ("user", "오늘 날짜: {today}\n 이름:\n{user_name}"),
         MessagesPlaceholder(variable_name="chat_history"),
         MessagesPlaceholder(variable_name="messages"),
         ])
 
     if purpose == "Payout Estimate":
-        tools=[fetch_insurance_term_con,human_retrieval,final_answer_payoutEstimate,update_specified_date]
+        tools=[fetch_insurance_term_con,human_retrieval,final_answer_payoutEstimate,fetch_insurance_enrollment_info]
     if purpose == "Claim Dispute":
-        tools=[fetch_insurance_term_con,human_retrieval,final_answer_dispute,update_specified_date]
+        tools=[fetch_insurance_term_con,human_retrieval,final_answer_dispute,fetch_insurance_enrollment_info]
     if purpose == "Medical Support for Claims":
-        tools=[fetch_insurance_term_con,human_retrieval,final_answer_medicalSupport,update_specified_date]
+        tools=[fetch_insurance_term_con,human_retrieval,final_answer_medicalSupport,fetch_insurance_enrollment_info]
     if purpose == "General Inquiry":
-        tools=[human_retrieval,final_answer_general,update_specified_date]
+        tools=[human_retrieval,final_answer_general,fetch_insurance_enrollment_info]
     if purpose == "General Inquiry about enrolled insurance":
-        tools=[fetch_insurance_term_con,human_retrieval,final_answer_general,update_specified_date]
+        tools=[fetch_insurance_term_con,human_retrieval,final_answer_general,fetch_insurance_enrollment_info]
 
 
     oracle = (
         {
             "user_input": lambda x: x["user_input"],
+            "user_name": lambda x: x["user_name"],
             "chat_history": lambda x: x["chat_history"],
             "specified_date_str" : lambda x: datetime.strptime(x["specified_date"], "%Y%m%d").strftime("%Y년 %m월 %d일") ,
             "today" : lambda x : datetime.today().strftime("%Y.%m.%d"),
@@ -617,6 +626,7 @@ def run_oracle(state) :
 
 class State(AgentState):
     user_input: str
+    user_name : str
     insurance_enrollment_info : dict
     chat_history: list[BaseMessage]
     specified_date : str 
@@ -644,7 +654,7 @@ def router(state: list):
         return "final_answer"
 
 
-tools = tools=[fetch_insurance_term_con,update_specified_date]
+tools = tools=[fetch_insurance_term_con,fetch_insurance_enrollment_info]
 tool_node = ToolNode(tools)
 
 from langgraph.graph import StateGraph, END
