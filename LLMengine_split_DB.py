@@ -302,7 +302,7 @@ This is useful for finding context or specific information related to insurance 
                 page_content = matching_doc.get("page_content", "")
                 metadata = matching_doc.get("metadata", "")
                 section = metadata.get("topic", "")
-                insurance_name = metadata.get("name", "")
+                insurance_name = metadata.get("insurance_name", "")
                 formatted_content = {
                     "insurance_name" : insurance_name,
                     "query" : query,
