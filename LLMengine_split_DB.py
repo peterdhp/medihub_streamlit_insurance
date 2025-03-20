@@ -28,6 +28,9 @@ import unicodedata
 import glob
 
 conn = st.connection("mydb")
+df = conn.query("SELECT * FROM insurance_company")
+st.dataframe(df)
+
 
 
 os.environ["LANGCHAIN_API_KEY"] = st.secrets['LANGCHAIN_API_KEY']
