@@ -28,8 +28,8 @@ import unicodedata
 import glob
 
 conn = st.connection("sql")
-#df = conn.query("SELECT * FROM insurance_company")
-#st.dataframe(df)
+df = conn.query("SELECT * FROM insurance_company")
+st.dataframe(df)
 
 
 
