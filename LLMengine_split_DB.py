@@ -120,10 +120,10 @@ def fetch_insurance_enrollment_info(
     insurance_enrollment_info: Annotated[dict, InjectedState("insurance_enrollment_info")],
     tool_call_id: Annotated[str, InjectedToolCallId]
 ):
-    """Fetches the user’s insurance enrollment information for a specified date and updates the session state with that date.
+    """Fetches the user's insurance enrollment information for a specified date and updates the session state with that date.
 
     Usage:
-      - If no specific date is provided, defaults to today’s date for general insurance inquiries.
+      - If no specific date is provided, defaults to today's date for general insurance inquiries.
       - For insurance claims, set `specified_date` based on the type of claim:
         • 실손 의료비 (Actual Medical Expenses): 영수증 수납일 (Receipt Payment Date)
         • 암 진단비 (Cancer Diagnosis Benefit): 진단서 발급일 (Diagnosis Certificate Issuance Date)
@@ -132,8 +132,8 @@ def fetch_insurance_enrollment_info(
         • 사망보험금 (Death Benefit): 사망진단서 발급일 (Death Certificate Issuance Date)
 
     Args:
-        specified_date (str): Date string in YYYYMMDD format. If omitted, today’s date is used.
-        insurance_enrollment_info (dict): A dictionary containing the user’s full insurance
+        specified_date (str): Date string in YYYYMMDD format. If omitted, today's date is used.
+        insurance_enrollment_info (dict): A dictionary containing the user's full insurance
                                           enrollment details (e.g., coverage start/end dates,
                                           policy types, etc.).
         tool_call_id (str): Unique identifier for this tool call.
