@@ -27,7 +27,7 @@ from utils import render_policy_as_table_actual, render_policy_as_table_flat, pr
 import unicodedata
 import glob
 
-conn = st.connection("mydb")
+conn = st.connection("sql")
 df = conn.query("SELECT * FROM insurance_company")
 st.dataframe(df)
 
