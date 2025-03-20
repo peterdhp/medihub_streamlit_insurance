@@ -27,33 +27,36 @@ from utils import render_policy_as_table_actual, render_policy_as_table_flat, pr
 import unicodedata
 import glob
 import logging
+import socket
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# Debug connection and query
-try:
-    conn = st.connection("sql")
+# Test server connectivity
+def test_mysql_connection():
+    host = "172.16.100.136"
+    port = 3306
     
-    # Test connection with a simple query
-    logger.info("Testing connection with SHOW TABLES query")
-    tables = conn.query("SHOW TABLES")
-    st.write("Available tables in database:", tables)
-    
-    # Try the main query
-    logger.info("Executing main query: SELECT * FROM insurance_company")
-    df = conn.query("SELECT * FROM insurance_company")
-    logger.info(f"Query returned {len(df)} rows")
-    
-    # Show the first few rows
-    st.write("First few rows of insurance_company table:")
-    st.dataframe(df.head())
+    try:
+        # Try to create a socket connection
+        sock = socket.create_connection((host, port), timeout=3)
+        sock.close()
+        st.success(f"Server {host}:{port} is reachable")
+        return True
+    except socket.error as e:
+        st.error(f"Cannot connect to {host}:{port}")
+        st.error(f"Error: {str(e)}")
+        return False
 
-except Exception as e:
-    logger.error(f"Database error: {str(e)}")
-    st.error(f"Database error: {str(e)}")
-    st.write("Please check your database connection settings in .streamlit/secrets.toml")
+# Test before attempting database connection
+if test_mysql_connection():
+    try:
+        conn = st.connection("sql")
+        df = conn.query("SHOW TABLES")
+        st.write("Available tables:", df)
+    except Exception as e:
+        st.error(f"Database connection failed: {str(e)}")
 
 os.environ["LANGCHAIN_API_KEY"] = st.secrets['LANGCHAIN_API_KEY']
 os.environ["LANGCHAIN_TRACING_V2"] = st.secrets['LANGCHAIN_TRACING_V2']
