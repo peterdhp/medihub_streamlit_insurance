@@ -35,27 +35,25 @@ logger = logging.getLogger(__name__)
 # Debug connection and query
 try:
     conn = st.connection("sql")
-    # Log connection details
-    logger.info(f"Connection type: {conn.type}")
-    logger.info(f"Connection details: {conn._secrets}")  # Be careful with sensitive info in production
     
-    # Log query execution
-    logger.info("Executing query: SELECT * FROM insurance_company")
+    # Test connection with a simple query
+    logger.info("Testing connection with SHOW TABLES query")
+    tables = conn.query("SHOW TABLES")
+    st.write("Available tables in database:", tables)
+    
+    # Try the main query
+    logger.info("Executing main query: SELECT * FROM insurance_company")
     df = conn.query("SELECT * FROM insurance_company")
-    logger.info(f"Query result shape: {df.shape}")
-    logger.info(f"Available columns: {df.columns.tolist()}")
+    logger.info(f"Query returned {len(df)} rows")
     
-    # Display results
-    st.write("Database connection successful!")
-    st.dataframe(df)
+    # Show the first few rows
+    st.write("First few rows of insurance_company table:")
+    st.dataframe(df.head())
 
 except Exception as e:
     logger.error(f"Database error: {str(e)}")
-    st.error(f"Database connection or query failed: {str(e)}")
-#df = conn.query("SELECT * FROM insurance_company")
-#st.dataframe(df)
-
-
+    st.error(f"Database error: {str(e)}")
+    st.write("Please check your database connection settings in .streamlit/secrets.toml")
 
 os.environ["LANGCHAIN_API_KEY"] = st.secrets['LANGCHAIN_API_KEY']
 os.environ["LANGCHAIN_TRACING_V2"] = st.secrets['LANGCHAIN_TRACING_V2']
