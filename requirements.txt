@@ -7,3 +7,4 @@ langsmith
 langchain_community
 streamlit
 pymongo
+SQLAlchemy
