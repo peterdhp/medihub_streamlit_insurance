@@ -27,6 +27,8 @@ from utils import render_policy_as_table_actual, render_policy_as_table_flat, pr
 import unicodedata
 import glob
 
+conn = st.connection("mydb")
+
 
 os.environ["LANGCHAIN_API_KEY"] = st.secrets['LANGCHAIN_API_KEY']
 os.environ["LANGCHAIN_TRACING_V2"] = st.secrets['LANGCHAIN_TRACING_V2']
