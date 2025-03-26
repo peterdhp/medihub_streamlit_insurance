@@ -725,7 +725,7 @@ Remember: While being thorough is important, maintain a conversational and suppo
             "messages": lambda x: x["messages"],
         }
         | oracle_prompt
-        | llmo3mini.bind_tools(tools, tool_choice="any")
+        | llm4o.bind_tools(tools, tool_choice="any")
     )
     
     out = oracle.invoke(state)
