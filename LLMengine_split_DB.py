@@ -71,14 +71,14 @@ def purpose_classifier(state):
         
     purpose_classifier_prompt = ChatPromptTemplate.from_messages([
         ("system", 
-         """You are a classifier designed to categorize chat history into one of five specific categories based on the user's intent. This chatbot is used exclusively for questions related to life and health insurance. The categories are:  
+         """You are a classifier designed to categorize the user question into one of five specific categories based on the user's intent and the chat history. 
+This chatbot is used exclusively for questions related to life and health insurance. The categories are:  
     1. **Payout Estimate**: The user is inquiring about an estimated insurance payout for a life or health insurance policy.
     2. **Claim Dispute**: The user has received a payout for a life or health insurance claim but is dissatisfied and requires assistance from a claim adjuster.
     3. **Medical Support for Claims**: The user is seeking medical advice or documentation to support a life or health insurance claim adjustment.
     4. **General Inquiry about enrolled insurance**: The user has a question related to their own life or health insurance that does not fit into the above categories.
     4. **General Inquiry**: The user has a question related to life or health insurance that does not need information about the insurances they are enrolled in.
-    5. **Unrelated**: The conversation is not about life or health insurance.
-Your task is to read the chat history and return the most appropriate category."""),
+    5. **Unrelated**: The conversation is not about life or health insurance."""),
         ("user", 
          "[chat history]\n{chat_history}")
     ])
@@ -670,7 +670,7 @@ def run_oracle(state):
 
 Available Tools:
 1. fetch_insurance_enrollment_info: Access user's current insurance policies and coverage details
-   NOTE: Before calling this tool, check if the information was already fetched in previous messages
+   NOTE: Before calling this tool, check if the information was already fetched in previous messages. only use it once.
 2. fetch_insurance_term_con: Look up specific details from insurance policy documents
 3. human_retrieval: Use ONLY for gathering personal case information or clarifying user intent
    IMPORTANT: NEVER use this tool to ask about insurance policy details or coverage information
