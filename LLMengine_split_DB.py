@@ -28,6 +28,7 @@ from utils import render_policy_as_table_actual, render_policy_as_table_flat, pr
 import unicodedata
 import logging
 import pandas as pd
+import pymongo
 
 
 os.environ["LANGCHAIN_API_KEY"] = st.secrets['LANGCHAIN_API_KEY']
@@ -36,7 +37,15 @@ os.environ["LANGCHAIN_ENDPOINT"] = st.secrets['LANGCHAIN_ENDPOINT']
 os.environ['LANGCHAIN_PROJECT'] = st.secrets['LANGCHAIN_PROJECT']
 
 
-conn = st.connection("sql")
+@st.cache_resource(ttl=3600)
+def init_sql_connection():
+    try:
+        return st.connection("sql")
+    except Exception as e:
+        st.error(f"SQL connection failed: {e}")
+        return None
+
+conn = init_sql_connection()
     
 
 llm4o = ChatOpenAI(
@@ -71,14 +80,14 @@ def purpose_classifier(state):
         
     purpose_classifier_prompt = ChatPromptTemplate.from_messages([
         ("system", 
-         """You are a classifier designed to categorize the user question into one of five specific categories based on the user's intent and the chat history. 
-This chatbot is used exclusively for questions related to life and health insurance. The categories are:  
+         """You are a classifier designed to categorize chat history into one of five specific categories based on the user's intent. This chatbot is used exclusively for questions related to life and health insurance. The categories are:  
     1. **Payout Estimate**: The user is inquiring about an estimated insurance payout for a life or health insurance policy.
     2. **Claim Dispute**: The user has received a payout for a life or health insurance claim but is dissatisfied and requires assistance from a claim adjuster.
     3. **Medical Support for Claims**: The user is seeking medical advice or documentation to support a life or health insurance claim adjustment.
     4. **General Inquiry about enrolled insurance**: The user has a question related to their own life or health insurance that does not fit into the above categories.
     4. **General Inquiry**: The user has a question related to life or health insurance that does not need information about the insurances they are enrolled in.
-    5. **Unrelated**: The conversation is not about life or health insurance."""),
+    5. **Unrelated**: The conversation is not about life or health insurance.
+Your task is to read the chat history and return the most appropriate category."""),
         ("user", 
          "[chat history]\n{chat_history}")
     ])
@@ -230,30 +239,24 @@ def fetch_insurance_term_con(query: InsuranceQuery, insurance_enrollment_info: A
         insurance_company_id_dict = dict(zip(df_1['name'], df_1['id']))
         insurance_company_id = insurance_company_id_dict.get(insurance_company, "Unknown")
         logger.info(f"Insurance company ID lookup: {insurance_company} -> {insurance_company_id}")
-        
-        query = query.query
         if insurance_company_id == "Unknown":
-            return "해당 보험사에 대한 약관 정보가 조회 불가능합니다.  서비스 업데이트를 기다려달라고 먼저 안내해주고 사용자 질문에 대해 약관 정보가 없는 선에서 최대한 답변을 줘"
+            return "해당 보험사에 대한 약관정보는 현재 조회가 불가능합니다. (약관 정보가 없는 선에서 최대한 답변을 주고 서비스 업데이트를 기다려달라는 안내해줘)"
         
-        
-        else :
-            
-            # Date processing
+        else:
+            query = query.query
             if len(str(insurance_start_date)) == 6:
                 year = int(insurance_start_date[:2])
                 current_year = datetime.now().year % 100
                 century = "20" if year <= current_year else "19"
                 insurance_start_date = century + insurance_start_date
             
-            
-             
             # Convert insurance_start_date string to datetime.date object
             try:
                 insurance_start_date = datetime.strptime(insurance_start_date, "%Y%m%d").date()
                 logger.info(f"Converted insurance_start_date to date object: {insurance_start_date}")
             except ValueError as e:
                 logger.error(f"Error converting insurance_start_date: {e}")
-                return "해당 약관에 대한 정보가 조회 불가능합니다.  서비스 업데이트를 기다려달라고 먼저 안내해주고 사용자 질문에 대해 약관 정보가 없는 선에서 최대한 답변을 줘"
+                return "해당 약관에 대한 정보가 조회 불가능합니다. 약관 정보가 없는 선에서 최대한 답변을 주고 서비스 업데이트를 기다려달라는 안내해줘"
             
             # Term lookup
             df_2 = conn.query(f"SELECT * FROM insurance_term WHERE COMPANY_ID = '{insurance_company_id}'")
@@ -271,7 +274,7 @@ def fetch_insurance_term_con(query: InsuranceQuery, insurance_enrollment_info: A
             
             if valid_dates.empty:
                 logger.warning(f"No valid terms found for company ID {insurance_company_id} before {insurance_start_date}")
-                return "해당 약관에 대한 정보가 조회 불가능합니다. 서비스 업데이트를 기다려달라고 먼저 안내해주고 사용자 질문에 대해 약관 정보가 없는 선에서 최대한 답변을 줘"
+                return "해당 약관에 대한 정보가 조회 불가능합니다. 약관 정보가 없는 선에서 최대한 답변을 주고 서비스 업데이트를 기다려달라는 안내해줘"
             
             exact_matches = valid_dates[valid_dates['name'] == insurance_name]
             
@@ -288,7 +291,7 @@ def fetch_insurance_term_con(query: InsuranceQuery, insurance_enrollment_info: A
                     logger.info(f"Found fuzzy match: {matching_name}")
                 else:
                     logger.warning(f"No fuzzy matches found for insurance name: {insurance_name}")
-                    return "해당 약관에 대한 정보가 조회 불가능합니다. 서비스 업데이트를 기다려달라고 먼저 안내해주고 사용자 질문에 대해 약관 정보가 없는 선에서 최대한 답변을 줘"
+                    return "해당 약관에 대한 정보가 조회 불가능합니다. 약관 정보가 없는 선에서 최대한 답변을 주고 서비스 업데이트를 기다려달라는 안내해줘"
             else:
                 matching_rows = exact_matches
                 logger.info(f"Found {len(matching_rows)} exact matches for insurance name: {insurance_name}")
@@ -438,7 +441,7 @@ def fetch_insurance_term_con(query: InsuranceQuery, insurance_enrollment_info: A
 
     except Exception as e:
         logger.error(f"Error in fetch_insurance_term_con: {str(e)}", exc_info=True)
-        return "해당 약관에 대한 정보가 조회 불가능합니다.  서비스 업데이트를 기다려달라고 먼저 안내해주고 사용자 질문에 대해 약관 정보가 없는 선에서 최대한 답변을 줘"
+        return "해당 약관에 대한 정보가 조회 불가능합니다. 약관 정보가 없는 선에서 최대한 답변을 주고 서비스 업데이트를 기다려달라는 안내해줘"
     if result == []:
         return "contents related to the query are not found"
     
@@ -666,32 +669,22 @@ def run_oracle(state):
     purpose_final_answer_map = {"Payout Estimate": "final_answer_payoutEstimate", "Claim Dispute": "final_answer_dispute", "Medical Support for Claims": "final_answer_medicalSupport", "General Inquiry": "final_answer_general","General Inquiry about enrolled insurance":"final_answer_general"}
     final_answer_str = purpose_final_answer_map[purpose]
 
-    oracle_system_prompt = """You are a caring and empathetic insurance consultant with years of experience helping clients understand their insurance coverage. Your goal is to provide clear, supportive, and accurate guidance while showing genuine concern for the client's situation.
+    oracle_system_prompt = """You are an insurance consultant. Your primary goal is to provide comprehensive and accurate answers based on the user's enrolled insurance policies.
 
-Available Tools:
-1. fetch_insurance_enrollment_info: Access user's current insurance policies and coverage details
-   NOTE: Before calling this tool, check if the information was already fetched in previous messages. only use it once.
-2. fetch_insurance_term_con: Look up specific details from insurance policy documents
-3. human_retrieval: Use ONLY for gathering personal case information or clarifying user intent
-   IMPORTANT: NEVER use this tool to ask about insurance policy details or coverage information
+Core Process:
+1. ALWAYS start by checking the user's current insurance enrollment (if not already done)
+2. Base your responses on the user's actual enrolled policies
+3. Look up specific details only from the user's enrolled insurance policies
+4. Ask for personal case details only when necessary for claim-specific questions
 
 Key Guidelines:
-- Always acknowledge the client's concerns and emotions first
-- Explain insurance terms in simple, easy-to-understand language
-- Be proactive in identifying potential issues or opportunities for better coverage
-- Review previous tool messages before making new tool calls to avoid redundant requests
-- Use fetch_insurance_term_con and fetch_insurance_enrollment_info for ALL policy-related information
-- Only use human_retrieval for personal case details that cannot be found in policy documents
+- Review previous tool messages to avoid redundant information requests
+- If a question relates to insurance not held by the user, clearly state this fact
+- For policy-specific questions, always cite the relevant policy name and section
+- Only ask the user for information that cannot be found in policy documents
 - Provide comprehensive answers using the {final_answer_str} tool once sufficient information is gathered
 
-Communication Style:
-- Use warm and supportive language
-- Break down complex information into digestible parts
-- Validate the client's concerns and questions
-- Provide clear action items when applicable
-- Always end with an offer to clarify any points or answer additional questions
-
-Remember: While being thorough is important, maintain a conversational and supportive tone throughout the interaction.
+Remember: While being thorough is important, try to minimize multiple back-and-forth interactions by gathering complete information upfront.
 """.format(final_answer_str=final_answer_str)
 
     oracle_prompt = ChatPromptTemplate.from_messages([
