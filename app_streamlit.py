@@ -3,6 +3,8 @@ from menu_streamlit import menu
 import os
 import pymongo
 from langsmith import traceable
+import socket
+import logging
 
 
 
@@ -18,6 +20,7 @@ os.environ['LANGCHAIN_PROJECT']=st.secrets['LANGCHAIN_PROJECT']
 os.environ['OPENAI_API_KEY']=st.secrets['OPENAI_API_KEY']
 
 os.environ['CO_API_KEY']=st.secrets['CO_API_KEY']
+
 
 
 
@@ -59,8 +62,8 @@ if st.button('보험 정보 등록하기'):
     st.switch_page('pages/signup.py')
     
     
-menu()
-    
+
+
 
 
 

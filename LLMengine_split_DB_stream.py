@@ -8,14 +8,13 @@ from typing_extensions import TypedDict
 from langgraph.graph import END, StateGraph, START, MessagesState
 from langgraph.prebuilt.chat_agent_executor import AgentState
 import os 
-
-from langchain_core.runnables import RunnableParallel
-from operator import itemgetter
 import streamlit as st
 from typing import TypedDict, Annotated, List, Union, Sequence
 from langchain_core.agents import AgentAction, AgentFinish
 from langchain_core.messages import BaseMessage,ToolCall, ToolMessage
 from langchain_core.tools import tool
+import operator
+import json
 from langgraph.prebuilt import InjectedState, ToolNode
 from langchain_core.tools.base import InjectedToolCallId
 from langgraph.types import Command
@@ -26,7 +25,10 @@ from difflib import get_close_matches
 from langgraph.checkpoint.memory import MemorySaver
 from utils import render_policy_as_table_actual, render_policy_as_table_flat, process_and_print_active_policies
 import unicodedata
+import glob
 import logging
+import socket
+import pymysql
 import pandas as pd
 
 
@@ -42,10 +44,6 @@ conn = st.connection("sql")
 llm4o = ChatOpenAI(
         model="gpt-4o",
         temperature=0
-    )
-
-llmo3mini = ChatOpenAI(
-        model="o3-mini"
     )
 
 llm4omini = ChatOpenAI(
@@ -129,7 +127,7 @@ def fetch_insurance_enrollment_info(
     Usage:
       - If no specific date is provided, defaults to today's date for general insurance inquiries.
       - For insurance claims, set `specified_date` based on the type of claim:
-        • 실손 의료비 (Actual Medical Expenses): 병원 영수증 수납일 (Receipt Payment Date)
+        • 실손 의료비 (Actual Medical Expenses): 영수증 수납일 (Receipt Payment Date)
         • 암 진단비 (Cancer Diagnosis Benefit): 진단서 발급일 (Diagnosis Certificate Issuance Date)
         • 질병 일당 (Daily Disease Allowance): 진단서 발급일 (Diagnosis Certificate Issuance Date)
         • 후유장해 (Permanent Disability Benefit): 후유장해진단서 발급일 (Permanent Disability Diagnosis Certificate Issuance Date)
@@ -171,25 +169,11 @@ if not logger.handlers:
     logger.addHandler(console_handler)
 
 @tool("fetch_insurance_term_con")
-def fetch_insurance_term_con(query: InsuranceQuery, insurance_enrollment_info: Annotated[dict, InjectedState("insurance_enrollment_info")], specified_date: Annotated[str, InjectedState("specified_date")]):
-    """Retrieves specific information from insurance terms and conditions documents.
-
-    Args:
-        query (InsuranceQuery): Contains:
-            - insurance_name (str): EXACT name of the insurance policy (보험명) from the user's enrolled policies, WITHOUT the insurance company name. 
-            - query (str): Specific information to find, such as:
-                - Coverage amounts and limits
-                - Claim requirements and procedures
-                - Specific medical conditions covered
-                - Exclusions or restrictions
-                - Waiting periods
-
-    Returns:
-        List of relevant sections from insurance terms, including:
-        - Page numbers
-        - Section titles
-        - Exact content matching the query
-    """
+def fetch_insurance_term_con(query : InsuranceQuery, insurance_enrollment_info: Annotated[dict, InjectedState("insurance_enrollment_info")],specified_date : Annotated[str, InjectedState("specified_date")] ):
+    """Retrieves relevant information from insurance terms and conditions based on a list of queries. 
+Each query specifies an exact 'insurance_name(보험명)' from the insurance_enrollment_info and a 'query' describing the details to be extracted.
+The company of the insurance should not be included in the insurance_name.
+This is useful for finding context or specific information related to insurance policies."""
     
     try:
         logger.info(f"Starting fetch_insurance_term_con with insurance name: {query.insurance_name}")
@@ -232,12 +216,7 @@ def fetch_insurance_term_con(query: InsuranceQuery, insurance_enrollment_info: A
         logger.info(f"Insurance company ID lookup: {insurance_company} -> {insurance_company_id}")
         
         query = query.query
-        if insurance_company_id == "Unknown":
-            return "해당 보험사에 대한 약관 정보가 조회 불가능합니다.  서비스 업데이트를 기다려달라고 먼저 안내해주고 사용자 질문에 대해 약관 정보가 없는 선에서 최대한 답변을 줘"
-        
-        
-        else :
-            
+        if insurance_company_id != "Unknown":
             # Date processing
             if len(str(insurance_start_date)) == 6:
                 year = int(insurance_start_date[:2])
@@ -253,7 +232,7 @@ def fetch_insurance_term_con(query: InsuranceQuery, insurance_enrollment_info: A
                 logger.info(f"Converted insurance_start_date to date object: {insurance_start_date}")
             except ValueError as e:
                 logger.error(f"Error converting insurance_start_date: {e}")
-                return "해당 약관에 대한 정보가 조회 불가능합니다.  서비스 업데이트를 기다려달라고 먼저 안내해주고 사용자 질문에 대해 약관 정보가 없는 선에서 최대한 답변을 줘"
+                return "해당 약관에 대한 정보가 조회 불가능합니다. 약관 정보가 없는 선에서 최대한 답변을 주고 서비스 업데이트를 기다려달라는 안내해줘"
             
             # Term lookup
             df_2 = conn.query(f"SELECT * FROM insurance_term WHERE COMPANY_ID = '{insurance_company_id}'")
@@ -271,7 +250,7 @@ def fetch_insurance_term_con(query: InsuranceQuery, insurance_enrollment_info: A
             
             if valid_dates.empty:
                 logger.warning(f"No valid terms found for company ID {insurance_company_id} before {insurance_start_date}")
-                return "해당 약관에 대한 정보가 조회 불가능합니다. 서비스 업데이트를 기다려달라고 먼저 안내해주고 사용자 질문에 대해 약관 정보가 없는 선에서 최대한 답변을 줘"
+                return "해당 약관에 대한 정보가 조회 불가능합니다. 약관 정보가 없는 선에서 최대한 답변을 주고 서비스 업데이트를 기다려달라는 안내해줘"
             
             exact_matches = valid_dates[valid_dates['name'] == insurance_name]
             
@@ -280,7 +259,7 @@ def fetch_insurance_term_con(query: InsuranceQuery, insurance_enrollment_info: A
                 names = valid_dates['name'].tolist()
                 insurance_name_normalized = unicodedata.normalize('NFC', insurance_name)
                 names_normalized = [unicodedata.normalize('NFC', name) for name in names]
-                closest_matches = get_close_matches(insurance_name_normalized, names_normalized, n=1, cutoff=0.4)
+                closest_matches = get_close_matches(insurance_name_normalized, names_normalized, n=1, cutoff=0.8)
                 
                 if closest_matches:
                     matching_name = names[names_normalized.index(closest_matches[0])]
@@ -288,7 +267,7 @@ def fetch_insurance_term_con(query: InsuranceQuery, insurance_enrollment_info: A
                     logger.info(f"Found fuzzy match: {matching_name}")
                 else:
                     logger.warning(f"No fuzzy matches found for insurance name: {insurance_name}")
-                    return "해당 약관에 대한 정보가 조회 불가능합니다. 서비스 업데이트를 기다려달라고 먼저 안내해주고 사용자 질문에 대해 약관 정보가 없는 선에서 최대한 답변을 줘"
+                    return "해당 약관에 대한 정보가 조회 불가능합니다. 약관 정보가 없는 선에서 최대한 답변을 주고 서비스 업데이트를 기다려달라는 안내해줘"
             else:
                 matching_rows = exact_matches
                 logger.info(f"Found {len(matching_rows)} exact matches for insurance name: {insurance_name}")
@@ -306,29 +285,16 @@ def fetch_insurance_term_con(query: InsuranceQuery, insurance_enrollment_info: A
             toc_list = df_3[['title', 'page']].to_dict('records')
             formatted_toc = "\n".join([f"{item['title']} - {item['page']}" for item in toc_list])
             
-            page_selector_system_prompt = """You are a page selector for insurance terms and conditions documents. 
-    Your task is to analyze a query and select ALL the relevant pages that contain information to answer their question.
+            page_selector_system_prompt = """Given a query and insurance enrollment info, select up to ONLY 10 relevant pages from the terms and conditions.
 
-    Key Tasks:
-    1. Analyze the user's query carefully
-    2. Review the table of contents
-    3. Select ALL relevant pages, not just section start pages
-    4. Include both direct matches and related sections
-
-    Critical Sections to Always Consider:
-    • 보험금 지급사유 (Insurance Payment Criteria)
-    • 보험금을 지급하지 않는 사유 (Exclusions)
-    • 보험금 지급한도 (Payment Limits)
-    • 중복지급 제한 (Duplicate Payment Restrictions)
-
+    Key Considerations:
+        •	Some policies prohibit duplicate payments
+        •	Prioritize sections on : 지급사유, 보험금을 지급하지 않는 사유 etc.
     [Insurance enrollment information]
     {enroll_info}
 
-    [Table of contents]
-    Note: Below shows section starting pages only. Include ALL relevant pages within sections.
-    {table_of_contents}
-
-    Output: Return a list of ALL page numbers containing relevant information."""
+    [Table of contents] : The Table of Content below only lists the starting page numbers for each section. If you think a section should be selected, please output all the pages.
+    {table_of_contents}"""
 
             page_selector_prompt = ChatPromptTemplate.from_messages([
             ("system", page_selector_system_prompt),
@@ -390,78 +356,18 @@ def fetch_insurance_term_con(query: InsuranceQuery, insurance_enrollment_info: A
         if result != []:
             result = sorted(result, key=lambda x: (x["insurance_name"], x["page"]))
             logger.info(f"Successfully processed {len(result)} results")
-            
-            selected_result = []
-
-            relevance_checker_system_prompt = """Given a query retrieved content from the insurance terms and conditions, check if the retrieved content is relevant to the query."""
-
-            relevance_checker_prompt = ChatPromptTemplate.from_messages([
-            ("system", relevance_checker_system_prompt),
-            ("user", "query : {query}\n content : {content}"),])
-            
-            class RelevanceCheck(BaseModel):
-                """binary score for whether the retrieved content is relevant to the query."""
-
-                score: str = Field(
-                description="binary score for whether the retrieved content is relevant to the query, yes or no"
-            )
-                
-            relevance_checker_llm = llm4omini.with_structured_output(RelevanceCheck)
-
-
-            # Combine the prompt and classifier
-            page_selector = relevance_checker_prompt | relevance_checker_llm
-            
-            tasks = {}
-            for i, retrieved_content in enumerate(result):
-                task_name = f'task{i}'
-                tasks[task_name] = ({'content': itemgetter(f'content{i}'), 'query': itemgetter('query')}) | page_selector
-
-            # Create a RunnableParallel instance with dynamic tasks
-            parallel_runner = RunnableParallel(**tasks)
-            
-            input_dict = {}
-            for i in range(len(result)): 
-                input_dict[f'content{i}'] =  result[i]
-            input_dict['query'] = query
-            
-            relevant_check_results = parallel_runner.invoke(input_dict)
-            
-            for i, relevant_check_result in enumerate(relevant_check_results.values()):
-                print(relevant_check_result)
-                if relevant_check_result.score== 'yes':
-                    selected_result.append(result[i])
-                    
-            result = selected_result
-                    
-            logger.info(f"{len(selected_result)} results are selected")
 
     except Exception as e:
         logger.error(f"Error in fetch_insurance_term_con: {str(e)}", exc_info=True)
-        return "해당 약관에 대한 정보가 조회 불가능합니다.  서비스 업데이트를 기다려달라고 먼저 안내해주고 사용자 질문에 대해 약관 정보가 없는 선에서 최대한 답변을 줘"
-    if result == []:
-        return "contents related to the query are not found"
-    
+        return "해당 약관에 대한 정보가 조회 불가능합니다. 약관 정보가 없는 선에서 최대한 답변을 주고 서비스 업데이트를 기다려달라는 안내해줘"
     return result
 
 
 def human_retrieval_node(state):
-   """Prompts the user with a question to gather missing or unclear information.
+   """Prompts the user for information. Useful for gathering details directly from the user,
+   Especially when clarifying or collecting information related to their health condition.
+   It is IMPORTANT that the tool is not used to retrieve contents of the insurance term and conditions."""
    
-   Use this tool to ask direct, specific questions to get:
-   1. Missing dates needed for claims (treatment, diagnosis, etc.)
-   2. Required documentation details (medical bills, records, etc.)
-   3. Specific claim information (exact expenses, hospital names, etc.)
-   
-   Do NOT use this tool if:
-   1. The information exists in policy documents
-   2. The question is about general insurance concepts
-   3. The user has already provided the information
-   4. You're simply repeating or rephrasing the user's question
-   
-   Args:
-       question: A clear, specific question to get the missing information
-   """
    for tool_call in state["messages"][-1].tool_calls :
         if tool_call['name'] == "human_retrieval":
             question = tool_call['args']['question']
@@ -473,26 +379,87 @@ def human_retrieval_node(state):
 
 @tool("human_retrieval")
 def human_retrieval(question : str):
-   """Prompts the user with a question to gather missing or unclear information.
+   """Prompts the user for information. Useful for gathering details directly from the user,
+   Especially when clarifying or collecting information related to their health condition.
+   It is IMPORTANT that the tool is not used to retrieve contents of the insurance term and conditions.
    
-   Use this tool to ask direct, specific questions to get:
-   1. Missing dates needed for claims (treatment, diagnosis, etc.)
-   2. Required documentation details (medical bills, records, etc.)
-   3. Specific claim information (exact expenses, hospital names, etc.)
+   args : 
+       question : A question to ask the user.
+    """
    
-   Do NOT use this tool if:
-   1. The information exists in policy documents
-   2. The question is about general insurance concepts
-   3. The user has already provided the information
-   4. You're simply repeating or rephrasing the user's question
-   
-   Args:
-       question: A clear, specific question to get the missing information
-   """
    return ""
 
-# Define the structured output model
+def is_about_policy_terms(question :str):
+    """
+    Classifies whether a given question is about the 보험 약관 (insurance policy terms).
 
+    Parameters:
+        question (str): The question to classify.
+
+    Returns:
+        dict: A structured response indicating whether the question is about 보험 약관.
+    """
+
+    # Define the structured output model
+    class PolicyTermsClassification(BaseModel):
+        """Binary score for whether the question is about insurance policy terms and conditions."""
+
+        is_about_policy_terms: str = Field(
+            description="Answer 'yes' if the question is about insurance policy terms and conditions, otherwise 'no'."
+        )
+
+
+    # Define the LLM with structured output
+    
+    structured_llm_classifier = llm4omini.with_structured_output(PolicyTermsClassification)
+
+    # Define the system prompt
+    policy_terms_system_prompt = """You are a classifier that determines whether a question is asking about insurance policy terms and conditions.
+
+Answer 'yes' if the question pertains to:
+1. General policy terms applicable to all insurers.
+2. Special terms and conditions, including payout criteria or claim amounts.
+
+Answer 'no' if the question is unrelated to insurance policy terms and conditions."""
+
+    # Define the prompt template
+    policy_terms_prompt = ChatPromptTemplate.from_messages(
+        [
+            ("system", policy_terms_system_prompt),
+            ("human", "Question: {question}")
+        ]
+    )
+
+    # Combine the prompt and classifier
+    policy_terms_classifier = policy_terms_prompt | structured_llm_classifier
+
+    # Classify the question
+    result = policy_terms_classifier.invoke({"question": question})
+
+    return result
+
+
+
+
+
+def question_v_retrieval(state):
+    """
+    Determines whether to retrieve information from user or to use other tool
+
+    Args:
+        state (dict): The current graph state
+
+    Returns:
+        str: Binary decision for next node to call
+    """
+    question = state["response"]
+    response = is_about_policy_terms(question)
+    grade = response.is_about_policy_terms
+
+    if grade == "yes":
+        return "END" ### 이후에 다시 수정해야함
+    else:
+        return "END"
     
 def continue_v_error(state):
     """
@@ -525,7 +492,7 @@ The arguments recieved are the sections to this report.
     Args :
         title : The title of the report
         chat_summary : A summary of the chat conversation that includes the main question of the user.
-        source: A list of referenced contents retrieved by the fetch_insurance_term_con tool. Should include the policy name, specific article and section numbers, page numbers, exact quotes and explanation.
+        source: A list of referenced insurance clauses, including the policy name, explanation, specific article and section numbers, and exact quotes from the relevant sections.
         answer : The answer to the user's question
     """
     
@@ -549,7 +516,7 @@ The arguments recieved are the sections to this report.
         chat_summary : A summary of the chat conversation that includes the main question of the user.
         estimate_details : A detailed explanation of how the estimate should be calculated. Also information of how it could vary. Be specific, not ambiguous
         estimate : The estimated payout amount of the user's case
-        source: A list of referenced contents retrieved by the fetch_insurance_term_con tool. Should include the policy name, specific article and section numbers, page numbers, exact quotes and explanation.
+        source: A list of referenced insurance clauses, including the policy name, explanation, specific article and section numbers, and exact quotes from the relevant sections.
         answer : The answer to the user's question
     """
     
@@ -575,7 +542,7 @@ The arguments recieved are the sections to this report.
         dispute_reason : What the user is dissatisfied with and the reason for the dispute
         wanted_outcome : The desired outcome of the claim of the user
         case_details : case details that are relevant to the dispute. Information that would help the claim adjuster understand the situation.
-        source: A list of referenced contents retrieved by the fetch_insurance_term_con tool. Should include the policy name, specific article and section numbers, page numbers, exact quotes and explanation.
+        source: A list of referenced insurance clauses, including the policy name, explanation, specific article and section numbers, and exact quotes from the relevant sections.
         answer : The answer to the user's question
     """
     
@@ -599,7 +566,7 @@ The arguments recieved are the sections to this report.
         chat_summary : A summary of the chat conversation that includes the main question of the user.
         medical_details : medical details of the case related to the insurance claim adjustment. (diagnostic code, test results, etc.)
         medical_history : medical history of the user that is relevant to the insurance claim adjustment.
-        source: A list of referenced contents retrieved by the fetch_insurance_term_con tool. Should include the policy name, specific article and section numbers, page numbers, exact quotes and explanation.
+        source: A list of referenced insurance clauses, including the policy name, explanation, specific article and section numbers, and exact quotes from the relevant sections.
         answer : The answer to the user's question
     """
     
@@ -612,77 +579,29 @@ The arguments recieved are the sections to this report.
     """
     args = state["messages"][-1].tool_calls[0]['args']
     response = args["answer"]
-    #print(state["chat_history"])
-    
-    chat_history_str = "\n".join([f"{message['type']}: {message['content']}" for message in state["chat_history"]])
-    class FollowUpQuestion(BaseModel):
-        """list of follow up questions to the chat history and answer."""
-        follow_up_question: list[str] = Field(
-            description="list of three follow up questions to the chat history and answer."
-            )
-    follow_up_question_llm = llm4omini.with_structured_output(FollowUpQuestion)
-    follow_up_question_system_prompt = """You are a follow up question generator for an insurance consultation chatbot.
-    
-    Given a chat history and the LLM's final response, generate three relevant follow-up questions that:
-    1. Naturally extend the conversation about the insurance topic being discussed
-    2. Help users better understand their insurance coverage or claims process
-    3. Address potential related concerns or scenarios the user might want to know about
-
-    Guidelines for generating questions:
-    - Make questions specific and directly related to the previous conversation
-    - Focus on practical, actionable information
-    - Avoid repeating information already covered in the chat
-    - Ensure questions are relevant to the type of insurance being discussed
-    - Phrase questions naturally in Korean, as if coming from the user
-    
-    Common themes to consider:
-    - Coverage details and limits
-    - Claim procedures and requirements
-    - Documentation needed
-    - Timeline expectations
-    - Related benefits or services
-    
-    Your questions should help users get the most value from their insurance consultation."""
-    follow_up_question_prompt = ChatPromptTemplate.from_messages(
-        [
-            ("system", follow_up_question_system_prompt),
-            ("human", "chat_history: \n {chat_history}\n llm_response: {llm_response}")
-        ]
-    )
-    follow_up_question_generator = follow_up_question_prompt | follow_up_question_llm
-    follow_up_question_response = follow_up_question_generator.invoke({"chat_history" : chat_history_str, "llm_response" : response})
-    
-    
     end_of_session_map = {"Payout Estimate" : "estimated_insurance_payout", "Claim Dispute" : "claims_adjuster", "Medical Support for Claims" : "medical_consulation", "General Inquiry" : "general","General Inquiry about enrolled insurance":"general"}
     end_of_session_str = end_of_session_map[state["purpose"]]
     
     
-    return {'response' : response, "report" : args, "end_of_session" : end_of_session_str, "follow_up_question" : follow_up_question_response.follow_up_question}
+    return {'response' : response, "report" : args, "end_of_session" : end_of_session_str}
 
 
-def run_oracle(state):
+def run_oracle(state) :
     purpose = state["purpose"]
     
-    purpose_final_answer_map = {"Payout Estimate": "final_answer_payoutEstimate", "Claim Dispute": "final_answer_dispute", "Medical Support for Claims": "final_answer_medicalSupport", "General Inquiry": "final_answer_general","General Inquiry about enrolled insurance":"final_answer_general"}
+    purpose_final_answer_map = {"Payout Estimate" : "final_answer_payoutEstimate", "Claim Dispute" : "final_answer_dispute", "Medical Support for Claims" : "final_answer_medicalSupport", "General Inquiry" : "final_answer_general","General Inquiry about enrolled insurance":"final_answer_general"}
     final_answer_str = purpose_final_answer_map[purpose]
 
-    oracle_system_prompt = """You are an insurance consultant. Your goal is to provide comprehensive and accurate answers to insurance-related questions using the tools provided.
+    oracle_system_prompt = """You are an insurance consultant. 
+When given insurance enrollment information, answer the user query using your tools. 
 
-Available Tools:
-1. fetch_insurance_enrollment_info: Access user's current insurance policies and coverage details
-   NOTE: Before calling this tool, check if the information was already fetched in previous messages
-2. fetch_insurance_term_con: Look up specific details from insurance policy documents
-3. human_retrieval: Use ONLY for gathering personal case information or clarifying user intent
-   IMPORTANT: NEVER use this tool to ask about insurance policy details or coverage information
+If you need more info, ask the user via the human_retrieval tool. 
+You have full access to insurance policy, terms and conditions(보험약관) yourself through fetch_insurance_term_con to get coverage details from the documents.
+Never use the human retrieval to find contents in the insurance policy themselves. 
+Never tell the user to contact the insurance company.
 
-Key Guidelines:
-- Review previous tool messages before making new tool calls to avoid redundant requests
-- Use fetch_insurance_term_con and fetch_insurance_enrollment_info for ALL policy-related information
-- Only use human_retrieval for personal case details that cannot be found in policy documents
-- Provide comprehensive answers using the {final_answer_str} tool once sufficient information is gathered
-
-Remember: While clarifying questions is important, try to minimize multiple back-and-forth interactions.
-""".format(final_answer_str=final_answer_str)
+Once you have collected plenty of information to answer the user's question use the {final_answer_str} tool. 
+    """.format(final_answer_str=final_answer_str)
 
     oracle_prompt = ChatPromptTemplate.from_messages([
         ("system", oracle_system_prompt),
@@ -715,7 +634,7 @@ Remember: While clarifying questions is important, try to minimize multiple back
             "messages": lambda x: x["messages"],
         }
         | oracle_prompt
-        | llmo3mini.bind_tools(tools, tool_choice="any")
+        | llm4o.bind_tools(tools, tool_choice="any")
     )
     
     out = oracle.invoke(state)
@@ -730,12 +649,11 @@ class State(AgentState):
     user_name : str
     insurance_enrollment_info : dict
     chat_history: list[BaseMessage]
-    follow_up_question : list[str]
     specified_date : str 
     non_related : str
     messages: Annotated[Sequence[BaseMessage], add_messages]
     response : str
-    purpose: str
+    purpose : str
     report : dict
     end_of_session : str = ""
     
@@ -784,8 +702,22 @@ graph.add_conditional_edges(
     source="oracle",  # where in graph to start
     path=router,  # function to determine which node is called
 )
+graph.add_conditional_edges(
+    "human_retrieval",
+    question_v_retrieval,
+    {
+        "oracle": "oracle",
+        "END": END,
+    },
+)
 
 graph.add_edge("tools","oracle")
+# create edges from each tool back to the oracle
+#for tool_obj in tools:
+#    if tool_obj.name != "final_answer" and tool_obj.name != "human_retrieval":
+#        graph.add_edge(tool_obj.name, "oracle")
+
+# if anything goes to final answer, it must then move to END
 graph.add_edge("final_answer", END)
-graph.add_edge("human_retrieval", END)
+
 insurance_engine = graph.compile()

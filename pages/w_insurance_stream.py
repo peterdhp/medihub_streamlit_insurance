@@ -22,8 +22,6 @@ if "messages_w" not in st.session_state:
 if 'log_str' not in st.session_state:
     st.session_state['log_str'] = 'ai: 보험과 관련해서 어떤게 궁금하신가요?'+ '\n\n'
 
-if "follow_up_clicked" not in st.session_state:
-    st.session_state.follow_up_clicked = None
 
 def reset():
     st.session_state["messages_w"] = [{"type": "ai", "content": "보험과 관련해서 어떤게 궁금하신가요?"}]
@@ -51,55 +49,50 @@ for item in st.session_state.user_data:
 
 #config = {"configurable": {"thread_id": st.session_state.thread_id}}
 
-# def submit_feedback():
-#     client.create_feedback(
-#         run_id,
-#         "thumbs",
-#         score=st.session_state.feedback,
-#         comment=st.session_state.feedback_text
-#     )
-#     st.session_state.feedback = None
-#     st.session_state.feedback_text = None
-#     st.session_state.run_id = None
-
-if "user_question" not in st.session_state:
-    st.session_state.user_question = None
-
-def set_chat_input(question):
-    st.session_state.user_question = question
+def submit_feedback():
+    client.create_feedback(
+        run_id,
+        "thumbs",
+        score=st.session_state.feedback,
+        comment=st.session_state.feedback_text
+    )
+    st.session_state.feedback = None
+    st.session_state.feedback_text = None
+    st.session_state.run_id = None
 
 for msg in st.session_state.messages_w:
     st.chat_message(msg["type"]).write(msg["content"])
 
-prompt = st.chat_input("Enter your message")
-if prompt or st.session_state.user_question:
-    # Use the follow-up question if it exists, otherwise use the chat input
-    current_prompt = st.session_state.user_question if st.session_state.user_question else prompt
-    # Clear the stored question after using it
-    st.session_state.user_question = None
-    
-    st.session_state.messages_w.append({"type": "human", "content": current_prompt})
-    st.chat_message("human").write(current_prompt)
-    st.session_state.log_str += 'human: ' + current_prompt + '\n\n'
+if prompt := st.chat_input():
+
+    st.session_state.messages_w.append({"type": "human", "content": prompt})
+    st.chat_message("human").write(prompt)
+    st.session_state.log_str += 'human: ' + prompt+ '\n\n'
     with collect_runs() as cb:
         with st.spinner('보장곰이 가입하신 보험들을 살펴보고 있습니다.'):
-            response = insurance_engine.invoke({"user_name": st.session_state.user,"user_input": current_prompt, "insurance_enrollment_info" : insurance_enrollment_info, "chat_history": st.session_state.messages_w},config={"recursion_limit": 15})
-        st.session_state.run_id = cb.traced_runs[-1].id
-        #print(st.session_state.run_id)
-    if response['non_related'] == 'F' :
-        st.session_state.messages_w.append({"type": "ai", "content": "저는 건강보험 관련 질문에 대해서만 답변할 수 있어요."})
-        st.chat_message("ai").write("저는 건강보험 관련 질문에 대해서만 답변할 수 있어요.")
-        st.session_state.log_str += 'ai: ' + "저는 건강보험 관련 질문에 대해서만 답변할 수 있어요." + '\n\n'
-    else :
-        msg = response["response"]
-        details = response.get("report")
-        st.session_state.messages_w.append({"type": "ai", "content": msg})
-        st.chat_message("ai").write(msg)
-        st.session_state.log_str += 'ai: ' + msg + '\n\n'
-        
-        
-        if details :
-            with st.expander("상담 일지 펼쳐보기"):
+            response_stream = insurance_engine.stream({"user_name": st.session_state.user, "user_input": prompt, "insurance_enrollment_info": insurance_enrollment_info, "chat_history": st.session_state.messages_w}, config={"recursion_limit": 15})
+            
+            placeholder = st.empty()
+            full_response = ""
+            
+            for chunk in response_stream:
+                if chunk.get('non_related') == 'F':
+                    message = "저는 건강보험 관련 질문에 대해서만 답변할 수 있어요."
+                    placeholder.write_stream(message)
+                    full_response = message
+                    break
+                
+                if 'response' in chunk:
+                    full_response += chunk['response']
+                    placeholder.write_stream(full_response)
+            
+            # After streaming is complete, update session state
+            st.session_state.messages_w.append({"type": "ai", "content": full_response})
+            st.session_state.log_str += 'ai: ' + full_response + '\n\n'
+            
+            # Handle details and end_of_session if they exist in the final chunk
+            if 'details' in chunk:
+                details = chunk['details']
                 if response['end_of_session'] == 'general':
                     details_str = """# {title}
 ### 상담요약
@@ -167,42 +160,35 @@ if prompt or st.session_state.user_question:
     
     if 'end_of_session' in response :    
         if response['end_of_session'] == 'general' :
-            #st.session_state.messages_w.append({"type": "ai", "content": "궁금한 점이 잘 해소되었나요?"})
+            st.session_state.messages_w.append({"type": "ai", "content": "궁금한 점이 잘 해소되었나요?"})
             st.chat_message("ai").write("궁금한 점이 잘 해소되었나요?")
-            #st.session_state.log_str += 'ai: 궁금한 점이 잘 해소되었나요?'
+            st.session_state.log_str += 'ai: 궁금한 점이 잘 해소되었나요?'
             
         if response['end_of_session'] == 'estimated_insurance_payout' :
-            #st.session_state.messages_w.append({"type": "ai", "content": "*실제 보장 금액이 예상 금액과 다를 수 있습니다. 보장 금액을 충분히 받지 못했다고 생각될 때는 닥터플렉스의 도움을 받아보세요."})
+            st.session_state.messages_w.append({"type": "ai", "content": "*실제 보장 금액이 예상 금액과 다를 수 있습니다. 보장 금액을 충분히 받지 못했다고 생각될 때는 닥터플렉스의 도움을 받아보세요."})
             st.chat_message("ai").write("*실제 보장 금액이 예상 금액과 다를 수 있습니다. 보장 금액을 충분히 받지 못했다고 생각될 때는 닥터플렉스의 도움을 받아보세요.")
-            #st.session_state.log_str += 'ai: *실제 보장 금액이 예상 금액과 다를 수 있습니다. 보장 금액을 충분히 받지 못했다고 생각될 때는 닥터플렉스의 도움을 받아보세요.'
+            st.session_state.log_str += 'ai: *실제 보장 금액이 예상 금액과 다를 수 있습니다. 보장 금액을 충분히 받지 못했다고 생각될 때는 닥터플렉스의 도움을 받아보세요.'
             
         if response['end_of_session'] == 'claims_adjuster' :
-            #st.session_state.messages_w.append({"type": "ai", "content": "보험사의 보장금액에 대해 문제를 겪고 계신 것 같군요. 닥터플렉스의 보험 의료 자문 서비스를 이용해보세요."})
+            st.session_state.messages_w.append({"type": "ai", "content": "보험사의 보장금액에 대해 문제를 겪고 계신 것 같군요. 닥터플렉스의 보험 의료 자문 서비스를 이용해보세요."})
             st.chat_message("ai").write("보험사의 보장금액에 대해 문제를 겪고 계신 것 같군요. 닥터플렉스의 보험 의료 자문 서비스를 이용해보세요.")
-            #st.session_state.log_str += 'ai: 보험사의 보장금액에 대해 문제를 겪고 계신 것 같군요. 닥터플렉스의 보험 의료 자문 서비스를 이용해보세요.'
+            st.session_state.log_str += 'ai: 보험사의 보장금액에 대해 문제를 겪고 계신 것 같군요. 닥터플렉스의 보험 의료 자문 서비스를 이용해보세요.'
             
         if response['end_of_session'] == 'medical_consulation' :
-            #st.session_state.messages_w.append({"type": "ai", "content": "보험과 관련해서 의학적인 도움이 필요하신 것 같군요. 닥터플렉스의 닥터나이트와 의료자문 서비스를 이용해보세요."})
+            st.session_state.messages_w.append({"type": "ai", "content": "보험과 관련해서 의학적인 도움이 필요하신 것 같군요. 닥터플렉스의 닥터나이트와 의료자문 서비스를 이용해보세요."})
             st.chat_message("ai").write("보험과 관련해서 의학적인 도움이 필요하신 것 같군요. 닥터플렉스의 닥터나이트와 의료자문 서비스를 이용해보세요.")
-            #st.session_state.log_str += 'ai: 보험과 관련해서 의학적인 도움이 필요하신 것 같군요. 닥터플렉스의 닥터나이트와 의료자문 서비스를 이용해보세요.'
+            st.session_state.log_str += 'ai: 보험과 관련해서 의학적인 도움이 필요하신 것 같군요. 닥터플렉스의 닥터나이트와 의료자문 서비스를 이용해보세요.'
 
-    if 'follow_up_question' in response:
-        for i, question in enumerate(response['follow_up_question']):
-            st.button(
-                question, 
-                key=f"follow_up_{question[:10]}_{i}",
-                on_click=set_chat_input,
-                args=(question,)
-            )
+    
             
-    # if st.session_state.get("run_id"):
-    #     run_id = st.session_state.run_id
-    #     st.text_input('[선택]코멘트를 입력해주세요.',key="feedback_text")
-    #     st.feedback(
-    #         options="thumbs",
-    #         on_change=submit_feedback,
-    #         key="feedback",
-    #     )
+if st.session_state.get("run_id"):
+    run_id = st.session_state.run_id
+    st.text_input('[선택]코멘트를 입력해주세요.',key="feedback_text")
+    st.feedback(
+        options="thumbs",
+        on_change=submit_feedback,
+        key="feedback",
+    )
             
 
 with st.sidebar :
